@@ -1,24 +1,31 @@
-# S? d?ng .NET SDK ?? build ?ng d?ng
+﻿# Chọn image base
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+# Thư mục làm việc trong container
 WORKDIR /src
 
-# Sao ch�p file csproj v� kh�i ph?c c�c dependency
-COPY *.sln .
+# Sao chép solution file
+COPY *.sln .  
+
+# Sao chép file csproj từ thư mục be
 COPY be/*.csproj ./be/
+
+# Khôi phục dependency
 RUN dotnet restore ./be/be.csproj
 
-# Sao ch�p t?t c? c�c file source v� build
+# Sao chép toàn bộ source code
 COPY . .
-WORKDIR /src/be
-RUN dotnet publish -c Release -o /app
 
-# S? d?ng .NET Runtime ?? ch?y ?ng d?ng
+# Build ứng dụng
+RUN dotnet build ./be/be.csproj -c Release -o /app
+
+# Publish ứng dụng
+RUN dotnet publish ./be/be.csproj -c Release -o /app
+
+# Image runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app .
 
-# C?ng m� ?ng d?ng l?ng nghe
-EXPOSE 80
-
-# Ch?y ?ng d?ng
+# Chạy ứng dụng
 ENTRYPOINT ["dotnet", "be.dll"]
