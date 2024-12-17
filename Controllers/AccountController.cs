@@ -1,5 +1,6 @@
 ﻿using be.DTOs;
 using be.Models;
+using be.Repositories.Implement;
 using be.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -17,37 +18,58 @@ namespace be.Controllers
     public class AccountController : ControllerBase
     {
         private readonly IAccountRepository _accountRepository;
+        private readonly IUserRepository _userRepository;
         private readonly string secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") ?? "WinterSoldier2k3!@#SecureLongKey$%^";
         private readonly string refreshSecretKey = Environment.GetEnvironmentVariable("JWT_REFRESH_SECRET_KEY") ?? "WinterSoldier2k3!@#SecureLongKey$%^";
-
-        public AccountController(IAccountRepository accountRepository)
+        public AccountController(IAccountRepository accountRepository, IUserRepository userRepository)
         {
             _accountRepository = accountRepository;
+            _userRepository = userRepository;
         }
 
         // Đăng ký tài khoản
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] CreateAccountDto request)
         {
+            // Kiểm tra Username đã tồn tại chưa
             if (await _accountRepository.UsernameExistsAsync(request.Username))
             {
                 return BadRequest(new { Message = "Username already exists." });
             }
 
+            // Tạo một User mới
+            var userId = Guid.NewGuid().ToString();
+            var user = new User
+            {
+                Id = userId,
+                Name = request.Username, // Hoặc thông tin khác nếu có
+                PhoneNumber = null,
+                Email = null,
+                Gender = null,
+                DateOfBirth = null
+            };
+
+            // Thêm User vào bảng Users
+            await _userRepository.AddAsync(user);
+
+            // Hash mật khẩu
             string hashedPassword = HashPassword(request.Password);
 
+            // Tạo Account mới
             var account = new Account
             {
                 Id = Guid.NewGuid().ToString(),
-                UserId = Guid.NewGuid().ToString(),
+                UserId = userId, // Tham chiếu User vừa tạo
                 Username = request.Username,
                 PasswordHash = hashedPassword
             };
 
+            // Thêm Account vào bảng Accounts
             await _accountRepository.AddAsync(account);
 
-            return Ok(new { Message = "User registered successfully." });
+            return Ok(new { Message = "User registered successfully.", UserId = userId });
         }
+
 
         // Đăng nhập tài khoản
         [HttpPost("login")]
