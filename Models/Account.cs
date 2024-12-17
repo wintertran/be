@@ -7,6 +7,9 @@ namespace be.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public required string Id { get; set; }
         public required string UserId { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual User? User { get; set; }
         public required string Username { get; set; }
         public string? PasswordHash { get; set; } // Mật khẩu đã được băm
         public string? ResetToken { get; set; }

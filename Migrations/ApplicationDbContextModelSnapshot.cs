@@ -17,13 +17,16 @@ namespace be.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "9.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("be.Models.Account", b =>
                 {
+                    b.Property<string>("Username")
+                        .HasColumnType("text");
+
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("text");
@@ -38,11 +41,9 @@ namespace be.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.HasKey("Username");
 
-                    b.HasKey("Id");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Accounts");
                 });
@@ -270,45 +271,45 @@ namespace be.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ac364bf2-846d-4d17-bf5c-8297cfc36b8e",
+                            Id = "ef95eba7-9df5-4863-b369-3be87f833290",
                             Brand = "BrandA",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 16, 20, 50, 45, 901, DateTimeKind.Utc).AddTicks(4536),
+                            CreatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 807, DateTimeKind.Utc).AddTicks(7322),
                             Description = "High-performance laptop",
                             ImageUrl = "https://placehold.co/400x400",
                             IsAvailable = true,
                             Name = "Laptop",
                             Price = 1000m,
                             Sku = "LAP123",
-                            UpdatedAt = new DateTime(2024, 12, 16, 20, 50, 45, 901, DateTimeKind.Utc).AddTicks(4541)
+                            UpdatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2471)
                         },
                         new
                         {
-                            Id = "56533235-773b-4d8b-a41b-742e92b0d8c0",
+                            Id = "25188e4a-7c9a-4f7d-b7fb-99affb0a6655",
                             Brand = "BrandB",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 16, 20, 50, 45, 901, DateTimeKind.Utc).AddTicks(4545),
+                            CreatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2671),
                             Description = "Latest smartphone model",
                             ImageUrl = "https://placehold.co/400x400",
                             IsAvailable = true,
                             Name = "Smartphone",
                             Price = 500m,
                             Sku = "SMT456",
-                            UpdatedAt = new DateTime(2024, 12, 16, 20, 50, 45, 901, DateTimeKind.Utc).AddTicks(4545)
+                            UpdatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2672)
                         },
                         new
                         {
-                            Id = "01caf0dc-df82-41b8-a2ce-a009a9fbec57",
+                            Id = "d224f866-c1c1-4cac-a429-3fa7e5c4b98f",
                             Brand = "AuthorName",
                             CategoryId = "2",
-                            CreatedAt = new DateTime(2024, 12, 16, 20, 50, 45, 901, DateTimeKind.Utc).AddTicks(4549),
+                            CreatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2676),
                             Description = "Bestselling novel book",
                             ImageUrl = "https://placehold.co/400x400",
                             IsAvailable = true,
                             Name = "Novel Book",
                             Price = 20m,
                             Sku = "NBK789",
-                            UpdatedAt = new DateTime(2024, 12, 16, 20, 50, 45, 901, DateTimeKind.Utc).AddTicks(4550)
+                            UpdatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2677)
                         });
                 });
 
@@ -390,6 +391,17 @@ namespace be.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("be.Models.Account", b =>
+                {
+                    b.HasOne("be.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("be.Models.Product", b =>

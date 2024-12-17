@@ -103,5 +103,11 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
 
         return (products, totalCount, availableCount);
     }
-
+    public async Task<Product?> GetByIdAsync(string id)
+    {
+        return await _context.Products
+                             .Include(p => p.Category) // Nếu cần thông tin category
+                             .Include(p => p.Ratings) // Nếu cần thông tin rating
+                             .FirstOrDefaultAsync(p => p.Id == id);
+    }
 }

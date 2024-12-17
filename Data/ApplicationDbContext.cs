@@ -27,6 +27,11 @@ namespace be.Data
                 new Category { Id = "1", Name = "Electronics", IsAvailable = true },
                 new Category { Id = "2", Name = "Books", IsAvailable = true }
             );
+            modelBuilder.Entity<Account>()
+                   .HasKey(a => a.Username); // Username làm khóa chính
+
+            modelBuilder.Entity<User>()
+                        .HasKey(u => u.Id); // Id làm khóa chính
 
             // Seed dữ liệu cho Product
             modelBuilder.Entity<Product>().HasData(

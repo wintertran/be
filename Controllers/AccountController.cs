@@ -1,16 +1,14 @@
 ﻿using be.DTOs;
+using be.Models;
+using be.Repositories.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace be.Controllers
 {
@@ -18,62 +16,51 @@ namespace be.Controllers
     [Route("api/account")]
     public class AccountController : ControllerBase
     {
-        private static Dictionary<string, (string Password, string UserId)> accountStore = new(); // Temporary in-memory account storage
-        private static Dictionary<string, UserDto> userStore = new(); // Temporary in-memory user storage
+        private readonly IAccountRepository _accountRepository;
         private readonly string secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") ?? "WinterSoldier2k3!@#SecureLongKey$%^";
         private readonly string refreshSecretKey = Environment.GetEnvironmentVariable("JWT_REFRESH_SECRET_KEY") ?? "WinterSoldier2k3!@#SecureLongKey$%^";
 
-        [HttpPost("register")]
-        public IActionResult Register([FromBody] CreateAccountDto request)
+        public AccountController(IAccountRepository accountRepository)
         {
-            // Check if the username already exists
-            if (accountStore.ContainsKey(request.Username))
-            {
-                return BadRequest("Username already exists."); // Response when username is taken
-            }
-
-            // Hash password for security
-            string hashedPassword = HashPassword(request.Password);
-
-            // Generate a new UserId
-            string userId = Guid.NewGuid().ToString();
-
-            var newUser = new UserDto
-            {
-                Id = userId,
-                Name = "New User", // Default name, update as necessary
-                PhoneNumber = null,
-                Email = null,
-                Gender = null,
-                DateOfBirth = null
-            };
-
-            userStore[userId] = newUser;
-
-            accountStore[request.Username] = (hashedPassword, userId);
-
-            return Ok(new { Message = "User registered successfully.", UserId = userId });
+            _accountRepository = accountRepository;
         }
 
-        [HttpPost("login")]
-        public IActionResult Login([FromBody] UpdateAccountDto request)
+        // Đăng ký tài khoản
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] CreateAccountDto request)
         {
-            if (!accountStore.TryGetValue(request.Username, out var accountInfo))
+            if (await _accountRepository.UsernameExistsAsync(request.Username))
+            {
+                return BadRequest(new { Message = "Username already exists." });
+            }
+
+            string hashedPassword = HashPassword(request.Password);
+
+            var account = new Account
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserId = Guid.NewGuid().ToString(),
+                Username = request.Username,
+                PasswordHash = hashedPassword
+            };
+
+            await _accountRepository.AddAsync(account);
+
+            return Ok(new { Message = "User registered successfully." });
+        }
+
+        // Đăng nhập tài khoản
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] UpdateAccountDto request)
+        {
+            var account = await _accountRepository.GetByUsernameAsync(request.Username);
+            if (account == null || account.PasswordHash != HashPassword(request.Password))
             {
                 return Unauthorized("Invalid username or password.");
             }
 
-            // Validate password
-            if (accountInfo.Password != HashPassword(request.Password))
-            {
-                return Unauthorized("Invalid username or password.");
-            }
-
-            // Generate access token
-            var accessToken = GenerateToken(accountInfo.UserId, secretKey, DateTime.UtcNow.AddHours(1));
-
-            // Generate refresh token
-            var refreshToken = GenerateToken(accountInfo.UserId, refreshSecretKey, DateTime.UtcNow.AddDays(7));
+            string accessToken = GenerateToken(account.UserId, secretKey, DateTime.UtcNow.AddHours(1));
+            string refreshToken = GenerateToken(account.UserId, refreshSecretKey, DateTime.UtcNow.AddDays(7));
 
             return Ok(new
             {
@@ -84,57 +71,48 @@ namespace be.Controllers
             });
         }
 
+        // Quên mật khẩu
         [HttpPost("forgot-password")]
-        public IActionResult ForgotPassword([FromBody] string email)
+        public async Task<IActionResult> ForgotPassword([FromBody] string email)
         {
-            // Find user by email
-            var user = userStore.Values.FirstOrDefault(u => u.Email == email);
-            if (user == null)
+            var account = await _accountRepository.GetByUsernameAsync(email);
+            if (account == null)
             {
                 return NotFound("Email not registered.");
             }
 
-            // Generate password reset token
             string resetToken = Guid.NewGuid().ToString();
-            user.ResetToken = resetToken;
-            string resetLink = Url.Action(nameof(ResetPassword), "Account", new { token = resetToken }, Request.Scheme);
+            account.ResetToken = resetToken;
+            await _accountRepository.UpdateAsync(account);
 
-            // Send email with the reset link
+            string resetLink = Url.Action(nameof(ResetPassword), "Account", new { token = resetToken }, Request.Scheme);
             SendEmail(email, "Password Reset", $"Click the link to reset your password: {resetLink}");
 
             return Ok("Reset password email sent.");
         }
 
+        // Reset mật khẩu
         [HttpPost("reset-password")]
-        public IActionResult ResetPassword(string token, [FromBody] string newPassword)
+        public async Task<IActionResult> ResetPassword(string token, [FromBody] string newPassword)
         {
-            // Find user by reset token
-            var user = userStore.Values.FirstOrDefault(u => u.ResetToken == token);
-            if (user == null)
+            var account = await _accountRepository.GetByUserIdAsync(token);
+            if (account == null || account.ResetToken != token)
             {
                 return BadRequest("Invalid or expired token.");
             }
 
-            // Hash the new password and update it in the accountStore
-            string hashedPassword = HashPassword(newPassword);
-            var account = accountStore.FirstOrDefault(a => a.Value.UserId == user.Id);
+            account.PasswordHash = HashPassword(newPassword);
+            account.ResetToken = null;
 
-            if (account.Equals(default(KeyValuePair<string, (string Password, string UserId)>)))
-            {
-                return NotFound("User not found.");
-            }
-
-            accountStore[account.Key] = (hashedPassword, account.Value.UserId);
-
-            user.ResetToken = null;
+            await _accountRepository.UpdateAsync(account);
 
             return Ok("Password reset successfully.");
         }
 
         private void SendEmail(string toEmail, string subject, string body)
         {
-            string smtpEmail = Environment.GetEnvironmentVariable("SMTP_EMAIL") ?? "";
-            string smtpPassword = Environment.GetEnvironmentVariable("SMTP_PASSWORD") ?? "";
+            string smtpEmail = Environment.GetEnvironmentVariable("SMTP_EMAIL") ?? "your-email@example.com";
+            string smtpPassword = Environment.GetEnvironmentVariable("SMTP_PASSWORD") ?? "your-password";
 
             using var smtpClient = new SmtpClient("smtp.example.com")
             {
@@ -149,8 +127,7 @@ namespace be.Controllers
         private string HashPassword(string password)
         {
             using var sha256 = SHA256.Create();
-            byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(hashedBytes);
+            return Convert.ToBase64String(sha256.ComputeHash(Encoding.UTF8.GetBytes(password)));
         }
 
         private string GenerateToken(string userId, string key, DateTime expiration)
@@ -170,10 +147,7 @@ namespace be.Controllers
                 SigningCredentials = credentials
             };
 
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-
-            return tokenHandler.WriteToken(token);
+            return new JwtSecurityTokenHandler().WriteToken(new JwtSecurityTokenHandler().CreateToken(tokenDescriptor));
         }
     }
 }

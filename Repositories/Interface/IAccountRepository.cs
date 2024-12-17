@@ -5,10 +5,11 @@ namespace be.Repositories.Interface
 {
     public interface IAccountRepository
     {
-        Task<Account> GetByUserIdAsync(string userId); // Lấy thông tin tài khoản người dùng theo userId
-        Task<Account> GetByUsernameAsync(string username); // Lấy thông tin tài khoản theo username
-        Task AddAsync(Account account); // Thêm tài khoản mới
-        Task UpdateAsync(Account account); // Cập nhật tài khoản
-        Task DeleteAsync(string userId); // Xóa tài khoản
+        Task<Account?> GetByUserIdAsync(string userId);
+        Task<Account?> GetByUsernameAsync(string username);
+        Task<bool> UsernameExistsAsync(string username);
+        Task AddAsync(Account account);
+        Task UpdateAsync(Account account); // Thêm UpdateAsync
+        Task DeleteAsync(string userId);
     }
 }

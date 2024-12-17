@@ -47,11 +47,25 @@ public class ProductController : ControllerBase
     public async Task<IActionResult> GetProductById(string id)
     {
         var product = await _productRepository.GetByIdAsync(id);
+
         if (product == null)
         {
-            return NotFound("Product not found.");
+            return NotFound(new { Message = "Product not found." });
         }
-        return Ok(product);
+
+        return Ok(new
+        {
+            product.Id,
+            product.Name,
+            product.Price,
+            product.StockQuantity,
+            Category = product.Category?.Name, // Nếu cần hiển thị tên Category
+            Ratings = product.Ratings?.Select(r => new
+            {
+                r.RatingValue,
+                r.Review
+            })
+        });
     }
 
 }

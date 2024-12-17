@@ -14,20 +14,6 @@ namespace be.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Accounts",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    Username = table.Column<string>(type: "text", nullable: false),
-                    Password = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Accounts", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Addresses",
                 columns: table => new
                 {
@@ -114,44 +100,6 @@ namespace be.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    CategoryId = table.Column<string>(type: "text", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: true),
-                    Price = table.Column<decimal>(type: "numeric", nullable: true),
-                    ImageUrl = table.Column<string>(type: "text", nullable: true),
-                    Sku = table.Column<string>(type: "text", nullable: true),
-                    Brand = table.Column<string>(type: "text", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    IsAvailable = table.Column<bool>(type: "boolean", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Ratings",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    ProductId = table.Column<string>(type: "text", nullable: false),
-                    RatingValue = table.Column<int>(type: "integer", nullable: true),
-                    Review = table.Column<string>(type: "text", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Ratings", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -173,7 +121,8 @@ namespace be.Migrations
                     PhoneNumber = table.Column<string>(type: "text", nullable: true),
                     Email = table.Column<string>(type: "text", nullable: true),
                     Gender = table.Column<string>(type: "text", nullable: true),
-                    DateOfBirth = table.Column<string>(type: "text", nullable: true)
+                    DateOfBirth = table.Column<string>(type: "text", nullable: true),
+                    ResetToken = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -181,17 +130,76 @@ namespace be.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Variations",
+                name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    ProductId = table.Column<string>(type: "text", nullable: false),
-                    Key = table.Column<string>(type: "text", nullable: true),
-                    Value = table.Column<string>(type: "text", nullable: true)
+                    CategoryId = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: true),
+                    Price = table.Column<decimal>(type: "numeric", nullable: true),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    Sku = table.Column<string>(type: "text", nullable: true),
+                    Brand = table.Column<string>(type: "text", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    IsAvailable = table.Column<bool>(type: "boolean", nullable: true),
+                    StockQuantity = table.Column<decimal>(type: "numeric", nullable: true),
+                    CartQuantity = table.Column<decimal>(type: "numeric", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Variations", x => x.Id);
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Accounts",
+                columns: table => new
+                {
+                    Username = table.Column<string>(type: "text", nullable: false),
+                    Id = table.Column<string>(type: "text", nullable: true),
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    PasswordHash = table.Column<string>(type: "text", nullable: true),
+                    ResetToken = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Accounts", x => x.Username);
+                    table.ForeignKey(
+                        name: "FK_Accounts_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Ratings",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    ProductId = table.Column<string>(type: "text", nullable: false),
+                    RatingValue = table.Column<int>(type: "integer", nullable: true),
+                    Review = table.Column<string>(type: "text", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ratings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Ratings_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
@@ -205,13 +213,28 @@ namespace be.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Brand", "CategoryId", "CreatedAt", "Description", "ImageUrl", "IsAvailable", "Name", "Price", "Sku", "UpdatedAt" },
+                columns: new[] { "Id", "Brand", "CartQuantity", "CategoryId", "CreatedAt", "Description", "ImageUrl", "IsAvailable", "Name", "Price", "Sku", "StockQuantity", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { "568e85bc-d883-48d6-838c-4a30a3d0dd9e", "BrandA", "1", new DateTime(2024, 11, 13, 10, 5, 45, 103, DateTimeKind.Utc).AddTicks(4799), "High-performance laptop", "https://placehold.co/400x400", true, "Laptop", 1000m, "LAP123", new DateTime(2024, 11, 13, 10, 5, 45, 103, DateTimeKind.Utc).AddTicks(4802) },
-                    { "60d7f2a0-87b9-4fb4-9424-f4552caad3dc", "AuthorName", "2", new DateTime(2024, 11, 13, 10, 5, 45, 103, DateTimeKind.Utc).AddTicks(4809), "Bestselling novel book", "https://placehold.co/400x400", true, "Novel Book", 20m, "NBK789", new DateTime(2024, 11, 13, 10, 5, 45, 103, DateTimeKind.Utc).AddTicks(4810) },
-                    { "df8cbb32-846b-446b-af1c-19af0945f58f", "BrandB", "1", new DateTime(2024, 11, 13, 10, 5, 45, 103, DateTimeKind.Utc).AddTicks(4806), "Latest smartphone model", "https://placehold.co/400x400", true, "Smartphone", 500m, "SMT456", new DateTime(2024, 11, 13, 10, 5, 45, 103, DateTimeKind.Utc).AddTicks(4807) }
+                    { "25188e4a-7c9a-4f7d-b7fb-99affb0a6655", "BrandB", null, "1", new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2671), "Latest smartphone model", "https://placehold.co/400x400", true, "Smartphone", 500m, "SMT456", null, new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2672) },
+                    { "d224f866-c1c1-4cac-a429-3fa7e5c4b98f", "AuthorName", null, "2", new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2676), "Bestselling novel book", "https://placehold.co/400x400", true, "Novel Book", 20m, "NBK789", null, new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2677) },
+                    { "ef95eba7-9df5-4863-b369-3be87f833290", "BrandA", null, "1", new DateTime(2024, 12, 17, 18, 28, 9, 807, DateTimeKind.Utc).AddTicks(7322), "High-performance laptop", "https://placehold.co/400x400", true, "Laptop", 1000m, "LAP123", null, new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2471) }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Accounts_UserId",
+                table: "Accounts",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryId",
+                table: "Products",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ratings_ProductId",
+                table: "Ratings",
+                column: "ProductId");
         }
 
         /// <inheritdoc />
@@ -227,16 +250,10 @@ namespace be.Migrations
                 name: "Carts");
 
             migrationBuilder.DropTable(
-                name: "Categories");
-
-            migrationBuilder.DropTable(
                 name: "Invoices");
 
             migrationBuilder.DropTable(
                 name: "Orders");
-
-            migrationBuilder.DropTable(
-                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Ratings");
@@ -248,7 +265,10 @@ namespace be.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Variations");
+                name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Categories");
         }
     }
 }
