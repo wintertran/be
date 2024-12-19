@@ -19,8 +19,8 @@ namespace be.Controllers
     {
         private readonly IAccountRepository _accountRepository;
         private readonly IUserRepository _userRepository;
-        private readonly string secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") ?? "WinterSoldier2k3!@#SecureLongKey$%^";
-        private readonly string refreshSecretKey = Environment.GetEnvironmentVariable("JWT_REFRESH_SECRET_KEY") ?? "WinterSoldier2k3!@#SecureLongKey$%^";
+        private readonly string secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") ?? "ThisIsA32CharacterLongKey12345!";
+        private readonly string refreshSecretKey = Environment.GetEnvironmentVariable("JWT_REFRESH_SECRET_KEY") ?? "Another32CharacterLongKey123!";
         public AccountController(IAccountRepository accountRepository, IUserRepository userRepository)
         {
             _accountRepository = accountRepository;
