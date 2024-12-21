@@ -36,7 +36,6 @@ namespace be.Migrations
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
                     UserId = table.Column<string>(type: "text", nullable: false),
-                    ProductId = table.Column<string>(type: "text", nullable: false),
                     Quantity = table.Column<int>(type: "integer", nullable: true),
                     AddedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     Status = table.Column<string>(type: "text", nullable: true),
@@ -138,7 +137,6 @@ namespace be.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
                     Price = table.Column<decimal>(type: "numeric", nullable: true),
-                    ImageUrl = table.Column<string>(type: "text", nullable: true),
                     Sku = table.Column<string>(type: "text", nullable: true),
                     Brand = table.Column<string>(type: "text", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
@@ -180,6 +178,51 @@ namespace be.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CartProduct",
+                columns: table => new
+                {
+                    CartId = table.Column<string>(type: "text", nullable: false),
+                    ProductId = table.Column<string>(type: "text", nullable: false),
+                    Quantity = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartProduct", x => new { x.CartId, x.ProductId });
+                    table.ForeignKey(
+                        name: "FK_CartProduct_Carts_CartId",
+                        column: x => x.CartId,
+                        principalTable: "Carts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CartProduct_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductImage",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "text", nullable: false),
+                    ProductId = table.Column<string>(type: "text", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductImage", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProductImage_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Ratings",
                 columns: table => new
                 {
@@ -207,24 +250,69 @@ namespace be.Migrations
                 columns: new[] { "Id", "IsAvailable", "Name", "ParentCategoryId" },
                 values: new object[,]
                 {
-                    { "1", true, "Electronics", null },
-                    { "2", true, "Books", null }
+                    { "1", true, "Shop All", null },
+                    { "2", true, "Computers", null },
+                    { "3", true, "Keyboards", null },
+                    { "4", true, "Mice & Joysticks", null },
+                    { "5", true, "Tablets & Ipads", null },
+                    { "6", true, "Cases", null },
+                    { "7", true, "Covers", null }
                 });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Brand", "CartQuantity", "CategoryId", "CreatedAt", "Description", "ImageUrl", "IsAvailable", "Name", "Price", "Sku", "StockQuantity", "UpdatedAt" },
+                columns: new[] { "Id", "Brand", "CartQuantity", "CategoryId", "CreatedAt", "Description", "IsAvailable", "Name", "Price", "Sku", "StockQuantity", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { "25188e4a-7c9a-4f7d-b7fb-99affb0a6655", "BrandB", null, "1", new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2671), "Latest smartphone model", "https://placehold.co/400x400", true, "Smartphone", 500m, "SMT456", null, new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2672) },
-                    { "d224f866-c1c1-4cac-a429-3fa7e5c4b98f", "AuthorName", null, "2", new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2676), "Bestselling novel book", "https://placehold.co/400x400", true, "Novel Book", 20m, "NBK789", null, new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2677) },
-                    { "ef95eba7-9df5-4863-b369-3be87f833290", "BrandA", null, "1", new DateTime(2024, 12, 17, 18, 28, 9, 807, DateTimeKind.Utc).AddTicks(7322), "High-performance laptop", "https://placehold.co/400x400", true, "Laptop", 1000m, "LAP123", null, new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2471) }
+                    { "1", "BrandA", null, "1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(979), "High-performance laptop", true, "Laptop", 7000000m, "LAP123", null, new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(983) },
+                    { "2", "BrandB", null, "1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(989), "Latest smartphone model", true, "Smartphone", 2300000m, "SMT456", null, new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(989) },
+                    { "3", "AuthorName", null, "2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1049), "Bestselling novel book", true, "Novel Book", 100000m, "NBK789", null, new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1050) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "ProductImage",
+                columns: new[] { "Id", "CreatedAt", "ImageUrl", "ProductId" },
+                values: new object[,]
+                {
+                    { "P1-Img1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1113), "https://placehold.co/400x400", "1" },
+                    { "P1-Img2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1115), "https://placehold.co/400x400/gray", "1" },
+                    { "P1-Img3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1116), "https://placehold.co/400x400/black", "1" },
+                    { "P1-Img4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1118), "https://placehold.co/400x400/blue", "1" },
+                    { "P2-Img1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1119), "https://placehold.co/400x400", "2" },
+                    { "P2-Img2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1121), "https://placehold.co/400x400/gray", "2" },
+                    { "P2-Img3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1122), "https://placehold.co/400x400/black", "2" },
+                    { "P2-Img4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1123), "https://placehold.co/400x400/blue", "2" },
+                    { "P3-Img1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1125), "https://placehold.co/400x400", "3" },
+                    { "P3-Img2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1126), "https://placehold.co/400x400/gray", "3" },
+                    { "P3-Img3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1127), "https://placehold.co/400x400/black", "3" },
+                    { "P3-Img4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1128), "https://placehold.co/400x400/blue", "3" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Ratings",
+                columns: new[] { "Id", "CreatedAt", "ProductId", "RatingValue", "Review", "UpdatedAt", "UserId" },
+                values: new object[,]
+                {
+                    { "R1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1079), "1", 5, "Excellent performance!", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1080), "U1" },
+                    { "R2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1081), "1", 4, "Good value for money.", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1082), "U2" },
+                    { "R3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1084), "2", 5, "Amazing features!", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1084), "U3" },
+                    { "R4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1085), "3", 4, "Engaging and well-written.", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1086), "U4" }
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Accounts_UserId",
                 table: "Accounts",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartProduct_ProductId",
+                table: "CartProduct",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductImage_ProductId",
+                table: "ProductImage",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",
@@ -247,13 +335,16 @@ namespace be.Migrations
                 name: "Addresses");
 
             migrationBuilder.DropTable(
-                name: "Carts");
+                name: "CartProduct");
 
             migrationBuilder.DropTable(
                 name: "Invoices");
 
             migrationBuilder.DropTable(
                 name: "Orders");
+
+            migrationBuilder.DropTable(
+                name: "ProductImage");
 
             migrationBuilder.DropTable(
                 name: "Ratings");
@@ -263,6 +354,9 @@ namespace be.Migrations
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Carts");
 
             migrationBuilder.DropTable(
                 name: "Products");

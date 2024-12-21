@@ -20,8 +20,8 @@ namespace be.Models
         public bool? IsAvailable { get; set; }
         public decimal? StockQuantity { get; set; }
         public decimal? CartQuantity { get; set; }
-        public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
-        public virtual ICollection<CartProduct> CartProducts { get; set; } = new List<CartProduct>();
+        public virtual ICollection<ProductImage>? ProductImages { get; set; } = new List<ProductImage>();
+        public virtual ICollection<CartProduct>? CartProducts { get; set; } = new List<CartProduct>();
         public virtual ICollection<Rating>? Ratings { get; set; }
     }
 }

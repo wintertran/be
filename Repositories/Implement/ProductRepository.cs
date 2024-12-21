@@ -33,7 +33,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
                 Price = p.Price,
                 Images = p.ProductImages.Select(img => new ImageDto
                 {
-                    ImageUrl = img.ImageUrl,    
+                    ImageUrl = img.ImageUrl,
                 }).ToList(),
                 StockQuantity = p.StockQuantity,
                 IsAvailable = p.IsAvailable,
@@ -46,12 +46,12 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
     }
 
     public async Task<(List<ProductDto> Products, int TotalCount, int AvailableCount)> SearchProductsAsync(
-        string? keyword, // Make the keyword nullable
-        List<string>? categories, // Make categories nullable for flexibility
-        List<string>? brands, // Make brands nullable for flexibility
-        decimal? priceFrom,
-        decimal? priceTo,
-        string sort)
+    string? keyword, // Make the keyword nullable
+    List<string>? categories, // Make categories nullable for flexibility
+    List<string>? brands, // Make brands nullable for flexibility
+    decimal? priceFrom,
+    decimal? priceTo,
+    string sort)
     {
         // Base query
         var query = _context.Products
@@ -101,6 +101,8 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
                 CategoryId = p.CategoryId,
                 Name = p.Name,
                 Price = p.Price,
+                Description = p.Description,
+                StockQuantity = p.StockQuantity,
                 Images = p.ProductImages.Select(img => new ImageDto
                 {
                     ImageUrl = img.ImageUrl,
@@ -112,6 +114,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
 
         return (products, totalCount, availableCount);
     }
+
 
     public async Task<Product?> GetByIdAsync(string id)
     {

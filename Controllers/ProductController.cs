@@ -25,15 +25,15 @@ public class ProductController : ControllerBase
     }
     [HttpGet("search")]
     public async Task<IActionResult> SearchProducts(
-    [FromQuery] string keyword,
-    [FromQuery] List<string> category,
-    [FromQuery] List<string> brand,
+    [FromQuery] string? keyword, // Make nullable
+    [FromQuery] List<string>? categories,
+    [FromQuery] List<string>? brands,
     [FromQuery] decimal? priceFrom,
     [FromQuery] decimal? priceTo,
     [FromQuery] string sort = "AtoZ")
     {
         var result = await _productRepository.SearchProductsAsync(
-            keyword, category, brand, priceFrom, priceTo, sort);
+            keyword, categories, brands, priceFrom, priceTo, sort);
 
         return Ok(new
         {
@@ -65,6 +65,7 @@ public class ProductController : ControllerBase
             }),
             product.Description,
             Category = product.Category?.Name, // Nếu cần hiển thị tên Category
+            AverageRating = product.Ratings.Any() ? product.Ratings.Average(r => r.RatingValue) : 0,
             Ratings = product.Ratings?.Select(r => new
             {
                 r.RatingValue,

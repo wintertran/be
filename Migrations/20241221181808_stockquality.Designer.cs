@@ -12,15 +12,15 @@ using be.Data;
 namespace be.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241217182811_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241221181808_stockquality")]
+    partial class stockquality
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.0")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -93,10 +93,6 @@ namespace be.Migrations
                     b.Property<bool?>("IsSavedForLater")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("ProductId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<int?>("Quantity")
                         .HasColumnType("integer");
 
@@ -113,6 +109,24 @@ namespace be.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("be.Models.CartProduct", b =>
+                {
+                    b.Property<string>("CartId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProductId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.HasKey("CartId", "ProductId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartProduct");
                 });
 
             modelBuilder.Entity("be.Models.Category", b =>
@@ -140,13 +154,43 @@ namespace be.Migrations
                         {
                             Id = "1",
                             IsAvailable = true,
-                            Name = "Electronics"
+                            Name = "Shop All"
                         },
                         new
                         {
                             Id = "2",
                             IsAvailable = true,
-                            Name = "Books"
+                            Name = "Computers"
+                        },
+                        new
+                        {
+                            Id = "3",
+                            IsAvailable = true,
+                            Name = "Keyboards"
+                        },
+                        new
+                        {
+                            Id = "4",
+                            IsAvailable = true,
+                            Name = "Mice & Joysticks"
+                        },
+                        new
+                        {
+                            Id = "5",
+                            IsAvailable = true,
+                            Name = "Tablets & Ipads"
+                        },
+                        new
+                        {
+                            Id = "6",
+                            IsAvailable = true,
+                            Name = "Cases"
+                        },
+                        new
+                        {
+                            Id = "7",
+                            IsAvailable = true,
+                            Name = "Covers"
                         });
                 });
 
@@ -243,9 +287,6 @@ namespace be.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("text");
-
                     b.Property<bool?>("IsAvailable")
                         .HasColumnType("boolean");
 
@@ -274,45 +315,155 @@ namespace be.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ef95eba7-9df5-4863-b369-3be87f833290",
+                            Id = "1",
                             Brand = "BrandA",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 807, DateTimeKind.Utc).AddTicks(7322),
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(943),
                             Description = "High-performance laptop",
-                            ImageUrl = "https://placehold.co/400x400",
                             IsAvailable = true,
                             Name = "Laptop",
-                            Price = 1000m,
+                            Price = 7000000m,
                             Sku = "LAP123",
-                            UpdatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2471)
+                            StockQuantity = 100m,
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(945)
                         },
                         new
                         {
-                            Id = "25188e4a-7c9a-4f7d-b7fb-99affb0a6655",
+                            Id = "2",
                             Brand = "BrandB",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2671),
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(947),
                             Description = "Latest smartphone model",
-                            ImageUrl = "https://placehold.co/400x400",
                             IsAvailable = true,
                             Name = "Smartphone",
-                            Price = 500m,
+                            Price = 2300000m,
                             Sku = "SMT456",
-                            UpdatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2672)
+                            StockQuantity = 200m,
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(948)
                         },
                         new
                         {
-                            Id = "d224f866-c1c1-4cac-a429-3fa7e5c4b98f",
+                            Id = "3",
                             Brand = "AuthorName",
                             CategoryId = "2",
-                            CreatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2676),
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(950),
                             Description = "Bestselling novel book",
-                            ImageUrl = "https://placehold.co/400x400",
                             IsAvailable = true,
                             Name = "Novel Book",
-                            Price = 20m,
+                            Price = 100000m,
                             Sku = "NBK789",
-                            UpdatedAt = new DateTime(2024, 12, 17, 18, 28, 9, 808, DateTimeKind.Utc).AddTicks(2677)
+                            StockQuantity = 300m,
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(951)
+                        });
+                });
+
+            modelBuilder.Entity("be.Models.ProductImage", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImage");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "P1-Img1",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(999),
+                            ImageUrl = "https://placehold.co/400x400",
+                            ProductId = "1"
+                        },
+                        new
+                        {
+                            Id = "P1-Img2",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1000),
+                            ImageUrl = "https://placehold.co/400x400/gray",
+                            ProductId = "1"
+                        },
+                        new
+                        {
+                            Id = "P1-Img3",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1001),
+                            ImageUrl = "https://placehold.co/400x400/black",
+                            ProductId = "1"
+                        },
+                        new
+                        {
+                            Id = "P1-Img4",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1002),
+                            ImageUrl = "https://placehold.co/400x400/blue",
+                            ProductId = "1"
+                        },
+                        new
+                        {
+                            Id = "P2-Img1",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1003),
+                            ImageUrl = "https://placehold.co/400x400",
+                            ProductId = "2"
+                        },
+                        new
+                        {
+                            Id = "P2-Img2",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1004),
+                            ImageUrl = "https://placehold.co/400x400/gray",
+                            ProductId = "2"
+                        },
+                        new
+                        {
+                            Id = "P2-Img3",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1005),
+                            ImageUrl = "https://placehold.co/400x400/black",
+                            ProductId = "2"
+                        },
+                        new
+                        {
+                            Id = "P2-Img4",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1006),
+                            ImageUrl = "https://placehold.co/400x400/blue",
+                            ProductId = "2"
+                        },
+                        new
+                        {
+                            Id = "P3-Img1",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1007),
+                            ImageUrl = "https://placehold.co/400x400",
+                            ProductId = "3"
+                        },
+                        new
+                        {
+                            Id = "P3-Img2",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1008),
+                            ImageUrl = "https://placehold.co/400x400/gray",
+                            ProductId = "3"
+                        },
+                        new
+                        {
+                            Id = "P3-Img3",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1009),
+                            ImageUrl = "https://placehold.co/400x400/black",
+                            ProductId = "3"
+                        },
+                        new
+                        {
+                            Id = "P3-Img4",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1010),
+                            ImageUrl = "https://placehold.co/400x400/blue",
+                            ProductId = "3"
                         });
                 });
 
@@ -347,6 +498,48 @@ namespace be.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("Ratings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "R1",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(971),
+                            ProductId = "1",
+                            RatingValue = 5,
+                            Review = "Excellent performance!",
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(971),
+                            UserId = "U1"
+                        },
+                        new
+                        {
+                            Id = "R2",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(973),
+                            ProductId = "1",
+                            RatingValue = 4,
+                            Review = "Good value for money.",
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(973),
+                            UserId = "U2"
+                        },
+                        new
+                        {
+                            Id = "R3",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(975),
+                            ProductId = "2",
+                            RatingValue = 5,
+                            Review = "Amazing features!",
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(975),
+                            UserId = "U3"
+                        },
+                        new
+                        {
+                            Id = "R4",
+                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(976),
+                            ProductId = "3",
+                            RatingValue = 4,
+                            Review = "Engaging and well-written.",
+                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(977),
+                            UserId = "U4"
+                        });
                 });
 
             modelBuilder.Entity("be.Models.Role", b =>
@@ -407,6 +600,25 @@ namespace be.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("be.Models.CartProduct", b =>
+                {
+                    b.HasOne("be.Models.Cart", "Cart")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("be.Models.Product", "Product")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("be.Models.Product", b =>
                 {
                     b.HasOne("be.Models.Category", "Category")
@@ -416,6 +628,17 @@ namespace be.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("be.Models.ProductImage", b =>
+                {
+                    b.HasOne("be.Models.Product", "Product")
+                        .WithMany("ProductImages")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("be.Models.Rating", b =>
@@ -429,6 +652,11 @@ namespace be.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("be.Models.Cart", b =>
+                {
+                    b.Navigation("CartProducts");
+                });
+
             modelBuilder.Entity("be.Models.Category", b =>
                 {
                     b.Navigation("Products");
@@ -436,6 +664,10 @@ namespace be.Migrations
 
             modelBuilder.Entity("be.Models.Product", b =>
                 {
+                    b.Navigation("CartProducts");
+
+                    b.Navigation("ProductImages");
+
                     b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618

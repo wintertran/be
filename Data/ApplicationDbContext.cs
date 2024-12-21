@@ -22,11 +22,6 @@ namespace be.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // Seed dữ liệu cho Category
-            modelBuilder.Entity<Category>().HasData(
-                new Category { Id = "1", Name = "Electronics", IsAvailable = true },
-                new Category { Id = "2", Name = "Books", IsAvailable = true }
-            );
             modelBuilder.Entity<Account>()
                    .HasKey(a => a.Username); // Username làm khóa chính
 
@@ -52,16 +47,30 @@ namespace be.Data
             .HasForeignKey(pi => pi.ProductId)
             .OnDelete(DeleteBehavior.Cascade); // Cascade delete if the product is deleted
 
-            // Seed dữ liệu cho Product
+            // Seed Categories
+            // Seed Categories
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = "1", Name = "Shop All", IsAvailable = true },
+                new Category { Id = "2", Name = "Computers", IsAvailable = true },
+                new Category { Id = "3", Name = "Keyboards", IsAvailable = true },
+                new Category { Id = "4", Name = "Mice & Joysticks", IsAvailable = true },
+                new Category { Id = "5", Name = "Tablets & Ipads", IsAvailable = true },
+                new Category { Id = "6", Name = "Cases", IsAvailable = true },
+                new Category { Id = "7", Name = "Covers", IsAvailable = true }
+            );
+
+
+            // Seed Products
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = "1", // Static ID for consistency
                     Name = "Laptop",
                     CategoryId = "1",
-                    Price = 1000,
+                    Price = 7000000,
                     IsAvailable = true,
                     CreatedAt = DateTime.UtcNow,
+                    StockQuantity = 100,
                     Description = "High-performance laptop",
                     Sku = "LAP123",
                     Brand = "BrandA",
@@ -69,12 +78,13 @@ namespace be.Data
                 },
                 new Product
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = "2", // Static ID for consistency
                     Name = "Smartphone",
                     CategoryId = "1",
-                    Price = 500,
+                    Price = 2300000,
                     IsAvailable = true,
                     CreatedAt = DateTime.UtcNow,
+                    StockQuantity = 200,
                     Description = "Latest smartphone model",
                     Sku = "SMT456",
                     Brand = "BrandB",
@@ -82,12 +92,13 @@ namespace be.Data
                 },
                 new Product
                 {
-                    Id = Guid.NewGuid().ToString(),
+                    Id = "3", // Static ID for consistency
                     Name = "Novel Book",
                     CategoryId = "2",
-                    Price = 20,
+                    Price = 100000,
                     IsAvailable = true,
                     CreatedAt = DateTime.UtcNow,
+                    StockQuantity = 300,
                     Description = "Bestselling novel book",
                     Sku = "NBK789",
                     Brand = "AuthorName",
@@ -95,12 +106,13 @@ namespace be.Data
                 }
             );
 
+            // Seed Ratings
             modelBuilder.Entity<Rating>().HasData(
                 new Rating
                 {
-                    Id = "101",
+                    Id = "R1",
                     UserId = "U1",
-                    ProductId = "1", // Reference Laptop
+                    ProductId = "1", // Matches static Product ID
                     RatingValue = 5,
                     Review = "Excellent performance!",
                     CreatedAt = DateTime.UtcNow,
@@ -108,9 +120,9 @@ namespace be.Data
                 },
                 new Rating
                 {
-                    Id = "102",
+                    Id = "R2",
                     UserId = "U2",
-                    ProductId = "1", // Reference Laptop
+                    ProductId = "1", // Matches static Product ID
                     RatingValue = 4,
                     Review = "Good value for money.",
                     CreatedAt = DateTime.UtcNow,
@@ -118,9 +130,9 @@ namespace be.Data
                 },
                 new Rating
                 {
-                    Id = "103",
+                    Id = "R3",
                     UserId = "U3",
-                    ProductId = "2", // Reference Smartphone
+                    ProductId = "2", // Matches static Product ID
                     RatingValue = 5,
                     Review = "Amazing features!",
                     CreatedAt = DateTime.UtcNow,
@@ -128,42 +140,43 @@ namespace be.Data
                 },
                 new Rating
                 {
-                    Id = "104",
+                    Id = "R4",
                     UserId = "U4",
-                    ProductId = "3", // Reference Novel Book
+                    ProductId = "3", // Matches static Product ID
                     RatingValue = 4,
                     Review = "Engaging and well-written.",
                     CreatedAt = DateTime.UtcNow,
                     UpdatedAt = DateTime.UtcNow
                 }
             );
+
             // Seed ProductImages
             modelBuilder.Entity<ProductImage>().HasData(
                 // Images for Laptop
                 new ProductImage
                 {
-                    Id = "101",
-                    ProductId = "1",
+                    Id = "P1-Img1",
+                    ProductId = "1", // Matches static Product ID
                     ImageUrl = "https://placehold.co/400x400",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "102",
+                    Id = "P1-Img2",
                     ProductId = "1",
                     ImageUrl = "https://placehold.co/400x400/gray",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "103",
+                    Id = "P1-Img3",
                     ProductId = "1",
                     ImageUrl = "https://placehold.co/400x400/black",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "104",
+                    Id = "P1-Img4",
                     ProductId = "1",
                     ImageUrl = "https://placehold.co/400x400/blue",
                     CreatedAt = DateTime.UtcNow
@@ -172,28 +185,28 @@ namespace be.Data
                 // Images for Smartphone
                 new ProductImage
                 {
-                    Id = "201",
-                    ProductId = "2",
+                    Id = "P2-Img1",
+                    ProductId = "2", // Matches static Product ID
                     ImageUrl = "https://placehold.co/400x400",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "202",
+                    Id = "P2-Img2",
                     ProductId = "2",
                     ImageUrl = "https://placehold.co/400x400/gray",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "203",
+                    Id = "P2-Img3",
                     ProductId = "2",
                     ImageUrl = "https://placehold.co/400x400/black",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "204",
+                    Id = "P2-Img4",
                     ProductId = "2",
                     ImageUrl = "https://placehold.co/400x400/blue",
                     CreatedAt = DateTime.UtcNow
@@ -202,28 +215,28 @@ namespace be.Data
                 // Images for Novel Book
                 new ProductImage
                 {
-                    Id = "301",
-                    ProductId = "3",
+                    Id = "P3-Img1",
+                    ProductId = "3", // Matches static Product ID
                     ImageUrl = "https://placehold.co/400x400",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "302",
+                    Id = "P3-Img2",
                     ProductId = "3",
                     ImageUrl = "https://placehold.co/400x400/gray",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "303",
+                    Id = "P3-Img3",
                     ProductId = "3",
                     ImageUrl = "https://placehold.co/400x400/black",
                     CreatedAt = DateTime.UtcNow
                 },
                 new ProductImage
                 {
-                    Id = "304",
+                    Id = "P3-Img4",
                     ProductId = "3",
                     ImageUrl = "https://placehold.co/400x400/blue",
                     CreatedAt = DateTime.UtcNow
