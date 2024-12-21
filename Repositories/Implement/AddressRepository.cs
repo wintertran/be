@@ -7,9 +7,14 @@ namespace be.Repositories.Implement
 {
     public class AddressRepository : GenericRepository<Address>, IAddressRepository
     {
-        public AddressRepository(ApplicationDbContext context) : base(context) { }
+        private new readonly ApplicationDbContext _context;
 
-        public async Task<IEnumerable<Address>> GetAddressesByUserIdAsync(string userId)
+        public AddressRepository(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<Address>> GetAddressesByUserIdAsync(string userId)
         {
             return await _context.Addresses.Where(a => a.UserId == userId).ToListAsync();
         }

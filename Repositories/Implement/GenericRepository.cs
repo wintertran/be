@@ -50,4 +50,9 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
             await _context.SaveChangesAsync();
         }
     }
+    public async Task DeleteAsync(T entity)
+    {
+        _dbSet.Remove(entity);
+        await _context.SaveChangesAsync();
+    }
 }

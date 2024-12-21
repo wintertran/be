@@ -18,6 +18,7 @@ namespace be.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Rating> Ratings { get; set; }
 
+        public DbSet<Brand> Brands { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -53,8 +54,30 @@ namespace be.Data
             .HasForeignKey(pi => pi.ProductId)
             .OnDelete(DeleteBehavior.Cascade); // Cascade delete if the product is deleted
 
-            // Seed Categories
-            // Seed Categories
+            // Quan hệ 1-N giữa User và Order
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.User)
+                .WithMany(u => u.Orders)
+                .HasForeignKey(o => o.UserId)
+                .OnDelete(DeleteBehavior.Restrict); // Xóa Order không xóa User
+
+            // Quan hệ 1-1 giữa Address và Order
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Address)
+                .WithMany() // Không có quan hệ ngược từ Address tới Order
+                .HasForeignKey(o => o.ShippingAddressId)
+                .OnDelete(DeleteBehavior.Restrict); // Xóa Address không xóa Order
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Brand)
+                .WithMany(b => b.Products)
+                .HasForeignKey(p => p.BrandId)
+                .OnDelete(DeleteBehavior.SetNull); // Nếu xóa Brand, không xóa Product
+
+
+
+
+            // Seed
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = "1", Name = "Shop All", IsAvailable = true },
                 new Category { Id = "2", Name = "Computers", IsAvailable = true },
@@ -64,6 +87,33 @@ namespace be.Data
                 new Category { Id = "6", Name = "Cases", IsAvailable = true },
                 new Category { Id = "7", Name = "Covers", IsAvailable = true }
             );
+            modelBuilder.Entity<Brand>().HasData(
+    new Brand
+    {
+        Id = "1",
+        Name = "Logitech",
+    },
+    new Brand
+    {
+        Id = "2",
+        Name = "Lenovo",
+    },
+    new Brand
+    {
+        Id = "3",
+        Name = "Microsoft",
+    },
+    new Brand
+    {
+        Id = "4",
+        Name = "Samsung",
+    },
+    new Brand
+    {
+        Id = "5",
+        Name = "Ugreen",
+    }
+);
 
 
             // Seed Products
@@ -79,7 +129,7 @@ namespace be.Data
                     StockQuantity = 100,
                     Description = "High-performance laptop",
                     Sku = "LAP123",
-                    Brand = "BrandA",
+                    BrandId = "1",
                     UpdatedAt = DateTime.UtcNow,
                 },
                 new Product
@@ -93,7 +143,7 @@ namespace be.Data
                     StockQuantity = 200,
                     Description = "Latest smartphone model",
                     Sku = "SMT456",
-                    Brand = "BrandB",
+                    BrandId = "1",
                     UpdatedAt = DateTime.UtcNow
                 },
                 new Product
@@ -107,7 +157,7 @@ namespace be.Data
                     StockQuantity = 300,
                     Description = "Bestselling novel book",
                     Sku = "NBK789",
-                    Brand = "AuthorName",
+                    BrandId = "2",
                     UpdatedAt = DateTime.UtcNow
                 }
             );

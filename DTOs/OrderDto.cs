@@ -20,10 +20,6 @@ namespace be.DTOs
     {
         public required string ShippingAddressId { get; set; }
         public required string CartId { get; set; }
-        public decimal? TotalAmount { get; set; }
-        public string? Status { get; set; }
         public string? PaymentMethod { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public DateTime? ShippingDate { get; set; }
     }
 }

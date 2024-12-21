@@ -1,5 +1,7 @@
-﻿using System;
+﻿using be.Models;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace be.DTOs
 {
@@ -20,7 +22,10 @@ namespace be.DTOs
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
 
-        public string? Brand { get; set; }
+        // Thêm khóa ngoại cho Brand
+        public string? BrandId { get; set; }
+        [ForeignKey("BrandId")]
+        public virtual Brand? Brand { get; set; }
 
         public DateTime? CreatedAt { get; set; }
 
@@ -50,7 +55,10 @@ namespace be.DTOs
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
 
-        public string? Brand { get; set; }
+        // Thêm khóa ngoại cho Brand
+        public string? BrandId { get; set; }
+        [ForeignKey("BrandId")]
+        public virtual Brand? Brand { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
@@ -70,7 +78,10 @@ namespace be.DTOs
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
 
-        public string? Brand { get; set; }
+        // Thêm khóa ngoại cho Brand
+        public string? BrandId { get; set; }
+        [ForeignKey("BrandId")]
+        public virtual Brand? Brand { get; set; }
 
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 

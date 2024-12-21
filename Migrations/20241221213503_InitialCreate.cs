@@ -14,37 +14,15 @@ namespace be.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Addresses",
+                name: "Brands",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    StreetAddress = table.Column<string>(type: "text", nullable: true),
-                    Province = table.Column<string>(type: "text", nullable: true),
-                    District = table.Column<string>(type: "text", nullable: true),
-                    Ward = table.Column<string>(type: "text", nullable: true),
-                    IsDefault = table.Column<bool>(type: "boolean", nullable: true)
+                    Name = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Addresses", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Carts",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    Quantity = table.Column<int>(type: "integer", nullable: true),
-                    AddedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    Status = table.Column<string>(type: "text", nullable: true),
-                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
-                    IsSavedForLater = table.Column<bool>(type: "boolean", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Carts", x => x.Id);
+                    table.PrimaryKey("PK_Brands", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -77,25 +55,6 @@ namespace be.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Invoices", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Orders",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<string>(type: "text", nullable: false),
-                    ShippingAddressId = table.Column<string>(type: "text", nullable: false),
-                    CartId = table.Column<string>(type: "text", nullable: false),
-                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
-                    Status = table.Column<string>(type: "text", nullable: true),
-                    PaymentMethod = table.Column<string>(type: "text", nullable: true),
-                    OrderDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    ShippingDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Orders", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -138,7 +97,7 @@ namespace be.Migrations
                     Description = table.Column<string>(type: "text", nullable: true),
                     Price = table.Column<decimal>(type: "numeric", nullable: true),
                     Sku = table.Column<string>(type: "text", nullable: true),
-                    Brand = table.Column<string>(type: "text", nullable: true),
+                    BrandId = table.Column<string>(type: "text", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     IsAvailable = table.Column<bool>(type: "boolean", nullable: true),
@@ -148,6 +107,12 @@ namespace be.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_Brands_BrandId",
+                        column: x => x.BrandId,
+                        principalTable: "Brands",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
                     table.ForeignKey(
                         name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
@@ -178,26 +143,47 @@ namespace be.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CartProduct",
+                name: "Addresses",
                 columns: table => new
                 {
-                    CartId = table.Column<string>(type: "text", nullable: false),
-                    ProductId = table.Column<string>(type: "text", nullable: false),
-                    Quantity = table.Column<int>(type: "integer", nullable: false)
+                    Id = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    StreetAddress = table.Column<string>(type: "text", nullable: true),
+                    Province = table.Column<string>(type: "text", nullable: true),
+                    District = table.Column<string>(type: "text", nullable: true),
+                    Ward = table.Column<string>(type: "text", nullable: true),
+                    IsDefault = table.Column<bool>(type: "boolean", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CartProduct", x => new { x.CartId, x.ProductId });
+                    table.PrimaryKey("PK_Addresses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CartProduct_Carts_CartId",
-                        column: x => x.CartId,
-                        principalTable: "Carts",
+                        name: "FK_Addresses_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Carts",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    Quantity = table.Column<int>(type: "integer", nullable: true),
+                    AddedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    Status = table.Column<string>(type: "text", nullable: true),
+                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
+                    IsSavedForLater = table.Column<bool>(type: "boolean", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Carts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CartProduct_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
+                        name: "FK_Carts_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -245,6 +231,80 @@ namespace be.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "CartProduct",
+                columns: table => new
+                {
+                    CartId = table.Column<string>(type: "text", nullable: false),
+                    ProductId = table.Column<string>(type: "text", nullable: false),
+                    Quantity = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartProduct", x => new { x.CartId, x.ProductId });
+                    table.ForeignKey(
+                        name: "FK_CartProduct_Carts_CartId",
+                        column: x => x.CartId,
+                        principalTable: "Carts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CartProduct_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Orders",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    ShippingAddressId = table.Column<string>(type: "text", nullable: false),
+                    CartSnapshot = table.Column<string>(type: "text", nullable: true),
+                    CartId = table.Column<string>(type: "text", nullable: true),
+                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
+                    Status = table.Column<string>(type: "text", nullable: true),
+                    PaymentMethod = table.Column<string>(type: "text", nullable: true),
+                    OrderDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ShippingDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Orders_Addresses_ShippingAddressId",
+                        column: x => x.ShippingAddressId,
+                        principalTable: "Addresses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Orders_Carts_CartId",
+                        column: x => x.CartId,
+                        principalTable: "Carts",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Orders_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Brands",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { "1", "Logitech" },
+                    { "2", "Lenovo" },
+                    { "3", "Microsoft" },
+                    { "4", "Samsung" },
+                    { "5", "Ugreen" }
+                });
+
             migrationBuilder.InsertData(
                 table: "Categories",
                 columns: new[] { "Id", "IsAvailable", "Name", "ParentCategoryId" },
@@ -261,12 +321,12 @@ namespace be.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Brand", "CartQuantity", "CategoryId", "CreatedAt", "Description", "IsAvailable", "Name", "Price", "Sku", "StockQuantity", "UpdatedAt" },
+                columns: new[] { "Id", "BrandId", "CartQuantity", "CategoryId", "CreatedAt", "Description", "IsAvailable", "Name", "Price", "Sku", "StockQuantity", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { "1", "BrandA", null, "1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(979), "High-performance laptop", true, "Laptop", 7000000m, "LAP123", null, new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(983) },
-                    { "2", "BrandB", null, "1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(989), "Latest smartphone model", true, "Smartphone", 2300000m, "SMT456", null, new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(989) },
-                    { "3", "AuthorName", null, "2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1049), "Bestselling novel book", true, "Novel Book", 100000m, "NBK789", null, new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1050) }
+                    { "1", "1", null, "1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4753), "High-performance laptop", true, "Laptop", 7000000m, "LAP123", 100m, new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4756) },
+                    { "2", "1", null, "1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4757), "Latest smartphone model", true, "Smartphone", 2300000m, "SMT456", 200m, new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4758) },
+                    { "3", "2", null, "2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4760), "Bestselling novel book", true, "Novel Book", 100000m, "NBK789", 300m, new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4761) }
                 });
 
             migrationBuilder.InsertData(
@@ -274,18 +334,18 @@ namespace be.Migrations
                 columns: new[] { "Id", "CreatedAt", "ImageUrl", "ProductId" },
                 values: new object[,]
                 {
-                    { "P1-Img1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1113), "https://placehold.co/400x400", "1" },
-                    { "P1-Img2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1115), "https://placehold.co/400x400/gray", "1" },
-                    { "P1-Img3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1116), "https://placehold.co/400x400/black", "1" },
-                    { "P1-Img4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1118), "https://placehold.co/400x400/blue", "1" },
-                    { "P2-Img1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1119), "https://placehold.co/400x400", "2" },
-                    { "P2-Img2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1121), "https://placehold.co/400x400/gray", "2" },
-                    { "P2-Img3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1122), "https://placehold.co/400x400/black", "2" },
-                    { "P2-Img4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1123), "https://placehold.co/400x400/blue", "2" },
-                    { "P3-Img1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1125), "https://placehold.co/400x400", "3" },
-                    { "P3-Img2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1126), "https://placehold.co/400x400/gray", "3" },
-                    { "P3-Img3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1127), "https://placehold.co/400x400/black", "3" },
-                    { "P3-Img4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1128), "https://placehold.co/400x400/blue", "3" }
+                    { "P1-Img1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4813), "https://placehold.co/400x400", "1" },
+                    { "P1-Img2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4814), "https://placehold.co/400x400/gray", "1" },
+                    { "P1-Img3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4815), "https://placehold.co/400x400/black", "1" },
+                    { "P1-Img4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4816), "https://placehold.co/400x400/blue", "1" },
+                    { "P2-Img1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4817), "https://placehold.co/400x400", "2" },
+                    { "P2-Img2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4818), "https://placehold.co/400x400/gray", "2" },
+                    { "P2-Img3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4819), "https://placehold.co/400x400/black", "2" },
+                    { "P2-Img4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4820), "https://placehold.co/400x400/blue", "2" },
+                    { "P3-Img1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4821), "https://placehold.co/400x400", "3" },
+                    { "P3-Img2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4822), "https://placehold.co/400x400/gray", "3" },
+                    { "P3-Img3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4823), "https://placehold.co/400x400/black", "3" },
+                    { "P3-Img4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4824), "https://placehold.co/400x400/blue", "3" }
                 });
 
             migrationBuilder.InsertData(
@@ -293,10 +353,10 @@ namespace be.Migrations
                 columns: new[] { "Id", "CreatedAt", "ProductId", "RatingValue", "Review", "UpdatedAt", "UserId" },
                 values: new object[,]
                 {
-                    { "R1", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1079), "1", 5, "Excellent performance!", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1080), "U1" },
-                    { "R2", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1081), "1", 4, "Good value for money.", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1082), "U2" },
-                    { "R3", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1084), "2", 5, "Amazing features!", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1084), "U3" },
-                    { "R4", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1085), "3", 4, "Engaging and well-written.", new DateTime(2024, 12, 21, 18, 9, 32, 370, DateTimeKind.Utc).AddTicks(1086), "U4" }
+                    { "R1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4786), "1", 5, "Excellent performance!", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4787), "U1" },
+                    { "R2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4788), "1", 4, "Good value for money.", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4789), "U2" },
+                    { "R3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4790), "2", 5, "Amazing features!", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4791), "U3" },
+                    { "R4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792), "3", 4, "Engaging and well-written.", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792), "U4" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -305,14 +365,45 @@ namespace be.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Addresses_UserId",
+                table: "Addresses",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CartProduct_ProductId",
                 table: "CartProduct",
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Carts_UserId",
+                table: "Carts",
+                column: "UserId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_CartId",
+                table: "Orders",
+                column: "CartId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_ShippingAddressId",
+                table: "Orders",
+                column: "ShippingAddressId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_UserId",
+                table: "Orders",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ProductImage_ProductId",
                 table: "ProductImage",
                 column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_BrandId",
+                table: "Products",
+                column: "BrandId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",
@@ -330,9 +421,6 @@ namespace be.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Accounts");
-
-            migrationBuilder.DropTable(
-                name: "Addresses");
 
             migrationBuilder.DropTable(
                 name: "CartProduct");
@@ -353,13 +441,19 @@ namespace be.Migrations
                 name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Addresses");
 
             migrationBuilder.DropTable(
                 name: "Carts");
 
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Brands");
 
             migrationBuilder.DropTable(
                 name: "Categories");

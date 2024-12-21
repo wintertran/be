@@ -20,5 +20,6 @@ namespace be.Repositories.Implement
         {
             return await _context.Categories.FirstOrDefaultAsync(c => c.Name == name);
         }
+
     }
 }

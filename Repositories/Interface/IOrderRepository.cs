@@ -4,6 +4,6 @@ namespace be.Repositories.Interface
 {
     public interface IOrderRepository : IGenericRepository<Order>
     {
-        Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId);
+        Task<Order?> GetOrderWithDetailsAsync(string orderId);
     }
 }

@@ -68,7 +68,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
             query = query.Where(p => categories.Contains(p.CategoryId));
 
         if (brands != null && brands.Any())
-            query = query.Where(p => brands.Contains(p.Brand));
+            query = query.Where(p => brands.Contains(p.BrandId));
 
         if (priceFrom.HasValue)
             query = query.Where(p => p.Price >= priceFrom.Value);

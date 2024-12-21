@@ -75,7 +75,51 @@ namespace be.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("be.Models.Brand", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            Name = "Logitech"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            Name = "Lenovo"
+                        },
+                        new
+                        {
+                            Id = "3",
+                            Name = "Microsoft"
+                        },
+                        new
+                        {
+                            Id = "4",
+                            Name = "Samsung"
+                        },
+                        new
+                        {
+                            Id = "5",
+                            Name = "Ugreen"
+                        });
                 });
 
             modelBuilder.Entity("be.Models.Cart", b =>
@@ -104,6 +148,9 @@ namespace be.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Carts");
                 });
@@ -231,7 +278,9 @@ namespace be.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("CartId")
-                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("CartSnapshot")
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("OrderDate")
@@ -259,6 +308,12 @@ namespace be.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ShippingAddressId");
+
+                    b.HasIndex("UserId");
+
                     b.ToTable("Orders");
                 });
 
@@ -268,7 +323,7 @@ namespace be.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("text");
 
-                    b.Property<string>("Brand")
+                    b.Property<string>("BrandId")
                         .HasColumnType("text");
 
                     b.Property<decimal?>("CartQuantity")
@@ -305,6 +360,8 @@ namespace be.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BrandId");
+
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
@@ -313,44 +370,44 @@ namespace be.Migrations
                         new
                         {
                             Id = "1",
-                            Brand = "BrandA",
+                            BrandId = "1",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(943),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4753),
                             Description = "High-performance laptop",
                             IsAvailable = true,
                             Name = "Laptop",
                             Price = 7000000m,
                             Sku = "LAP123",
                             StockQuantity = 100m,
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(945)
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4756)
                         },
                         new
                         {
                             Id = "2",
-                            Brand = "BrandB",
+                            BrandId = "1",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(947),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4757),
                             Description = "Latest smartphone model",
                             IsAvailable = true,
                             Name = "Smartphone",
                             Price = 2300000m,
                             Sku = "SMT456",
                             StockQuantity = 200m,
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(948)
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4758)
                         },
                         new
                         {
                             Id = "3",
-                            Brand = "AuthorName",
+                            BrandId = "2",
                             CategoryId = "2",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(950),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4760),
                             Description = "Bestselling novel book",
                             IsAvailable = true,
                             Name = "Novel Book",
                             Price = 100000m,
                             Sku = "NBK789",
                             StockQuantity = 300m,
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(951)
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4761)
                         });
                 });
 
@@ -381,84 +438,84 @@ namespace be.Migrations
                         new
                         {
                             Id = "P1-Img1",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(999),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4813),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img2",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1000),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4814),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img3",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1001),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4815),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img4",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1002),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4816),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P2-Img1",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1003),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4817),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img2",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1004),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4818),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img3",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1005),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4819),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img4",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1006),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4820),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P3-Img1",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1007),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4821),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P3-Img2",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1008),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4822),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P3-Img3",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1009),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4823),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P3-Img4",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(1010),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4824),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "3"
                         });
@@ -500,41 +557,41 @@ namespace be.Migrations
                         new
                         {
                             Id = "R1",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(971),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4786),
                             ProductId = "1",
                             RatingValue = 5,
                             Review = "Excellent performance!",
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(971),
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4787),
                             UserId = "U1"
                         },
                         new
                         {
                             Id = "R2",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(973),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4788),
                             ProductId = "1",
                             RatingValue = 4,
                             Review = "Good value for money.",
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(973),
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4789),
                             UserId = "U2"
                         },
                         new
                         {
                             Id = "R3",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(975),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4790),
                             ProductId = "2",
                             RatingValue = 5,
                             Review = "Amazing features!",
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(975),
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4791),
                             UserId = "U3"
                         },
                         new
                         {
                             Id = "R4",
-                            CreatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(976),
+                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792),
                             ProductId = "3",
                             RatingValue = 4,
                             Review = "Engaging and well-written.",
-                            UpdatedAt = new DateTime(2024, 12, 21, 18, 18, 8, 487, DateTimeKind.Utc).AddTicks(977),
+                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792),
                             UserId = "U4"
                         });
                 });
@@ -597,6 +654,28 @@ namespace be.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("be.Models.Address", b =>
+                {
+                    b.HasOne("be.Models.User", "User")
+                        .WithMany("Addresses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("be.Models.Cart", b =>
+                {
+                    b.HasOne("be.Models.User", "User")
+                        .WithOne("Cart")
+                        .HasForeignKey("be.Models.Cart", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("be.Models.CartProduct", b =>
                 {
                     b.HasOne("be.Models.Cart", "Cart")
@@ -616,13 +695,45 @@ namespace be.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("be.Models.Order", b =>
+                {
+                    b.HasOne("be.Models.Cart", "Cart")
+                        .WithMany()
+                        .HasForeignKey("CartId");
+
+                    b.HasOne("be.Models.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("ShippingAddressId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("be.Models.User", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Address");
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("be.Models.Product", b =>
                 {
+                    b.HasOne("be.Models.Brand", "Brand")
+                        .WithMany("Products")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.HasOne("be.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Brand");
 
                     b.Navigation("Category");
                 });
@@ -649,6 +760,11 @@ namespace be.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("be.Models.Brand", b =>
+                {
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("be.Models.Cart", b =>
                 {
                     b.Navigation("CartProducts");
@@ -666,6 +782,15 @@ namespace be.Migrations
                     b.Navigation("ProductImages");
 
                     b.Navigation("Ratings");
+                });
+
+            modelBuilder.Entity("be.Models.User", b =>
+                {
+                    b.Navigation("Addresses");
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

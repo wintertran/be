@@ -10,5 +10,6 @@ namespace be.Repositories.Interface
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(string id);
+        Task DeleteAsync(T entity);
     }
 }

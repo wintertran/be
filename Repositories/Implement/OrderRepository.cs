@@ -7,11 +7,22 @@ namespace be.Repositories.Implement
 {
     public class OrderRepository : GenericRepository<Order>, IOrderRepository
     {
-        public OrderRepository(ApplicationDbContext context) : base(context) { }
+        private new readonly ApplicationDbContext _context;
 
-        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId)
+        public OrderRepository(ApplicationDbContext context) : base(context)
         {
-            return await _context.Orders.Where(o => o.UserId == userId).ToListAsync();
+            _context = context;
+        }
+
+        public async Task<Order?> GetOrderWithDetailsAsync(string orderId)
+        {
+            return await _context.Orders
+                                 .Include(o => o.Address)
+                                 .Include(o => o.Cart)
+                                 .ThenInclude(c => c.CartProducts)
+                                 .ThenInclude(cp => cp.Product)
+                                 .ThenInclude(p => p.ProductImages)
+                                 .FirstOrDefaultAsync(o => o.Id == orderId);
         }
     }
 }

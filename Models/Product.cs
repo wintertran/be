@@ -14,7 +14,9 @@ namespace be.Models
         public string? Description { get; set; }
         public decimal? Price { get; set; }
         public string? Sku { get; set; }
-        public string? Brand { get; set; }
+        public string? BrandId { get; set; }
+        [ForeignKey("BrandId")]
+        public virtual Brand? Brand { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public bool? IsAvailable { get; set; }
