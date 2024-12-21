@@ -10,9 +10,10 @@ public class CartRepository : GenericRepository<Cart>, ICartRepository
     public async Task<Cart?> GetCartByUserIdAsync(string userId)
     {
         return await _context.Carts
-            .Include(c => c.CartProducts)
-                .ThenInclude(cp => cp.Product)
-            .FirstOrDefaultAsync(c => c.UserId == userId);
+                             .Include(c => c.CartProducts)
+                             .ThenInclude(cp => cp.Product)
+                             .ThenInclude(p => p.ProductImages)
+                             .FirstOrDefaultAsync(c => c.UserId == userId);
     }
 
     public async Task AddAsync(Cart cart)
@@ -24,6 +25,11 @@ public class CartRepository : GenericRepository<Cart>, ICartRepository
     public async Task UpdateAsync(Cart cart)
     {
         _context.Carts.Update(cart);
+        await _context.SaveChangesAsync();
+    }
+    public async Task DeleteAsync(Cart cart)
+    {
+        _context.Carts.Remove(cart);
         await _context.SaveChangesAsync();
     }
 }

@@ -7,5 +7,7 @@ namespace be.Repositories.Interface
         Task<Cart?> GetCartByUserIdAsync(string userId);
         Task AddAsync(Cart cart);
         Task UpdateAsync(Cart cart);
+
+        Task DeleteAsync(Cart cart);
     }
 }

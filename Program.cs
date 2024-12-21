@@ -1,15 +1,20 @@
-using be.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using be.Data;
 using be.Mappings;
+using be.Repositories;
 using be.Repositories.Implement;
 using be.Repositories.Interface;
-using be.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Configure Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
@@ -20,9 +25,10 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IRatingRepository, RatingRepository>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
-// C?u h�nh AutoMapper
+// Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -33,19 +39,55 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Th�m c�c d?ch v? kh�c
-builder.Services.AddControllers();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false, // Không kiểm tra Issuer
+            ValidateAudience = false, // Không kiểm tra Audience
+            ValidateLifetime = true, // Kiểm tra thời hạn token
+            ValidateIssuerSigningKey = true, // Vẫn kiểm tra chữ ký của token
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
+// Configure Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Enter 'Bearer' followed by your JWT token in the text box below.\n\nExample: Bearer eyJhbGciOiJIUzI1NiIsInR..."
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+
+// Configure Controllers
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
-//}
-// Middleware Swagger
+// Configure Middleware
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
@@ -55,10 +97,9 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     });
 }
 
-// S? d?ng CORS to�n c?c cho ?ng d?ng
 app.UseCors("AllowAll");
-
 app.UseHttpsRedirection();
-app.UseAuthorization();
+app.UseAuthentication(); // Enable authentication
+app.UseAuthorization();  // Enable authorization
 app.MapControllers();
 app.Run();

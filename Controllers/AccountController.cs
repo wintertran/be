@@ -81,6 +81,7 @@ namespace be.Controllers
                 return Unauthorized("Invalid username or password.");
             }
 
+            // Phát hành token
             string accessToken = GenerateToken(account.UserId, secretKey, DateTime.UtcNow.AddHours(1));
             string refreshToken = GenerateToken(account.UserId, refreshSecretKey, DateTime.UtcNow.AddDays(7));
 
@@ -159,7 +160,7 @@ namespace be.Controllers
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, userId)
+                new Claim(ClaimTypes.NameIdentifier, userId) // Chỉ định UserId làm claim
             };
 
             var tokenDescriptor = new SecurityTokenDescriptor

@@ -28,6 +28,12 @@ namespace be.Data
             modelBuilder.Entity<User>()
                         .HasKey(u => u.Id); // Id làm khóa chính
                                             // Cấu hình bảng liên kết CartProduct
+
+            modelBuilder.Entity<User>()
+                    .HasOne(u => u.Cart)
+                    .WithOne(c => c.User)
+                    .HasForeignKey<Cart>(c => c.UserId) // Cart.UserId is the foreign key
+                    .OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<CartProduct>()
                 .HasKey(cp => new { cp.CartId, cp.ProductId });
 

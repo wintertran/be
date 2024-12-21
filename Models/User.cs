@@ -13,5 +13,7 @@ namespace be.Models
         public string? DateOfBirth { get; set; }
 
         public string? ResetToken { get; set; } // Thêm trường này để lưu token
+
+        public virtual Cart? Cart { get; set; }
     }
 }

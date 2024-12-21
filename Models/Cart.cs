@@ -7,7 +7,9 @@ namespace be.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public required string Id { get; set; }
-        public required string UserId { get; set; }
+        public required string UserId { get; set; } // Foreign key to User
+        [ForeignKey("UserId")]
+        public virtual User? User { get; set; } // Navigation property for User
         public int? Quantity { get; set; }
         public DateTime? AddedAt { get; set; }
         public string? Status { get; set; } // Enum for cart status
