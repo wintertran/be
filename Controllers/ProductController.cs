@@ -59,7 +59,10 @@ public class ProductController : ControllerBase
             product.Name,
             product.Price,
             product.StockQuantity,
-            product.ImageUrl,
+            Images = product.ProductImages?.Select(img => new
+            {
+                img.ImageUrl,
+            }),
             product.Description,
             Category = product.Category?.Name, // Nếu cần hiển thị tên Category
             Ratings = product.Ratings?.Select(r => new

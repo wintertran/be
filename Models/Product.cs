@@ -13,7 +13,6 @@ namespace be.Models
         public required string Name { get; set; }
         public string? Description { get; set; }
         public decimal? Price { get; set; }
-        public string? ImageUrl { get; set; }
         public string? Sku { get; set; }
         public string? Brand { get; set; }
         public DateTime? CreatedAt { get; set; }
@@ -21,6 +20,7 @@ namespace be.Models
         public bool? IsAvailable { get; set; }
         public decimal? StockQuantity { get; set; }
         public decimal? CartQuantity { get; set; }
+        public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public virtual ICollection<CartProduct> CartProducts { get; set; } = new List<CartProduct>();
         public virtual ICollection<Rating>? Ratings { get; set; }
     }

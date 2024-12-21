@@ -46,6 +46,12 @@ namespace be.Data
                 .WithMany(p => p.CartProducts)
                 .HasForeignKey(cp => cp.ProductId);
 
+            modelBuilder.Entity<ProductImage>()
+            .HasOne(pi => pi.Product)
+            .WithMany(p => p.ProductImages)
+            .HasForeignKey(pi => pi.ProductId)
+            .OnDelete(DeleteBehavior.Cascade); // Cascade delete if the product is deleted
+
             // Seed dữ liệu cho Product
             modelBuilder.Entity<Product>().HasData(
                 new Product
@@ -57,10 +63,9 @@ namespace be.Data
                     IsAvailable = true,
                     CreatedAt = DateTime.UtcNow,
                     Description = "High-performance laptop",
-                    ImageUrl = "https://placehold.co/400x400",
                     Sku = "LAP123",
                     Brand = "BrandA",
-                    UpdatedAt = DateTime.UtcNow
+                    UpdatedAt = DateTime.UtcNow,
                 },
                 new Product
                 {
@@ -71,7 +76,6 @@ namespace be.Data
                     IsAvailable = true,
                     CreatedAt = DateTime.UtcNow,
                     Description = "Latest smartphone model",
-                    ImageUrl = "https://placehold.co/400x400",
                     Sku = "SMT456",
                     Brand = "BrandB",
                     UpdatedAt = DateTime.UtcNow
@@ -85,10 +89,144 @@ namespace be.Data
                     IsAvailable = true,
                     CreatedAt = DateTime.UtcNow,
                     Description = "Bestselling novel book",
-                    ImageUrl = "https://placehold.co/400x400",
                     Sku = "NBK789",
                     Brand = "AuthorName",
                     UpdatedAt = DateTime.UtcNow
+                }
+            );
+
+            modelBuilder.Entity<Rating>().HasData(
+                new Rating
+                {
+                    Id = "101",
+                    UserId = "U1",
+                    ProductId = "1", // Reference Laptop
+                    RatingValue = 5,
+                    Review = "Excellent performance!",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                },
+                new Rating
+                {
+                    Id = "102",
+                    UserId = "U2",
+                    ProductId = "1", // Reference Laptop
+                    RatingValue = 4,
+                    Review = "Good value for money.",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                },
+                new Rating
+                {
+                    Id = "103",
+                    UserId = "U3",
+                    ProductId = "2", // Reference Smartphone
+                    RatingValue = 5,
+                    Review = "Amazing features!",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                },
+                new Rating
+                {
+                    Id = "104",
+                    UserId = "U4",
+                    ProductId = "3", // Reference Novel Book
+                    RatingValue = 4,
+                    Review = "Engaging and well-written.",
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = DateTime.UtcNow
+                }
+            );
+            // Seed ProductImages
+            modelBuilder.Entity<ProductImage>().HasData(
+                // Images for Laptop
+                new ProductImage
+                {
+                    Id = "101",
+                    ProductId = "1",
+                    ImageUrl = "https://placehold.co/400x400",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "102",
+                    ProductId = "1",
+                    ImageUrl = "https://placehold.co/400x400/gray",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "103",
+                    ProductId = "1",
+                    ImageUrl = "https://placehold.co/400x400/black",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "104",
+                    ProductId = "1",
+                    ImageUrl = "https://placehold.co/400x400/blue",
+                    CreatedAt = DateTime.UtcNow
+                },
+
+                // Images for Smartphone
+                new ProductImage
+                {
+                    Id = "201",
+                    ProductId = "2",
+                    ImageUrl = "https://placehold.co/400x400",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "202",
+                    ProductId = "2",
+                    ImageUrl = "https://placehold.co/400x400/gray",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "203",
+                    ProductId = "2",
+                    ImageUrl = "https://placehold.co/400x400/black",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "204",
+                    ProductId = "2",
+                    ImageUrl = "https://placehold.co/400x400/blue",
+                    CreatedAt = DateTime.UtcNow
+                },
+
+                // Images for Novel Book
+                new ProductImage
+                {
+                    Id = "301",
+                    ProductId = "3",
+                    ImageUrl = "https://placehold.co/400x400",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "302",
+                    ProductId = "3",
+                    ImageUrl = "https://placehold.co/400x400/gray",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "303",
+                    ProductId = "3",
+                    ImageUrl = "https://placehold.co/400x400/black",
+                    CreatedAt = DateTime.UtcNow
+                },
+                new ProductImage
+                {
+                    Id = "304",
+                    ProductId = "3",
+                    ImageUrl = "https://placehold.co/400x400/blue",
+                    CreatedAt = DateTime.UtcNow
                 }
             );
         }

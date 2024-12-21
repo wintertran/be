@@ -12,5 +12,4 @@ public interface IProductRepository : IGenericRepository<Product>
        decimal? priceFrom,
        decimal? priceTo,
        string sort);
-    Task<Product?> GetByIdAsync(string id);
 }

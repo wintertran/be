@@ -11,12 +11,11 @@ namespace be.DTOs
 
         public string Name { get; set; } = string.Empty;
 
+        public List<ImageDto> Images { get; set; } = new List<ImageDto>(); // List of images
         public string? Description { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value")]
         public decimal? Price { get; set; }
-
-        public string? ImageUrl { get; set; }
 
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
@@ -48,8 +47,6 @@ namespace be.DTOs
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value")]
         public decimal? Price { get; set; }
 
-        public string? ImageUrl { get; set; }
-
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
 
@@ -70,8 +67,6 @@ namespace be.DTOs
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value")]
         public decimal? Price { get; set; }
 
-        public string? ImageUrl { get; set; }
-
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
 
@@ -80,5 +75,10 @@ namespace be.DTOs
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         public bool? IsAvailable { get; set; }
+    }
+
+    public class ImageDto
+    {
+        public string ImageUrl { get; set; }
     }
 }

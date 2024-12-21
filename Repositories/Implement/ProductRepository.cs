@@ -16,7 +16,8 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
     {
         var query = _context.Products
                             .Include(p => p.Category)
-                            .Include(p => p.Ratings); // JOIN với Ratings
+                            .Include(p => p.Ratings)
+                            .Include(p => p.ProductImages); // Include ProductImages
 
         var totalCount = await query.CountAsync();
 
@@ -30,7 +31,10 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
                 CategoryId = p.CategoryId,
                 Name = p.Name,
                 Price = p.Price,
-                ImageUrl = p.ImageUrl,
+                Images = p.ProductImages.Select(img => new ImageDto
+                {
+                    ImageUrl = img.ImageUrl,    
+                }).ToList(),
                 StockQuantity = p.StockQuantity,
                 IsAvailable = p.IsAvailable,
                 AverageRating = p.Ratings.Any() ? p.Ratings.Average(r => r.RatingValue) : 0,
@@ -40,18 +44,20 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
 
         return (products, totalCount);
     }
+
     public async Task<(List<ProductDto> Products, int TotalCount, int AvailableCount)> SearchProductsAsync(
-       string keyword,
-       List<string> categories,
-       List<string> brands,
-       decimal? priceFrom,
-       decimal? priceTo,
-       string sort)
+        string? keyword, // Make the keyword nullable
+        List<string>? categories, // Make categories nullable for flexibility
+        List<string>? brands, // Make brands nullable for flexibility
+        decimal? priceFrom,
+        decimal? priceTo,
+        string sort)
     {
         // Base query
         var query = _context.Products
                             .Include(p => p.Category)
                             .Include(p => p.Ratings)
+                            .Include(p => p.ProductImages)
                             .AsQueryable();
 
         // Filters
@@ -95,7 +101,10 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
                 CategoryId = p.CategoryId,
                 Name = p.Name,
                 Price = p.Price,
-                ImageUrl = p.ImageUrl,
+                Images = p.ProductImages.Select(img => new ImageDto
+                {
+                    ImageUrl = img.ImageUrl,
+                }).ToList(),
                 AverageRating = p.Ratings.Any() ? p.Ratings.Average(r => r.RatingValue) : 0,
                 Reviews = p.Ratings.Select(r => r.Review).ToList()
             })
@@ -103,11 +112,15 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
 
         return (products, totalCount, availableCount);
     }
+
     public async Task<Product?> GetByIdAsync(string id)
     {
         return await _context.Products
-                             .Include(p => p.Category) // Nếu cần thông tin category
-                             .Include(p => p.Ratings) // Nếu cần thông tin rating
+                             .Include(p => p.Category) // Include Category
+                             .Include(p => p.Ratings) // Include Ratings
+                             .Include(p => p.ProductImages) // Include ProductImages
                              .FirstOrDefaultAsync(p => p.Id == id);
     }
+
 }
+
