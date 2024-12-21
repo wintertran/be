@@ -32,6 +32,19 @@ namespace be.Data
 
             modelBuilder.Entity<User>()
                         .HasKey(u => u.Id); // Id làm khóa chính
+                                            // Cấu hình bảng liên kết CartProduct
+            modelBuilder.Entity<CartProduct>()
+                .HasKey(cp => new { cp.CartId, cp.ProductId });
+
+            modelBuilder.Entity<CartProduct>()
+                .HasOne(cp => cp.Cart)
+                .WithMany(c => c.CartProducts)
+                .HasForeignKey(cp => cp.CartId);
+
+            modelBuilder.Entity<CartProduct>()
+                .HasOne(cp => cp.Product)
+                .WithMany(p => p.CartProducts)
+                .HasForeignKey(cp => cp.ProductId);
 
             // Seed dữ liệu cho Product
             modelBuilder.Entity<Product>().HasData(

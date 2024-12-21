@@ -15,7 +15,6 @@ namespace be.DTOs
         public decimal? TotalAmount { get; set; }
         public bool? IsSavedForLater { get; set; }
     }
-
     public class CreateCartDto
     {
         public required string UserId { get; set; }

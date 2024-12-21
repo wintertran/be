@@ -3,15 +3,27 @@ using be.Models;
 using be.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
-namespace be.Repositories.Implement
+public class CartRepository : GenericRepository<Cart>, ICartRepository
 {
-    public class CartRepository : GenericRepository<Cart>, ICartRepository
-    {
-        public CartRepository(ApplicationDbContext context) : base(context) { }
+    public CartRepository(ApplicationDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<Cart>> GetCartItemsByUserIdAsync(string userId)
-        {
-            return await _context.Carts.Where(c => c.UserId == userId).ToListAsync();
-        }
+    public async Task<Cart?> GetCartByUserIdAsync(string userId)
+    {
+        return await _context.Carts
+            .Include(c => c.CartProducts)
+                .ThenInclude(cp => cp.Product)
+            .FirstOrDefaultAsync(c => c.UserId == userId);
+    }
+
+    public async Task AddAsync(Cart cart)
+    {
+        _context.Carts.Add(cart);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(Cart cart)
+    {
+        _context.Carts.Update(cart);
+        await _context.SaveChangesAsync();
     }
 }
