@@ -111,6 +111,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
                 Price = p.Price,
                 Description = p.Description,
                 StockQuantity = p.StockQuantity,
+                IsAvailable = p.IsAvailable,
                 Images = p.ProductImages.Select(img => new ImageDto
                 {
                     ImageUrl = img.ImageUrl,
