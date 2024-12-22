@@ -12,36 +12,55 @@ public class ProductController : ControllerBase
     }
 
     [HttpGet("getProductByPaging")]
-    public async Task<IActionResult> GetProductsWithPaging([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 20)
+    public async Task<IActionResult> GetProductsWithPaging([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 12)
     {
         var result = await _productRepository.GetProductsWithPagingAsync(pageNumber, pageSize);
         return Ok(new
         {
-            PageNumber = pageNumber,
-            PageSize = pageSize,
             TotalCount = result.TotalCount,
-            Products = result.Products
+            Products = result.Products,
+            Pagination = new
+            {
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalPages = (int)Math.Ceiling((double)result.TotalCount / pageSize)
+            }
         });
     }
     [HttpGet("search")]
     public async Task<IActionResult> SearchProducts(
-    [FromQuery] string? keyword, // Make nullable
+    [FromQuery] string? keyword,
     [FromQuery] List<string>? categories,
     [FromQuery] List<string>? brands,
     [FromQuery] decimal? priceFrom,
     [FromQuery] decimal? priceTo,
-    [FromQuery] string sort = "AtoZ")
+    [FromQuery] string sort = "AtoZ",
+    [FromQuery] int pageNumber = 1,
+    [FromQuery] int pageSize = 12)
     {
+        // Validate pageNumber and pageSize
+        if (pageNumber < 1 || pageSize < 1)
+        {
+            return BadRequest(new { Message = "Page number and page size must be greater than 0." });
+        }
+
         var result = await _productRepository.SearchProductsAsync(
-            keyword, categories, brands, priceFrom, priceTo, sort);
+            keyword, pageNumber, pageSize, categories, brands, priceFrom, priceTo, sort);
 
         return Ok(new
         {
             TotalCount = result.TotalCount,
             AvailableCount = result.AvailableCount,
-            Products = result.Products
+            Products = result.Products,
+            Pagination = new
+            {
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalPages = (int)Math.Ceiling((double)result.TotalCount / pageSize)
+            }
         });
     }
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetProductById(string id)

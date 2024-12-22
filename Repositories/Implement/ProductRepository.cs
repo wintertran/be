@@ -46,13 +46,19 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
     }
 
     public async Task<(List<ProductDto> Products, int TotalCount, int AvailableCount)> SearchProductsAsync(
-    string? keyword, // Make the keyword nullable
-    List<string>? categories, // Make categories nullable for flexibility
-    List<string>? brands, // Make brands nullable for flexibility
-    decimal? priceFrom,
-    decimal? priceTo,
-    string sort)
+        string? keyword,
+        int pageNumber,
+        int pageSize,
+        List<string>? categories,
+        List<string>? brands,
+        decimal? priceFrom,
+        decimal? priceTo,
+        string sort)
     {
+        // Ensure pageNumber and pageSize are valid
+        pageNumber = pageNumber < 1 ? 1 : pageNumber;
+        pageSize = pageSize < 1 ? 12 : pageSize;
+
         // Base query
         var query = _context.Products
                             .Include(p => p.Category)
@@ -91,10 +97,12 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
         var totalCount = await query.CountAsync();
 
         // Available product count
-        var availableCount = await query.CountAsync(p => p.IsAvailable == true);
+        var availableCount = await query.CountAsync(p => p.IsAvailable??true);
 
-        // Select and map to DTO
+        // Apply pagination
         var products = await query
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
             .Select(p => new ProductDto
             {
                 Id = p.Id,
@@ -114,6 +122,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
 
         return (products, totalCount, availableCount);
     }
+
 
 
     public async Task<Product?> GetByIdAsync(string id)
