@@ -24,7 +24,11 @@ namespace be.Controllers
             _tmnCode = configuration["Vnpay:TmnCode"];
             _hashSecret = configuration["Vnpay:HashSecret"];
             _baseUrl = configuration["Vnpay:BaseUrl"];
-            _callbackUrl = configuration["Vnpay:CallbackUrl"];
+            _callbackUrl = configuration["Vnpay:ReturnUrl"];
+            Console.WriteLine($"TmnCode: {_tmnCode}");
+            Console.WriteLine($"HashSecret: {_hashSecret}");
+            Console.WriteLine($"BaseUrl: {_baseUrl}");
+            Console.WriteLine($"CallbackUrl: {_callbackUrl}");
 
             _vnpay.Initialize(_tmnCode, _hashSecret, _baseUrl, _callbackUrl);
         }
