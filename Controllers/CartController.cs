@@ -108,28 +108,45 @@ namespace be.Controllers
             // Kiểm tra sản phẩm trong giỏ hàng
             var cartProduct = cart.CartProducts.FirstOrDefault(cp => cp.ProductId == request.ProductId);
 
-            if (cartProduct == null)
+            if (request.ActionType == "increase")
             {
-                // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
-                cartProduct = new CartProduct
+                if (cartProduct == null)
                 {
-                    CartId = cart.Id,
-                    ProductId = product.Id,
-                    Quantity = request.QuantityChange > 0 ? request.QuantityChange : 0 // Chỉ thêm nếu số lượng hợp lệ
-                };
+                    // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới
+                    cartProduct = new CartProduct
+                    {
+                        CartId = cart.Id,
+                        ProductId = product.Id,
+                        Quantity = request.QuantityChange > 0 ? request.QuantityChange : 0 // Chỉ thêm nếu số lượng hợp lệ
+                    };
 
-                cart.CartProducts.Add(cartProduct);
+                    cart.CartProducts.Add(cartProduct);
+                }
+                else
+                {
+                    // Nếu sản phẩm đã tồn tại, tăng số lượng
+                    cartProduct.Quantity += request.QuantityChange;
+                }
             }
-            else
+            else if (request.ActionType == "decrease")
             {
-                // Nếu sản phẩm đã tồn tại, cập nhật số lượng
-                cartProduct.Quantity += request.QuantityChange;
+                if (cartProduct == null)
+                {
+                    return BadRequest(new { Message = "Product not found in cart to decrease." });
+                }
+
+                // Giảm số lượng sản phẩm
+                cartProduct.Quantity -= request.QuantityChange;
 
                 // Xóa sản phẩm nếu số lượng <= 0
                 if (cartProduct.Quantity <= 0)
                 {
                     cart.CartProducts.Remove(cartProduct);
                 }
+            }
+            else
+            {
+                return BadRequest(new { Message = "Invalid action type. Use 'increase' or 'decrease'." });
             }
 
             // Tính toán lại tổng số lượng và tổng tiền
@@ -169,6 +186,7 @@ namespace be.Controllers
         public class UpdateCartDto
     {
         public required string ProductId { get; set; } // ID sản phẩm
+        public required string ActionType { get; set; }
         public int QuantityChange { get; set; }       // Số lượng thay đổi (+/-)
     }
 }
