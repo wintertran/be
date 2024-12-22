@@ -1,5 +1,6 @@
 ﻿using be.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace be.Data
 {
@@ -25,6 +26,21 @@ namespace be.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            //// Seed Provinces
+            //var provincesJson = File.ReadAllText("Data/Seed/Province.json");
+            //var provinces = JsonConvert.DeserializeObject<List<Province>>(provincesJson);
+            //modelBuilder.Entity<Province>().HasData(Provinces);
+
+            //// Seed Districts
+            //var districtsJson = File.ReadAllText("Data/Seed/District.json");
+            //var districts = JsonConvert.DeserializeObject<List<District>>(districtsJson);
+            //modelBuilder.Entity<District>().HasData(Districts);
+
+            //// Seed Wards
+            //var wardsJson = File.ReadAllText("Data/Seed/Ward.json");
+            //var wards = JsonConvert.DeserializeObject<List<Ward>>(wardsJson);
+            //modelBuilder.Entity<Ward>().HasData(Wards);
             modelBuilder.Entity<Account>()
                    .HasKey(a => a.Username); // Username làm khóa chính
 

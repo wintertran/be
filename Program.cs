@@ -98,6 +98,12 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     });
 }
 
+//using (var scope = app.Services.CreateScope())
+//{
+//    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//    AddressSeeder.SeedData(context);
+//}
+
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 app.UseAuthentication(); // Enable authentication
