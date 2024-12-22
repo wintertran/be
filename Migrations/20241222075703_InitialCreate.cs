@@ -324,9 +324,9 @@ namespace be.Migrations
                 columns: new[] { "Id", "BrandId", "CartQuantity", "CategoryId", "CreatedAt", "Description", "IsAvailable", "Name", "Price", "Sku", "StockQuantity", "UpdatedAt" },
                 values: new object[,]
                 {
-                    { "1", "1", null, "1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4753), "High-performance laptop", true, "Laptop", 7000000m, "LAP123", 100m, new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4756) },
-                    { "2", "1", null, "1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4757), "Latest smartphone model", true, "Smartphone", 2300000m, "SMT456", 200m, new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4758) },
-                    { "3", "2", null, "2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4760), "Bestselling novel book", true, "Novel Book", 100000m, "NBK789", 300m, new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4761) }
+                    { "1", "1", null, "1", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(3997), "High-performance laptop", true, "Laptop", 7000000m, "LAP123", 100m, new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4000) },
+                    { "2", "1", null, "1", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4002), "Latest smartphone model", true, "Smartphone", 2300000m, "SMT456", 200m, new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4003) },
+                    { "3", "2", null, "2", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4005), "Bestselling novel book", true, "Novel Book", 100000m, "NBK789", 300m, new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4006) }
                 });
 
             migrationBuilder.InsertData(
@@ -334,18 +334,18 @@ namespace be.Migrations
                 columns: new[] { "Id", "CreatedAt", "ImageUrl", "ProductId" },
                 values: new object[,]
                 {
-                    { "P1-Img1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4813), "https://placehold.co/400x400", "1" },
-                    { "P1-Img2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4814), "https://placehold.co/400x400/gray", "1" },
-                    { "P1-Img3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4815), "https://placehold.co/400x400/black", "1" },
-                    { "P1-Img4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4816), "https://placehold.co/400x400/blue", "1" },
-                    { "P2-Img1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4817), "https://placehold.co/400x400", "2" },
-                    { "P2-Img2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4818), "https://placehold.co/400x400/gray", "2" },
-                    { "P2-Img3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4819), "https://placehold.co/400x400/black", "2" },
-                    { "P2-Img4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4820), "https://placehold.co/400x400/blue", "2" },
-                    { "P3-Img1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4821), "https://placehold.co/400x400", "3" },
-                    { "P3-Img2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4822), "https://placehold.co/400x400/gray", "3" },
-                    { "P3-Img3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4823), "https://placehold.co/400x400/black", "3" },
-                    { "P3-Img4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4824), "https://placehold.co/400x400/blue", "3" }
+                    { "P1-Img1", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4064), "https://placehold.co/400x400", "1" },
+                    { "P1-Img2", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4065), "https://placehold.co/400x400/gray", "1" },
+                    { "P1-Img3", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4066), "https://placehold.co/400x400/black", "1" },
+                    { "P1-Img4", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4067), "https://placehold.co/400x400/blue", "1" },
+                    { "P2-Img1", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4068), "https://placehold.co/400x400", "2" },
+                    { "P2-Img2", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4069), "https://placehold.co/400x400/gray", "2" },
+                    { "P2-Img3", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4071), "https://placehold.co/400x400/black", "2" },
+                    { "P2-Img4", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4072), "https://placehold.co/400x400/blue", "2" },
+                    { "P3-Img1", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4073), "https://placehold.co/400x400", "3" },
+                    { "P3-Img2", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4074), "https://placehold.co/400x400/gray", "3" },
+                    { "P3-Img3", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4075), "https://placehold.co/400x400/black", "3" },
+                    { "P3-Img4", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4076), "https://placehold.co/400x400/blue", "3" }
                 });
 
             migrationBuilder.InsertData(
@@ -353,10 +353,10 @@ namespace be.Migrations
                 columns: new[] { "Id", "CreatedAt", "ProductId", "RatingValue", "Review", "UpdatedAt", "UserId" },
                 values: new object[,]
                 {
-                    { "R1", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4786), "1", 5, "Excellent performance!", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4787), "U1" },
-                    { "R2", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4788), "1", 4, "Good value for money.", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4789), "U2" },
-                    { "R3", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4790), "2", 5, "Amazing features!", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4791), "U3" },
-                    { "R4", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792), "3", 4, "Engaging and well-written.", new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792), "U4" }
+                    { "R1", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4031), "1", 5, "Excellent performance!", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4032), "U1" },
+                    { "R2", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4033), "1", 4, "Good value for money.", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4034), "U2" },
+                    { "R3", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4035), "2", 5, "Amazing features!", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4036), "U3" },
+                    { "R4", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4037), "3", 4, "Engaging and well-written.", new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4038), "U4" }
                 });
 
             migrationBuilder.CreateIndex(

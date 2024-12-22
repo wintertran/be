@@ -12,7 +12,7 @@ using be.Data;
 namespace be.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241221213503_InitialCreate")]
+    [Migration("20241222075703_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -375,42 +375,42 @@ namespace be.Migrations
                             Id = "1",
                             BrandId = "1",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4753),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(3997),
                             Description = "High-performance laptop",
                             IsAvailable = true,
                             Name = "Laptop",
                             Price = 7000000m,
                             Sku = "LAP123",
                             StockQuantity = 100m,
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4756)
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4000)
                         },
                         new
                         {
                             Id = "2",
                             BrandId = "1",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4757),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4002),
                             Description = "Latest smartphone model",
                             IsAvailable = true,
                             Name = "Smartphone",
                             Price = 2300000m,
                             Sku = "SMT456",
                             StockQuantity = 200m,
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4758)
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4003)
                         },
                         new
                         {
                             Id = "3",
                             BrandId = "2",
                             CategoryId = "2",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4760),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4005),
                             Description = "Bestselling novel book",
                             IsAvailable = true,
                             Name = "Novel Book",
                             Price = 100000m,
                             Sku = "NBK789",
                             StockQuantity = 300m,
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4761)
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4006)
                         });
                 });
 
@@ -441,84 +441,84 @@ namespace be.Migrations
                         new
                         {
                             Id = "P1-Img1",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4813),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4064),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img2",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4814),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4065),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img3",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4815),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4066),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img4",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4816),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4067),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P2-Img1",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4817),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4068),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img2",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4818),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4069),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img3",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4819),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4071),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img4",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4820),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4072),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P3-Img1",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4821),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4073),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P3-Img2",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4822),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4074),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P3-Img3",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4823),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4075),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P3-Img4",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4824),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4076),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "3"
                         });
@@ -560,41 +560,41 @@ namespace be.Migrations
                         new
                         {
                             Id = "R1",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4786),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4031),
                             ProductId = "1",
                             RatingValue = 5,
                             Review = "Excellent performance!",
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4787),
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4032),
                             UserId = "U1"
                         },
                         new
                         {
                             Id = "R2",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4788),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4033),
                             ProductId = "1",
                             RatingValue = 4,
                             Review = "Good value for money.",
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4789),
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4034),
                             UserId = "U2"
                         },
                         new
                         {
                             Id = "R3",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4790),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4035),
                             ProductId = "2",
                             RatingValue = 5,
                             Review = "Amazing features!",
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4791),
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4036),
                             UserId = "U3"
                         },
                         new
                         {
                             Id = "R4",
-                            CreatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792),
+                            CreatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4037),
                             ProductId = "3",
                             RatingValue = 4,
                             Review = "Engaging and well-written.",
-                            UpdatedAt = new DateTime(2024, 12, 21, 21, 35, 3, 337, DateTimeKind.Utc).AddTicks(4792),
+                            UpdatedAt = new DateTime(2024, 12, 22, 7, 57, 1, 445, DateTimeKind.Utc).AddTicks(4038),
                             UserId = "U4"
                         });
                 });

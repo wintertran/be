@@ -79,41 +79,45 @@ namespace be.Data
 
             // Seed
             modelBuilder.Entity<Category>().HasData(
-                new Category { Id = "1", Name = "Shop All", IsAvailable = true },
-                new Category { Id = "2", Name = "Computers", IsAvailable = true },
-                new Category { Id = "3", Name = "Keyboards", IsAvailable = true },
-                new Category { Id = "4", Name = "Mice & Joysticks", IsAvailable = true },
-                new Category { Id = "5", Name = "Tablets & Ipads", IsAvailable = true },
-                new Category { Id = "6", Name = "Cases", IsAvailable = true },
-                new Category { Id = "7", Name = "Covers", IsAvailable = true }
+                new Category { Id = "1", Name = "Computers", IsAvailable = true },
+                new Category { Id = "2", Name = "Keyboards", IsAvailable = true },
+                new Category { Id = "3", Name = "Mice & Joysticks", IsAvailable = true },
+                new Category { Id = "4", Name = "Tablets & Ipads", IsAvailable = true },
+                new Category { Id = "5", Name = "Cases", IsAvailable = true },
+                new Category { Id = "6", Name = "Covers", IsAvailable = true }
             );
             modelBuilder.Entity<Brand>().HasData(
-    new Brand
-    {
-        Id = "1",
-        Name = "Logitech",
-    },
-    new Brand
-    {
-        Id = "2",
-        Name = "Lenovo",
-    },
-    new Brand
-    {
-        Id = "3",
-        Name = "Microsoft",
-    },
-    new Brand
-    {
-        Id = "4",
-        Name = "Samsung",
-    },
-    new Brand
-    {
-        Id = "5",
-        Name = "Ugreen",
-    }
-);
+                new Brand
+                {
+                    Id = "1",
+                    Name = "Logitech",
+                },
+                new Brand
+                {
+                    Id = "2",
+                    Name = "Lenovo",
+                },
+                new Brand
+                {
+                    Id = "3",
+                    Name = "Microsoft",
+                },
+                new Brand
+                {
+                    Id = "4",
+                    Name = "Samsung",
+                },
+                new Brand
+                {
+                    Id = "5",
+                    Name = "Ugreen",
+                },
+                new Brand
+                {
+                    Id = "6",
+                    Name = "Other",
+                }
+            );
 
 
             // Seed Products
