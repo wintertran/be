@@ -9,7 +9,6 @@ public static class AddressSeeder
 {
     public static void SeedData(ApplicationDbContext context)
     {
-        // Cấu hình Contract Resolver để ánh xạ
         var settings = new JsonSerializerSettings
         {
             ContractResolver = new DefaultContractResolver
@@ -18,34 +17,56 @@ public static class AddressSeeder
             }
         };
 
+        // Xóa dữ liệu cũ trước khi seed mới
+        context.Wards.RemoveRange(context.Wards);
+        context.Districts.RemoveRange(context.Districts);
+        context.Provinces.RemoveRange(context.Provinces);
+        context.SaveChanges();
+
         // Seed Provinces
-        if (context.Provinces.Any())
+        if (!context.Provinces.Any())
         {
-            context.Provinces.RemoveRange(context.Provinces);
+            var provincesJson = File.ReadAllText("Data/Seed/Province.json");
+            var provinces = JsonConvert.DeserializeObject<List<Province>>(provincesJson, settings);
+            context.Provinces.AddRange(provinces);
+
         }
-        var provincesJson = File.ReadAllText("Data/Seed/Province.json");
-        var provinces = JsonConvert.DeserializeObject<List<Province>>(provincesJson, settings);
-        context.Provinces.AddRange(provinces);
 
         // Seed Districts
-        if (context.Districts.Any())
+        if (!context.Districts.Any())
         {
-            context.Districts.RemoveRange(context.Districts);
+            var districtsJson = File.ReadAllText("Data/Seed/District.json");
+            var districts = JsonConvert.DeserializeObject<List<District>>(districtsJson, settings);
+
+            foreach (var district in districts)
+            {
+                var province = context.Provinces.FirstOrDefault(p => p.Id == district.ProvinceId);
+                if (province != null)
+                {
+                    district.ProvinceId = province.Id;
+                }
+            }
+
+            context.Districts.AddRange(districts);
         }
-        var districtsJson = File.ReadAllText("Data/Seed/District.json");
-        var districts = JsonConvert.DeserializeObject<List<District>>(districtsJson, settings);
-        context.Districts.AddRange(districts);
 
         // Seed Wards
-        if (context.Wards.Any())
+        if (!context.Wards.Any())
         {
-            context.Wards.RemoveRange(context.Wards);
-        }
-        var wardsJson = File.ReadAllText("Data/Seed/Ward.json");
-        var wards = JsonConvert.DeserializeObject<List<Ward>>(wardsJson, settings);
-        context.Wards.AddRange(wards);
+            var wardsJson = File.ReadAllText("Data/Seed/Ward.json");
+            var wards = JsonConvert.DeserializeObject<List<Ward>>(wardsJson, settings);
 
-        // Save all changes
+            foreach (var ward in wards)
+            {
+                var district = context.Districts.FirstOrDefault(d => d.Id == ward.DistrictId);
+                if (district != null)
+                {
+                    ward.DistrictId = district.Id;
+                }
+            }
+
+            context.Wards.AddRange(wards);
+        }
         context.SaveChanges();
     }
 }
