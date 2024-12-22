@@ -72,6 +72,48 @@ namespace be.Controllers
 
             return Ok(new { Message = "Order created successfully.", OrderId = order.Id });
         }
+        [HttpGet("get-all")]
+        [Authorize]
+        public async Task<IActionResult> GetAllOrders()
+        {
+            // Lấy UserId từ token
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new { Message = "Invalid or missing token." });
+            }
+
+            // Lấy tất cả các đơn hàng của người dùng
+            var orders = await _orderRepository.GetOrdersByUserIdAsync(userId);
+
+            if (orders == null || !orders.Any())
+            {
+                return NotFound(new { Message = "No orders found for the user." });
+            }
+
+            // Chuẩn bị dữ liệu trả về
+            var orderList = orders.Select(order => new
+            {
+                order.Id,
+                order.Status,
+                order.PaymentMethod,
+                order.OrderDate,
+                order.ShippingDate,
+                TotalAmount = order.TotalAmount,
+                Address = new
+                {
+                    order.Address?.StreetAddress,
+                    order.Address?.Province,
+                    order.Address?.District,
+                    order.Address?.Ward
+                },
+                CartDetails = string.IsNullOrEmpty(order.CartSnapshot)
+                    ? null
+                    : JsonSerializer.Deserialize<object>(order.CartSnapshot) // Deserialize CartSnapshot nếu cần
+            }).ToList();
+
+            return Ok(orderList);
+        }
 
 
         [HttpGet("get/{orderId}")]

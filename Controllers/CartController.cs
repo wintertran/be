@@ -124,7 +124,6 @@ namespace be.Controllers
                 }
                 else
                 {
-                    // Nếu sản phẩm đã tồn tại, tăng số lượng
                     cartProduct.Quantity += request.QuantityChange;
                 }
             }

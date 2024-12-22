@@ -24,5 +24,12 @@ namespace be.Repositories.Implement
                                  .ThenInclude(p => p.ProductImages)
                                  .FirstOrDefaultAsync(o => o.Id == orderId);
         }
+        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId)
+        {
+            return await _context.Orders
+                .Include(o => o.Address) // Nếu có Address liên kết
+                .Where(o => o.UserId == userId)
+                .ToListAsync();
+        }
     }
 }
