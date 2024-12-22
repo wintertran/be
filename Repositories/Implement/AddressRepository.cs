@@ -18,5 +18,29 @@ namespace be.Repositories.Implement
         {
             return await _context.Addresses.Where(a => a.UserId == userId).ToListAsync();
         }
+        public async Task<Address?> GetAddressWithDetailsAsync(string addressId)
+        {
+            return await _context.Addresses
+                .Include(a => a.Province)
+                .Include(a => a.District)
+                .Include(a => a.Ward)
+                .FirstOrDefaultAsync(a => a.Id == addressId);
+        }
+        public async Task ResetDefaultAddressAsync(string userId)
+        {
+            var defaultAddresses = await _context.Addresses
+                .Where(a => a.UserId == userId && a.IsDefault == true)
+                .ToListAsync();
+
+            foreach (var address in defaultAddresses)
+            {
+                address.IsDefault = false;
+            }
+
+            if (defaultAddresses.Any())
+            {
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

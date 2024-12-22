@@ -12,8 +12,8 @@ using be.Data;
 namespace be.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241222132928_updateseed")]
-    partial class updateseed
+    [Migration("20241222164825_addresses332")]
+    partial class addresses332
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,13 +57,13 @@ namespace be.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("text");
 
-                    b.Property<string>("District")
+                    b.Property<string>("DistrictId")
                         .HasColumnType("text");
 
                     b.Property<bool?>("IsDefault")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("Province")
+                    b.Property<string>("ProvinceId")
                         .HasColumnType("text");
 
                     b.Property<string>("StreetAddress")
@@ -73,12 +73,18 @@ namespace be.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Ward")
+                    b.Property<string>("WardId")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DistrictId");
+
+                    b.HasIndex("ProvinceId");
+
                     b.HasIndex("UserId");
+
+                    b.HasIndex("WardId");
 
                     b.ToTable("Addresses");
                 });
@@ -251,8 +257,56 @@ namespace be.Migrations
                         {
                             Id = "7",
                             IsAvailable = true,
+                            Name = "Hardware"
+                        },
+                        new
+                        {
+                            Id = "8",
+                            IsAvailable = true,
+                            Name = "Speaker"
+                        },
+                        new
+                        {
+                            Id = "9",
+                            IsAvailable = true,
+                            Name = "Monitor"
+                        },
+                        new
+                        {
+                            Id = "10",
+                            IsAvailable = true,
                             Name = "Other"
                         });
+                });
+
+            modelBuilder.Entity("be.Models.District", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CodeName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullNameEn")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameEn")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProvinceId")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProvinceId");
+
+                    b.ToTable("Districts");
                 });
 
             modelBuilder.Entity("be.Models.Invoice", b =>
@@ -389,196 +443,196 @@ namespace be.Migrations
                             Id = "1",
                             BrandId = "1",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7369),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8534),
                             Description = "High-performance laptop",
                             IsAvailable = true,
                             Name = "Laptop",
                             Price = 7000000m,
                             Sku = "LAP123",
                             StockQuantity = 100m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7371)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8537)
                         },
                         new
                         {
                             Id = "2",
                             BrandId = "1",
                             CategoryId = "1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7373),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8539),
                             Description = "Latest smartphone model",
                             IsAvailable = true,
                             Name = "Smartphone",
                             Price = 2300000m,
                             Sku = "SMT456",
                             StockQuantity = 200m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7374)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8540)
                         },
                         new
                         {
                             Id = "3",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7378),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8542),
                             Description = "Wireless POP Mouse",
                             IsAvailable = true,
                             Name = "POP Mouse",
                             Price = 849000m,
                             Sku = "POP123",
                             StockQuantity = 50m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7380)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8543)
                         },
                         new
                         {
                             Id = "4",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7381),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8545),
                             Description = "Ergonomic Wireless Trackball",
                             IsAvailable = true,
                             Name = "ERGO M575S",
                             Price = 1800000m,
                             Sku = "ERGOM575S",
                             StockQuantity = 40m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7382)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8546)
                         },
                         new
                         {
                             Id = "5",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7384),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8548),
                             Description = "Precision trackball mouse",
                             IsAvailable = true,
                             Name = "MX Ergo S",
                             Price = 1329000m,
                             Sku = "MXERGO",
                             StockQuantity = 35m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7385)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8549)
                         },
                         new
                         {
                             Id = "6",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7387),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8551),
                             Description = "Compact wireless mouse for Mac",
                             IsAvailable = true,
                             Name = "MX Anywhere 3S for Mac",
                             Price = 1500000m,
                             Sku = "MXA3SMAC",
                             StockQuantity = 60m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7388)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8552)
                         },
                         new
                         {
                             Id = "7",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7389),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8554),
                             Description = "High-performance wireless mouse",
                             IsAvailable = true,
                             Name = "MX Master 3S",
                             Price = 3299000m,
                             Sku = "MXMASTER3S",
                             StockQuantity = 45m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7390)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8555)
                         },
                         new
                         {
                             Id = "8",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7392),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8594),
                             Description = "High-precision mouse for Mac",
                             IsAvailable = true,
                             Name = "MX Master 3S For Mac",
                             Price = 1200000m,
                             Sku = "MXM3SMAC",
                             StockQuantity = 50m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7393)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8596)
                         },
                         new
                         {
                             Id = "9",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7395),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8597),
                             Description = "Portable wireless mouse",
                             IsAvailable = true,
                             Name = "MX Anywhere 3S",
                             Price = 3299000m,
                             Sku = "MXA3S",
                             StockQuantity = 70m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7396)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8599)
                         },
                         new
                         {
                             Id = "10",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7397),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8601),
                             Description = "Ergonomic vertical mouse",
                             IsAvailable = true,
                             Name = "LIFT",
                             Price = 2500000m,
                             Sku = "LIFT123",
                             StockQuantity = 80m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7398)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8602)
                         },
                         new
                         {
                             Id = "11",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7400),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8603),
                             Description = "Sleek and silent mouse",
                             IsAvailable = true,
                             Name = "Pebble Mouse 2 M350s",
                             Price = 2139990m,
                             Sku = "PEBBLEM2",
                             StockQuantity = 75m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7401)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8604)
                         },
                         new
                         {
                             Id = "12",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7403),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8606),
                             Description = "Wireless mouse for everyday use",
                             IsAvailable = true,
                             Name = "Signature M650",
                             Price = 1700000m,
                             Sku = "SIGM650",
                             StockQuantity = 65m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7404)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8607)
                         },
                         new
                         {
                             Id = "13",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7406),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8609),
                             Description = "Multi-device wireless mouse",
                             IsAvailable = true,
                             Name = "M720 Triathlon",
                             Price = 1599000m,
                             Sku = "M720TRI",
                             StockQuantity = 85m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7407)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8610)
                         },
                         new
                         {
                             Id = "14",
                             BrandId = "1",
                             CategoryId = "3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7408),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8612),
                             Description = "Silent wireless mouse",
                             IsAvailable = true,
                             Name = "M331 SILENT PLUS",
                             Price = 2200000m,
                             Sku = "M331SP",
                             StockQuantity = 90m,
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7409)
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8613)
                         });
                 });
 
@@ -609,143 +663,174 @@ namespace be.Migrations
                         new
                         {
                             Id = "P1-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7495),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8696),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img2",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7496),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8698),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7497),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8699),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P1-Img4",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7498),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8700),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "1"
                         },
                         new
                         {
                             Id = "P2-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7499),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8701),
                             ImageUrl = "https://placehold.co/400x400",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img2",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7500),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8702),
                             ImageUrl = "https://placehold.co/400x400/gray",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7502),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8703),
                             ImageUrl = "https://placehold.co/400x400/black",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P2-Img4",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7503),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8704),
                             ImageUrl = "https://placehold.co/400x400/blue",
                             ProductId = "2"
                         },
                         new
                         {
                             Id = "P3-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7504),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8705),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/pop-mouse-gallery-off-white-1.png?v=1",
                             ProductId = "3"
                         },
                         new
                         {
                             Id = "P4-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7505),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8706),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/pop-mouse-gallery-rose-1.png?v=1",
                             ProductId = "4"
                         },
                         new
                         {
                             Id = "P5-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7562),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8707),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/pop-mouse-gallery-graphite-1.png?v=1",
                             ProductId = "5"
                         },
                         new
                         {
                             Id = "P6-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7564),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8708),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/wave-2/pop-mouse-gallery-mist-1.png?v=1",
                             ProductId = "6"
                         },
                         new
                         {
                             Id = "P7-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7565),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8709),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/pop-mouse-gallery-blast-1.png?v=1",
                             ProductId = "7"
                         },
                         new
                         {
                             Id = "P8-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7566),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8710),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/pop-mouse-gallery-heartbreak-1.png?v=1",
                             ProductId = "8"
                         },
                         new
                         {
                             Id = "P9-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7567),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8711),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/2024-update/pop-mouse-gallery-lilac-1.png?v=1",
                             ProductId = "9"
                         },
                         new
                         {
                             Id = "P10-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7568),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8712),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/wave-2/pop-mouse-gallery-cosmo-1.png?v=1",
                             ProductId = "10"
                         },
                         new
                         {
                             Id = "P11-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7569),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8713),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/pop-wireless-mouse/gallery/pop-mouse-gallery-daydream-1.png?v=1",
                             ProductId = "11"
                         },
                         new
                         {
                             Id = "P12-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7570),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8714),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/m575s-ergo-wireless-trackball/gallery/ergo-m575s-m575sp-graphite-blue-ball-gallery-1.png?v=1",
                             ProductId = "12"
                         },
                         new
                         {
                             Id = "P13-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7571),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8715),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-ergo-s-wireless-trackball-mouse/gallery/mx-ergo-s-graphite-gallery-1.png?v=1",
                             ProductId = "13"
                         },
                         new
                         {
                             Id = "P14-Img1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7572),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8716),
                             ImageUrl = "https://resource.logitech.com/w_386,ar_1.0,c_limit,f_auto,q_auto,dpr_2.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-anywhere-3s-for-mac/buy/gallery/mx-anywhere-3s-mac-space-grey-gallery-01.png?v=1",
                             ProductId = "14"
                         });
+                });
+
+            modelBuilder.Entity("be.Models.Province", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<int>("AdministrativeRegionId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("AdministrativeUnitsId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("CodeName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullNameEn")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameEn")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provinces");
                 });
 
             modelBuilder.Entity("be.Models.Rating", b =>
@@ -784,141 +869,141 @@ namespace be.Migrations
                         new
                         {
                             Id = "R1",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7441),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8644),
                             ProductId = "1",
                             RatingValue = 5,
                             Review = "Excellent performance!",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7442),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8644),
                             UserId = "U1"
                         },
                         new
                         {
                             Id = "R2",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7443),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8646),
                             ProductId = "1",
                             RatingValue = 4,
                             Review = "Good value for money.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7444),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8646),
                             UserId = "U2"
                         },
                         new
                         {
                             Id = "R3",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7445),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8648),
                             ProductId = "2",
                             RatingValue = 5,
                             Review = "Amazing features!",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7446),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8648),
                             UserId = "U3"
                         },
                         new
                         {
                             Id = "R4",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7447),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8650),
                             ProductId = "3",
                             RatingValue = 5,
                             Review = "Stylish and compact!",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7447),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8650),
                             UserId = "U4"
                         },
                         new
                         {
                             Id = "R5",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7448),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8652),
                             ProductId = "4",
                             RatingValue = 4,
                             Review = "Great ergonomic design.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7449),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8652),
                             UserId = "U5"
                         },
                         new
                         {
                             Id = "R6",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7450),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8653),
                             ProductId = "5",
                             RatingValue = 4,
                             Review = "Smooth and precise!",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7451),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8654),
                             UserId = "U6"
                         },
                         new
                         {
                             Id = "R7",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7452),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8655),
                             ProductId = "7",
                             RatingValue = 4,
                             Review = "Amazing precision and feel.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7452),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8656),
                             UserId = "U7"
                         },
                         new
                         {
                             Id = "R8",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7454),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8657),
                             ProductId = "8",
                             RatingValue = 5,
                             Review = "Great for professional use.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7454),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8658),
                             UserId = "U8"
                         },
                         new
                         {
                             Id = "R9",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7455),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8659),
                             ProductId = "9",
                             RatingValue = 4,
                             Review = "Portable and reliable.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7456),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8660),
                             UserId = "U9"
                         },
                         new
                         {
                             Id = "R10",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7457),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8661),
                             ProductId = "10",
                             RatingValue = 5,
                             Review = "Ergonomic design, very comfortable.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7457),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8661),
                             UserId = "U10"
                         },
                         new
                         {
                             Id = "R11",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7459),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8663),
                             ProductId = "11",
                             RatingValue = 5,
                             Review = "Silent and sleek mouse.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7459),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8663),
                             UserId = "U11"
                         },
                         new
                         {
                             Id = "R12",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7460),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8665),
                             ProductId = "12",
                             RatingValue = 5,
                             Review = "Perfect for work and everyday use.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7461),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8665),
                             UserId = "U12"
                         },
                         new
                         {
                             Id = "R13",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7462),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8666),
                             ProductId = "13",
                             RatingValue = 4,
                             Review = "Good value for multi-device users.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7463),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8667),
                             UserId = "U13"
                         },
                         new
                         {
                             Id = "R14",
-                            CreatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7464),
+                            CreatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8668),
                             ProductId = "14",
                             RatingValue = 4,
                             Review = "Silent clicks make it great for quiet spaces.",
-                            UpdatedAt = new DateTime(2024, 12, 22, 13, 29, 28, 370, DateTimeKind.Utc).AddTicks(7464),
+                            UpdatedAt = new DateTime(2024, 12, 22, 16, 48, 24, 565, DateTimeKind.Utc).AddTicks(8669),
                             UserId = "U14"
                         });
                 });
@@ -970,6 +1055,36 @@ namespace be.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("be.Models.Ward", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CodeName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("DistrictId")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullNameEn")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NameEn")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DistrictId");
+
+                    b.ToTable("Wards");
+                });
+
             modelBuilder.Entity("be.Models.Account", b =>
                 {
                     b.HasOne("be.Models.User", "User")
@@ -983,13 +1098,31 @@ namespace be.Migrations
 
             modelBuilder.Entity("be.Models.Address", b =>
                 {
+                    b.HasOne("be.Models.District", "District")
+                        .WithMany()
+                        .HasForeignKey("DistrictId");
+
+                    b.HasOne("be.Models.Province", "Province")
+                        .WithMany()
+                        .HasForeignKey("ProvinceId");
+
                     b.HasOne("be.Models.User", "User")
                         .WithMany("Addresses")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("be.Models.Ward", "Ward")
+                        .WithMany()
+                        .HasForeignKey("WardId");
+
+                    b.Navigation("District");
+
+                    b.Navigation("Province");
+
                     b.Navigation("User");
+
+                    b.Navigation("Ward");
                 });
 
             modelBuilder.Entity("be.Models.Cart", b =>
@@ -1020,6 +1153,15 @@ namespace be.Migrations
                     b.Navigation("Cart");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("be.Models.District", b =>
+                {
+                    b.HasOne("be.Models.Province", "Province")
+                        .WithMany("Districts")
+                        .HasForeignKey("ProvinceId");
+
+                    b.Navigation("Province");
                 });
 
             modelBuilder.Entity("be.Models.Order", b =>
@@ -1087,6 +1229,15 @@ namespace be.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("be.Models.Ward", b =>
+                {
+                    b.HasOne("be.Models.District", "District")
+                        .WithMany("Wards")
+                        .HasForeignKey("DistrictId");
+
+                    b.Navigation("District");
+                });
+
             modelBuilder.Entity("be.Models.Brand", b =>
                 {
                     b.Navigation("Products");
@@ -1102,6 +1253,11 @@ namespace be.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("be.Models.District", b =>
+                {
+                    b.Navigation("Wards");
+                });
+
             modelBuilder.Entity("be.Models.Product", b =>
                 {
                     b.Navigation("CartProducts");
@@ -1109,6 +1265,11 @@ namespace be.Migrations
                     b.Navigation("ProductImages");
 
                     b.Navigation("Ratings");
+                });
+
+            modelBuilder.Entity("be.Models.Province", b =>
+                {
+                    b.Navigation("Districts");
                 });
 
             modelBuilder.Entity("be.Models.User", b =>
