@@ -20,7 +20,6 @@ namespace be.Controllers
 
         public VnPayPaymentController(IVnpay vnpay, IConfiguration configuration)
         {
-            _vnpay = vnpay;
 
             _tmnCode = configuration["Vnpay:TmnCode"];
             _hashSecret = configuration["Vnpay:HashSecret"];
@@ -30,7 +29,7 @@ namespace be.Controllers
             Console.WriteLine($"HashSecret: {_hashSecret}");
             Console.WriteLine($"BaseUrl: {_baseUrl}");
             Console.WriteLine($"CallbackUrl: {_callbackUrl}");
-
+            _vnpay = vnpay;
             _vnpay.Initialize(_tmnCode, _hashSecret, _baseUrl, _callbackUrl);
         }
 
@@ -47,7 +46,7 @@ namespace be.Controllers
                     Money = moneyToPay,
                     Description = description,
                     IpAddress = ipAddress,
-                    BankCode = BankCode.ANY, // Tùy chọn. Mặc định là tất cả phương thức giao dịch
+                    //BankCode = BankCode.ANY, // Tùy chọn. Mặc định là tất cả phương thức giao dịch
                     CreatedDate = DateTime.Now, // Tùy chọn. Mặc định là thời điểm hiện tại
                     Currency = Currency.VND, // Tùy chọn. Mặc định là VND (Việt Nam đồng)
                     Language = DisplayLanguage.Vietnamese // Tùy chọn. Mặc định là tiếng Việt

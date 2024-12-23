@@ -21,6 +21,7 @@ public class BrandRepository : GenericRepository<Brand>, IBrandRepository
             {
                 Id = b.Id,
                 Name = b.Name,
+                ImgUrl = b.ImgUrl,
                 ProductCount = b.Products.Count()
             })
             .ToListAsync();
