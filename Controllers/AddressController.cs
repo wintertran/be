@@ -19,6 +19,7 @@ namespace be.Controllers
         {
             _addressRepository = addressRepository;
             _logger = logger;
+            _locationRepository = locationRepository;
         }
 
         /// <summary>
