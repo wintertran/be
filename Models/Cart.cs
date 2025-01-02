@@ -13,7 +13,7 @@ namespace be.Models
         public int? Quantity { get; set; }
         public DateTime? AddedAt { get; set; }
         public string? Status { get; set; } // Enum for cart status
-        public double? TotalAmount { get; set; }
+        public double TotalAmount { get; set; }
         public bool? IsSavedForLater { get; set; }
         public virtual ICollection<CartProduct> CartProducts { get; set; } = new List<CartProduct>();
     }

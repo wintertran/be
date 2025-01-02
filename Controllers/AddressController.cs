@@ -131,9 +131,6 @@ namespace be.Controllers
             });
         }
 
-        /// <summary>
-        /// Lấy tất cả địa chỉ của người dùng
-        /// </summary>
         [HttpGet("get-all")]
         [Authorize]
         public async Task<IActionResult> GetAllAddresses()
@@ -156,21 +153,21 @@ namespace be.Controllers
                 address.StreetAddress,
                 Province = new
                 {
-                    address.Province?.Id,
-                    address.Province?.Name,
-                    address.Province?.NameEn
+                    Id = address.Province?.Id,
+                    Name = address.Province?.Name,
+                    NameEn = address.Province?.NameEn
                 },
                 District = new
                 {
-                    address.District?.Id,
-                    address.District?.Name,
-                    address.District?.NameEn
+                    Id = address.District?.Id,
+                    Name = address.District?.Name,
+                    NameEn = address.District?.NameEn
                 },
                 Ward = new
                 {
-                    address.Ward?.Id,
-                    address.Ward?.Name,
-                    address.Ward?.NameEn
+                    Id = address.Ward?.Id,
+                    Name = address.Ward?.Name,
+                    NameEn = address.Ward?.NameEn
                 },
                 address.IsDefault
             }));

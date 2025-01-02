@@ -9,7 +9,7 @@ namespace be.DTOs
         public required string Id { get; set; }
         public required string ShippingAddressId { get; set; }
         public required string CartId { get; set; }
-        public double? TotalAmount { get; set; }
+        public double TotalAmount { get; set; }
         public string? Status { get; set; }
         public string? PaymentMethod { get; set; }
         public DateTime? OrderDate { get; set; }

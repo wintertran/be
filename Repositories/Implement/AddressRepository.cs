@@ -16,7 +16,12 @@ namespace be.Repositories.Implement
 
         public async Task<List<Address>> GetAddressesByUserIdAsync(string userId)
         {
-            return await _context.Addresses.Where(a => a.UserId == userId).ToListAsync();
+            return await _context.Addresses
+                .Include(a => a.Province) // Include Province
+                .Include(a => a.District) // Include District
+                .Include(a => a.Ward)     // Include Ward
+                .Where(a => a.UserId == userId)
+                .ToListAsync();
         }
         public async Task<Address?> GetAddressWithDetailsAsync(string addressId)
         {
@@ -26,6 +31,7 @@ namespace be.Repositories.Implement
                 .Include(a => a.Ward)
                 .FirstOrDefaultAsync(a => a.Id == addressId);
         }
+
         public async Task ResetDefaultAddressAsync(string userId)
         {
             var defaultAddresses = await _context.Addresses

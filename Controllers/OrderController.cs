@@ -60,7 +60,7 @@ namespace be.Controllers
                 ShippingAddressId = request.ShippingAddressId,
                 TotalAmount = cart.TotalAmount,
                 CartSnapshot = cartSnapshot,
-                Status = "Pending",
+                Status = "PENDING",
                 PaymentMethod = request.PaymentMethod,
                 OrderDate = DateTime.UtcNow
             };
@@ -72,6 +72,7 @@ namespace be.Controllers
 
             return Ok(new { Message = "Order created successfully.", OrderId = order.Id });
         }
+
         [HttpGet("get-all")]
         [Authorize]
         public async Task<IActionResult> GetAllOrders()
@@ -114,7 +115,6 @@ namespace be.Controllers
 
             return Ok(orderList);
         }
-
 
         [HttpGet("get/{orderId}")]
         [Authorize]
@@ -176,6 +176,33 @@ namespace be.Controllers
 
             return Ok(new { Message = "Order deleted successfully." });
         }
+
+        [HttpPut("update-status/{orderId}")]
+        [Authorize]
+        public async Task<IActionResult> UpdateOrderStatus(string orderId, [FromBody] UpdateOrderStatusDto request)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new { Message = "Invalid or missing token." });
+            }
+
+            var order = await _orderRepository.GetByIdAsync(orderId);
+            if (order == null || order.UserId != userId)
+            {
+                return NotFound(new { Message = "Order not found or unauthorized." });
+            }
+
+            // Update order status
+            order.Status = string.IsNullOrEmpty(request.Status) ? "IN_PROGRESS" : request.Status;
+            await _orderRepository.UpdateAsync(order);
+
+            return Ok(new { Message = "Order status updated successfully.", OrderId = order.Id, NewStatus = order.Status });
+        }
     }
 
+    public class UpdateOrderStatusDto
+    {
+        public string? Status { get; set; }
+    }
 }

@@ -15,7 +15,7 @@ namespace be.Models
         public virtual Address? Address { get; set; } // Navigation Property
         public string? CartSnapshot { get; set; }
         public virtual Cart? Cart { get; set; } // Navigation Property
-        public double? TotalAmount { get; set; }
+        public double TotalAmount { get; set; }
         public string? Status { get; set; } // Enum for order status could be considered
         public string? PaymentMethod { get; set; } // Enum for payment method
         public DateTime? OrderDate { get; set; }

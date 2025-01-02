@@ -5,6 +5,7 @@ using VNPAY.NET.Enums;
 using VNPAY.NET.Models;
 using System;
 using VNPAY.NET.Utilities;
+using be.Repositories.Interface;
 
 namespace be.Controllers
 {
@@ -17,10 +18,10 @@ namespace be.Controllers
         private readonly string _hashSecret;
         private readonly string _baseUrl;
         private readonly string _callbackUrl;
+        private readonly IOrderRepository _orderRepository;
 
-        public VnPayPaymentController(IVnpay vnpay, IConfiguration configuration)
+        public VnPayPaymentController(IVnpay vnpay, IConfiguration configuration, IOrderRepository orderRepository)
         {
-
             _tmnCode = configuration["Vnpay:TmnCode"];
             _hashSecret = configuration["Vnpay:HashSecret"];
             _baseUrl = configuration["Vnpay:BaseUrl"];
@@ -31,25 +32,32 @@ namespace be.Controllers
             Console.WriteLine($"CallbackUrl: {_callbackUrl}");
             _vnpay = vnpay;
             _vnpay.Initialize(_tmnCode, _hashSecret, _baseUrl, _callbackUrl);
+            _orderRepository = orderRepository;
         }
 
         [HttpGet("CreatePaymentUrl")]
-        public ActionResult<string> CreatePaymentUrl(double moneyToPay, string description)
+        public async Task<ActionResult<string>> CreatePaymentUrl(string orderId)
         {
             try
             {
+                var order = await _orderRepository.GetByIdAsync(orderId);
+                if (order == null)
+                {
+                    return NotFound("Order not found.");
+                }
+
                 var ipAddress = NetworkHelper.GetIpAddress(HttpContext); // Lấy địa chỉ IP của thiết bị thực hiện giao dịch
 
                 var request = new PaymentRequest
                 {
                     PaymentId = DateTime.Now.Ticks,
-                    Money = moneyToPay,
-                    Description = description,
+                    Money = order.TotalAmount,
+                    Description = order.Id,
                     IpAddress = ipAddress,
-                    BankCode = BankCode.ANY, 
-                    CreatedDate = DateTime.Now, 
-                    Currency = Currency.VND, 
-                    Language = DisplayLanguage.Vietnamese 
+                    BankCode = BankCode.ANY,
+                    CreatedDate = DateTime.Now,
+                    Currency = Currency.VND,
+                    Language = DisplayLanguage.Vietnamese
                 };
 
                 var paymentUrl = _vnpay.GetPaymentUrl(request);
@@ -63,7 +71,7 @@ namespace be.Controllers
         }
 
         [HttpGet("IpnAction")]
-        public IActionResult IpnAction()
+        public async Task<IActionResult> IpnAction()
         {
             if (Request.QueryString.HasValue)
             {
@@ -72,7 +80,15 @@ namespace be.Controllers
                     var paymentResult = _vnpay.GetPaymentResult(Request.Query);
                     if (paymentResult.IsSuccess)
                     {
-                        // Thực hiện hành động nếu thanh toán thành công tại đây. Ví dụ: Cập nhật trạng thái đơn hàng trong cơ sở dữ liệu.
+                        // Cập nhật trạng thái đơn hàng nếu thanh toán thành công
+                        var orderId = paymentResult.PaymentResponse.Description; // Giả sử OrderId được gửi kèm trong PaymentRequest
+                        var order = await _orderRepository.GetByIdAsync(orderId);
+                        if (order != null)
+                        {
+                            order.Status = "Paid";
+                            await _orderRepository.UpdateAsync(order);
+                        }
+
                         return Ok();
                     }
 
@@ -89,7 +105,7 @@ namespace be.Controllers
         }
 
         [HttpGet("Callback")]
-        public ActionResult<string> Callback()
+        public async Task<ActionResult<string>> Callback()
         {
             if (Request.QueryString.HasValue)
             {
@@ -100,6 +116,15 @@ namespace be.Controllers
 
                     if (paymentResult.IsSuccess)
                     {
+                        // Cập nhật trạng thái đơn hàng nếu thanh toán thành công
+                        var orderId = paymentResult.PaymentResponse.Description; // Giả sử OrderId được gửi kèm trong PaymentRequest
+                        var order = await _orderRepository.GetByIdAsync(orderId);
+                        if (order != null)
+                        {
+                            order.Status = "Paid";
+                            await _orderRepository.UpdateAsync(order);
+                        }
+
                         return Ok(resultDescription);
                     }
 
