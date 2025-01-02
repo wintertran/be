@@ -13,11 +13,72 @@ namespace be.Controllers
     {
         private readonly IAddressRepository _addressRepository;
         private readonly ILogger<AddressController> _logger;
+        private readonly ILocationRepository _locationRepository;
 
-        public AddressController(IAddressRepository addressRepository, ILogger<AddressController> logger)
+        public AddressController(IAddressRepository addressRepository, ILogger<AddressController> logger, ILocationRepository locationRepository)
         {
             _addressRepository = addressRepository;
             _logger = logger;
+        }
+
+        /// <summary>
+        /// Lấy danh sách province
+        /// </summary>
+        [HttpGet("provinces")]
+        public async Task<IActionResult> GetProvinces()
+        {
+            var provinces = await _locationRepository.GetAllProvincesAsync();
+            if (provinces == null || !provinces.Any())
+            {
+                return NotFound(new { Message = "No provinces found." });
+            }
+
+            return Ok(provinces.Select(province => new
+            {
+                province.Id,
+                province.Name,
+                province.NameEn
+            }));
+        }
+
+        /// <summary>
+        /// Lấy danh sách districts theo provinceId
+        /// </summary>
+        [HttpGet("districts/{provinceId}")]
+        public async Task<IActionResult> GetDistrictsByProvinceId(string provinceId)
+        {
+            var districts = await _locationRepository.GetDistrictsByProvinceIdAsync(provinceId);
+            if (districts == null || !districts.Any())
+            {
+                return NotFound(new { Message = "No districts found for the given province." });
+            }
+
+            return Ok(districts.Select(district => new
+            {
+                district.Id,
+                district.Name,
+                district.NameEn
+            }));
+        }
+
+        /// <summary>
+        /// Lấy danh sách wards theo districtId
+        /// </summary>
+        [HttpGet("wards/{districtId}")]
+        public async Task<IActionResult> GetWardsByDistrictId(string districtId)
+        {
+            var wards = await _locationRepository.GetWardsByDistrictIdAsync(districtId);
+            if (wards == null || !wards.Any())
+            {
+                return NotFound(new { Message = "No wards found for the given district." });
+            }
+
+            return Ok(wards.Select(ward => new
+            {
+                ward.Id,
+                ward.Name,
+                ward.NameEn
+            }));
         }
 
         /// <summary>
@@ -67,6 +128,51 @@ namespace be.Controllers
                 },
                 address.IsDefault
             });
+        }
+
+        /// <summary>
+        /// Lấy tất cả địa chỉ của người dùng
+        /// </summary>
+        [HttpGet("get-all")]
+        [Authorize]
+        public async Task<IActionResult> GetAllAddresses()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new { Message = "Invalid or missing token." });
+            }
+
+            var addresses = await _addressRepository.GetAddressesByUserIdAsync(userId);
+            if (addresses == null || !addresses.Any())
+            {
+                return NotFound(new { Message = "No addresses found for the user." });
+            }
+
+            return Ok(addresses.Select(address => new
+            {
+                address.Id,
+                address.StreetAddress,
+                Province = new
+                {
+                    address.Province?.Id,
+                    address.Province?.Name,
+                    address.Province?.NameEn
+                },
+                District = new
+                {
+                    address.District?.Id,
+                    address.District?.Name,
+                    address.District?.NameEn
+                },
+                Ward = new
+                {
+                    address.Ward?.Id,
+                    address.Ward?.Name,
+                    address.Ward?.NameEn
+                },
+                address.IsDefault
+            }));
         }
 
         /// <summary>
