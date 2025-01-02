@@ -51,8 +51,8 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
         int pageSize,
         List<string>? categories,
         List<string>? brands,
-        decimal? priceFrom,
-        decimal? priceTo,
+        double? priceFrom,
+        double? priceTo,
         string sort)
     {
         // Ensure pageNumber and pageSize are valid

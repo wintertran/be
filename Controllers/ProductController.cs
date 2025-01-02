@@ -32,8 +32,8 @@ public class ProductController : ControllerBase
     [FromQuery] string? keyword,
     [FromQuery] List<string>? categories,
     [FromQuery] List<string>? brands,
-    [FromQuery] decimal? priceFrom,
-    [FromQuery] decimal? priceTo,
+    [FromQuery] double? priceFrom,
+    [FromQuery] double? priceTo,
     [FromQuery] string sort = "AtoZ",
     [FromQuery] int pageNumber = 1,
     [FromQuery] int pageSize = 12)

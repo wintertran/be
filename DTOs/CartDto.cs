@@ -12,7 +12,7 @@ namespace be.DTOs
         public int? Quantity { get; set; }
         public DateTime? AddedAt { get; set; }
         public string? Status { get; set; }
-        public decimal? TotalAmount { get; set; }
+        public double? TotalAmount { get; set; }
         public bool? IsSavedForLater { get; set; }
     }
     public class CreateCartDto
@@ -22,7 +22,7 @@ namespace be.DTOs
         public int? Quantity { get; set; }
         public DateTime? AddedAt { get; set; }
         public string? Status { get; set; }
-        public decimal? TotalAmount { get; set; }
+        public double? TotalAmount { get; set; }
         public bool? IsSavedForLater { get; set; }
     }
 }

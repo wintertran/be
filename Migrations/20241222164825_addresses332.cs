@@ -47,7 +47,7 @@ namespace be.Migrations
                     Id = table.Column<string>(type: "text", nullable: false),
                     OrderId = table.Column<string>(type: "text", nullable: false),
                     InvoiceDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
+                    TotalAmount = table.Column<double>(type: "numeric", nullable: true),
                     DueDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     PaymentStatus = table.Column<string>(type: "text", nullable: true),
                     PaymentMethod = table.Column<string>(type: "text", nullable: true),
@@ -114,14 +114,14 @@ namespace be.Migrations
                     CategoryId = table.Column<string>(type: "text", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: true),
-                    Price = table.Column<decimal>(type: "numeric", nullable: true),
+                    Price = table.Column<double>(type: "numeric", nullable: true),
                     Sku = table.Column<string>(type: "text", nullable: true),
                     BrandId = table.Column<string>(type: "text", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     IsAvailable = table.Column<bool>(type: "boolean", nullable: true),
-                    StockQuantity = table.Column<decimal>(type: "numeric", nullable: true),
-                    CartQuantity = table.Column<decimal>(type: "numeric", nullable: true)
+                    StockQuantity = table.Column<double>(type: "numeric", nullable: true),
+                    CartQuantity = table.Column<double>(type: "numeric", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -192,7 +192,7 @@ namespace be.Migrations
                     Quantity = table.Column<int>(type: "integer", nullable: true),
                     AddedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     Status = table.Column<string>(type: "text", nullable: true),
-                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
+                    TotalAmount = table.Column<double>(type: "numeric", nullable: true),
                     IsSavedForLater = table.Column<bool>(type: "boolean", nullable: true)
                 },
                 constraints: table =>
@@ -343,7 +343,7 @@ namespace be.Migrations
                     ShippingAddressId = table.Column<string>(type: "text", nullable: false),
                     CartSnapshot = table.Column<string>(type: "text", nullable: true),
                     CartId = table.Column<string>(type: "text", nullable: true),
-                    TotalAmount = table.Column<decimal>(type: "numeric", nullable: true),
+                    TotalAmount = table.Column<double>(type: "numeric", nullable: true),
                     Status = table.Column<string>(type: "text", nullable: true),
                     PaymentMethod = table.Column<string>(type: "text", nullable: true),
                     OrderDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),

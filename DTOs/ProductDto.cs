@@ -17,7 +17,7 @@ namespace be.DTOs
         public string? Description { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value")]
-        public decimal? Price { get; set; }
+        public double? Price { get; set; }
 
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
@@ -32,8 +32,8 @@ namespace be.DTOs
         public DateTime? UpdatedAt { get; set; }
 
         public bool? IsAvailable { get; set; }
-        public decimal? StockQuantity { get; set; }
-        public decimal? CartQuantity { get; set; }
+        public double? StockQuantity { get; set; }
+        public double? CartQuantity { get; set; }
         public double? AverageRating { get; set; } // Thêm Rating trung bình
         public List<string>? Reviews { get; set; } // Danh sách Review
     }
@@ -50,7 +50,7 @@ namespace be.DTOs
         public string? Description { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value")]
-        public decimal? Price { get; set; }
+        public double? Price { get; set; }
 
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }
@@ -73,7 +73,7 @@ namespace be.DTOs
         public string? Description { get; set; }
 
         [Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value")]
-        public decimal? Price { get; set; }
+        public double? Price { get; set; }
 
         [MaxLength(50, ErrorMessage = "SKU cannot exceed 50 characters")]
         public string? Sku { get; set; }

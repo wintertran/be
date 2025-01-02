@@ -9,7 +9,7 @@ namespace be.DTOs
         public required string Id { get; set; }
         public required string OrderId { get; set; }
         public DateTime? InvoiceDate { get; set; }
-        public decimal? TotalAmount { get; set; }
+        public double? TotalAmount { get; set; }
         public DateTime? DueDate { get; set; }
         public string? PaymentStatus { get; set; }
         public string? PaymentMethod { get; set; }
@@ -20,7 +20,7 @@ namespace be.DTOs
     {
         public required string OrderId { get; set; }
         public DateTime? InvoiceDate { get; set; }
-        public decimal? TotalAmount { get; set; }
+        public double? TotalAmount { get; set; }
         public DateTime? DueDate { get; set; }
         public string? PaymentStatus { get; set; }
         public string? PaymentMethod { get; set; }

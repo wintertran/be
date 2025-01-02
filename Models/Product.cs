@@ -12,7 +12,7 @@ namespace be.Models
         public virtual Category? Category { get; set; } // Navigation Property
         public required string Name { get; set; }
         public string? Description { get; set; }
-        public decimal? Price { get; set; }
+        public double? Price { get; set; }
         public string? Sku { get; set; }
         public string? BrandId { get; set; }
         [ForeignKey("BrandId")]
@@ -20,8 +20,8 @@ namespace be.Models
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public bool? IsAvailable { get; set; }
-        public decimal? StockQuantity { get; set; }
-        public decimal? CartQuantity { get; set; }
+        public double? StockQuantity { get; set; }
+        public double? CartQuantity { get; set; }
         public virtual ICollection<ProductImage>? ProductImages { get; set; } = new List<ProductImage>();
         public virtual ICollection<CartProduct>? CartProducts { get; set; } = new List<CartProduct>();
         public virtual ICollection<Rating>? Ratings { get; set; }

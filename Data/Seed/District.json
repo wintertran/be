@@ -5,7 +5,7 @@
     "full_name": "Quận Ba Đình",
     "full_name_en": "Ba Dinh District",
     "code_name": "ba_dinh",
-    "province_code": "01",
+    "province_id": "01",
     "id": "001"
   },
   {
@@ -14,7 +14,7 @@
     "full_name": "Quận Hoàn Kiếm",
     "full_name_en": "Hoan Kiem District",
     "code_name": "hoan_kiem",
-    "province_code": "01",
+    "province_id": "01",
     "id": "002"
   },
   {
@@ -23,7 +23,7 @@
     "full_name": "Quận Tây Hồ",
     "full_name_en": "Tay Ho District",
     "code_name": "tay_ho",
-    "province_code": "01",
+    "province_id": "01",
     "id": "003"
   },
   {
@@ -32,7 +32,7 @@
     "full_name": "Quận Long Biên",
     "full_name_en": "Long Bien District",
     "code_name": "long_bien",
-    "province_code": "01",
+    "province_id": "01",
     "id": "004"
   },
   {
@@ -41,7 +41,7 @@
     "full_name": "Quận Cầu Giấy",
     "full_name_en": "Cau Giay District",
     "code_name": "cau_giay",
-    "province_code": "01",
+    "province_id": "01",
     "id": "005"
   },
   {
@@ -50,7 +50,7 @@
     "full_name": "Quận Đống Đa",
     "full_name_en": "Dong Da District",
     "code_name": "dong_da",
-    "province_code": "01",
+    "province_id": "01",
     "id": "006"
   },
   {
@@ -59,7 +59,7 @@
     "full_name": "Quận Hai Bà Trưng",
     "full_name_en": "Hai Ba Trung District",
     "code_name": "hai_ba_trung",
-    "province_code": "01",
+    "province_id": "01",
     "id": "007"
   },
   {
@@ -68,7 +68,7 @@
     "full_name": "Quận Hoàng Mai",
     "full_name_en": "Hoang Mai District",
     "code_name": "hoang_mai",
-    "province_code": "01",
+    "province_id": "01",
     "id": "008"
   },
   {
@@ -77,7 +77,7 @@
     "full_name": "Quận Thanh Xuân",
     "full_name_en": "Thanh Xuan District",
     "code_name": "thanh_xuan",
-    "province_code": "01",
+    "province_id": "01",
     "id": "009"
   },
   {
@@ -86,7 +86,7 @@
     "full_name": "Huyện Sóc Sơn",
     "full_name_en": "Soc Son District",
     "code_name": "soc_son",
-    "province_code": "01",
+    "province_id": "01",
     "id": "016"
   },
   {
@@ -95,7 +95,7 @@
     "full_name": "Huyện Đông Anh",
     "full_name_en": "Dong Anh District",
     "code_name": "dong_anh",
-    "province_code": "01",
+    "province_id": "01",
     "id": "017"
   },
   {
@@ -104,7 +104,7 @@
     "full_name": "Huyện Gia Lâm",
     "full_name_en": "Gia Lam District",
     "code_name": "gia_lam",
-    "province_code": "01",
+    "province_id": "01",
     "id": "018"
   },
   {
@@ -113,7 +113,7 @@
     "full_name": "Quận Nam Từ Liêm",
     "full_name_en": "Nam Tu Liem District",
     "code_name": "nam_tu_liem",
-    "province_code": "01",
+    "province_id": "01",
     "id": "019"
   },
   {
@@ -122,7 +122,7 @@
     "full_name": "Huyện Thanh Trì",
     "full_name_en": "Thanh Tri District",
     "code_name": "thanh_tri",
-    "province_code": "01",
+    "province_id": "01",
     "id": "020"
   },
   {
@@ -131,7 +131,7 @@
     "full_name": "Quận Bắc Từ Liêm",
     "full_name_en": "Bac Tu Liem District",
     "code_name": "bac_tu_liem",
-    "province_code": "01",
+    "province_id": "01",
     "id": "021"
   },
   {
@@ -140,7 +140,7 @@
     "full_name": "Thành phố Hà Giang",
     "full_name_en": "Ha Giang City",
     "code_name": "ha_giang",
-    "province_code": "02",
+    "province_id": "02",
     "id": "024"
   },
   {
@@ -149,7 +149,7 @@
     "full_name": "Huyện Đồng Văn",
     "full_name_en": "Dong Van District",
     "code_name": "dong_van",
-    "province_code": "02",
+    "province_id": "02",
     "id": "026"
   },
   {
@@ -158,7 +158,7 @@
     "full_name": "Huyện Mèo Vạc",
     "full_name_en": "Meo Vac District",
     "code_name": "meo_vac",
-    "province_code": "02",
+    "province_id": "02",
     "id": "027"
   },
   {
@@ -167,7 +167,7 @@
     "full_name": "Huyện Yên Minh",
     "full_name_en": "Yen Minh District",
     "code_name": "yen_minh",
-    "province_code": "02",
+    "province_id": "02",
     "id": "028"
   },
   {
@@ -176,7 +176,7 @@
     "full_name": "Huyện Quản Bạ",
     "full_name_en": "Quan Ba District",
     "code_name": "quan_ba",
-    "province_code": "02",
+    "province_id": "02",
     "id": "029"
   },
   {
@@ -185,7 +185,7 @@
     "full_name": "Huyện Vị Xuyên",
     "full_name_en": "Vi Xuyen District",
     "code_name": "vi_xuyen",
-    "province_code": "02",
+    "province_id": "02",
     "id": "030"
   },
   {
@@ -194,7 +194,7 @@
     "full_name": "Huyện Bắc Mê",
     "full_name_en": "Bac Me District",
     "code_name": "bac_me",
-    "province_code": "02",
+    "province_id": "02",
     "id": "031"
   },
   {
@@ -203,7 +203,7 @@
     "full_name": "Huyện Hoàng Su Phì",
     "full_name_en": "Hoang Su Phi District",
     "code_name": "hoang_su_phi",
-    "province_code": "02",
+    "province_id": "02",
     "id": "032"
   },
   {
@@ -212,7 +212,7 @@
     "full_name": "Huyện Xín Mần",
     "full_name_en": "Xin Man District",
     "code_name": "xin_man",
-    "province_code": "02",
+    "province_id": "02",
     "id": "033"
   },
   {
@@ -221,7 +221,7 @@
     "full_name": "Huyện Bắc Quang",
     "full_name_en": "Bac Quang District",
     "code_name": "bac_quang",
-    "province_code": "02",
+    "province_id": "02",
     "id": "034"
   },
   {
@@ -230,7 +230,7 @@
     "full_name": "Huyện Quang Bình",
     "full_name_en": "Quang Binh District",
     "code_name": "quang_binh",
-    "province_code": "02",
+    "province_id": "02",
     "id": "035"
   },
   {
@@ -239,7 +239,7 @@
     "full_name": "Thành phố Cao Bằng",
     "full_name_en": "Cao Bang City",
     "code_name": "cao_bang",
-    "province_code": "04",
+    "province_id": "04",
     "id": "040"
   },
   {
@@ -248,7 +248,7 @@
     "full_name": "Huyện Bảo Lâm",
     "full_name_en": "Bao Lam District",
     "code_name": "bao_lam",
-    "province_code": "04",
+    "province_id": "04",
     "id": "042"
   },
   {
@@ -257,7 +257,7 @@
     "full_name": "Huyện Bảo Lạc",
     "full_name_en": "Bao Lac District",
     "code_name": "bao_lac",
-    "province_code": "04",
+    "province_id": "04",
     "id": "043"
   },
   {
@@ -266,7 +266,7 @@
     "full_name": "Huyện Hà Quảng",
     "full_name_en": "Ha Quang District",
     "code_name": "ha_quang",
-    "province_code": "04",
+    "province_id": "04",
     "id": "045"
   },
   {
@@ -275,7 +275,7 @@
     "full_name": "Huyện Trùng Khánh",
     "full_name_en": "Trung Khanh District",
     "code_name": "trung_khanh",
-    "province_code": "04",
+    "province_id": "04",
     "id": "047"
   },
   {
@@ -284,7 +284,7 @@
     "full_name": "Huyện Hạ Lang",
     "full_name_en": "Ha Lang District",
     "code_name": "ha_lang",
-    "province_code": "04",
+    "province_id": "04",
     "id": "048"
   },
   {
@@ -293,7 +293,7 @@
     "full_name": "Huyện Quảng Hòa",
     "full_name_en": "Quang Hoa District",
     "code_name": "quang_hoa",
-    "province_code": "04",
+    "province_id": "04",
     "id": "049"
   },
   {
@@ -302,7 +302,7 @@
     "full_name": "Huyện Hoà An",
     "full_name_en": "Hoa An District",
     "code_name": "hoa_an",
-    "province_code": "04",
+    "province_id": "04",
     "id": "051"
   },
   {
@@ -311,7 +311,7 @@
     "full_name": "Huyện Nguyên Bình",
     "full_name_en": "Nguyen Binh District",
     "code_name": "nguyen_binh",
-    "province_code": "04",
+    "province_id": "04",
     "id": "052"
   },
   {
@@ -320,7 +320,7 @@
     "full_name": "Huyện Thạch An",
     "full_name_en": "Thach An District",
     "code_name": "thach_an",
-    "province_code": "04",
+    "province_id": "04",
     "id": "053"
   },
   {
@@ -329,7 +329,7 @@
     "full_name": "Thành phố Bắc Kạn",
     "full_name_en": "Bac Kan City",
     "code_name": "bac_kan",
-    "province_code": "06",
+    "province_id": "06",
     "id": "058"
   },
   {
@@ -338,7 +338,7 @@
     "full_name": "Huyện Pác Nặm",
     "full_name_en": "Pac Nam District",
     "code_name": "pac_nam",
-    "province_code": "06",
+    "province_id": "06",
     "id": "060"
   },
   {
@@ -347,7 +347,7 @@
     "full_name": "Huyện Ba Bể",
     "full_name_en": "Ba Be District",
     "code_name": "ba_be",
-    "province_code": "06",
+    "province_id": "06",
     "id": "061"
   },
   {
@@ -356,7 +356,7 @@
     "full_name": "Huyện Ngân Sơn",
     "full_name_en": "Ngan Son District",
     "code_name": "ngan_son",
-    "province_code": "06",
+    "province_id": "06",
     "id": "062"
   },
   {
@@ -365,7 +365,7 @@
     "full_name": "Huyện Bạch Thông",
     "full_name_en": "Bach Thong District",
     "code_name": "bach_thong",
-    "province_code": "06",
+    "province_id": "06",
     "id": "063"
   },
   {
@@ -374,7 +374,7 @@
     "full_name": "Huyện Chợ Đồn",
     "full_name_en": "Cho Don District",
     "code_name": "cho_don",
-    "province_code": "06",
+    "province_id": "06",
     "id": "064"
   },
   {
@@ -383,7 +383,7 @@
     "full_name": "Huyện Chợ Mới",
     "full_name_en": "Cho Moi District",
     "code_name": "cho_moi",
-    "province_code": "06",
+    "province_id": "06",
     "id": "065"
   },
   {
@@ -392,7 +392,7 @@
     "full_name": "Huyện Na Rì",
     "full_name_en": "Na Ri District",
     "code_name": "na_ri",
-    "province_code": "06",
+    "province_id": "06",
     "id": "066"
   },
   {
@@ -401,7 +401,7 @@
     "full_name": "Thành phố Tuyên Quang",
     "full_name_en": "Tuyen Quang City",
     "code_name": "tuyen_quang",
-    "province_code": "08",
+    "province_id": "08",
     "id": "070"
   },
   {
@@ -410,7 +410,7 @@
     "full_name": "Huyện Lâm Bình",
     "full_name_en": "Lam Binh District",
     "code_name": "lam_binh",
-    "province_code": "08",
+    "province_id": "08",
     "id": "071"
   },
   {
@@ -419,7 +419,7 @@
     "full_name": "Huyện Na Hang",
     "full_name_en": "Na Hang District",
     "code_name": "na_hang",
-    "province_code": "08",
+    "province_id": "08",
     "id": "072"
   },
   {
@@ -428,7 +428,7 @@
     "full_name": "Huyện Chiêm Hóa",
     "full_name_en": "Chiem Hoa District",
     "code_name": "chiem_hoa",
-    "province_code": "08",
+    "province_id": "08",
     "id": "073"
   },
   {
@@ -437,7 +437,7 @@
     "full_name": "Huyện Hàm Yên",
     "full_name_en": "Ham Yen District",
     "code_name": "ham_yen",
-    "province_code": "08",
+    "province_id": "08",
     "id": "074"
   },
   {
@@ -446,7 +446,7 @@
     "full_name": "Huyện Yên Sơn",
     "full_name_en": "Yen Son District",
     "code_name": "yen_son",
-    "province_code": "08",
+    "province_id": "08",
     "id": "075"
   },
   {
@@ -455,7 +455,7 @@
     "full_name": "Huyện Sơn Dương",
     "full_name_en": "Son Duong District",
     "code_name": "son_duong",
-    "province_code": "08",
+    "province_id": "08",
     "id": "076"
   },
   {
@@ -464,7 +464,7 @@
     "full_name": "Thành phố Lào Cai",
     "full_name_en": "Lao Cai City",
     "code_name": "lao_cai",
-    "province_code": "10",
+    "province_id": "10",
     "id": "080"
   },
   {
@@ -473,7 +473,7 @@
     "full_name": "Huyện Bát Xát",
     "full_name_en": "Bat Xat District",
     "code_name": "bat_xat",
-    "province_code": "10",
+    "province_id": "10",
     "id": "082"
   },
   {
@@ -482,7 +482,7 @@
     "full_name": "Huyện Mường Khương",
     "full_name_en": "Muong Khuong District",
     "code_name": "muong_khuong",
-    "province_code": "10",
+    "province_id": "10",
     "id": "083"
   },
   {
@@ -491,7 +491,7 @@
     "full_name": "Huyện Si Ma Cai",
     "full_name_en": "Si Ma Cai District",
     "code_name": "si_ma_cai",
-    "province_code": "10",
+    "province_id": "10",
     "id": "084"
   },
   {
@@ -500,7 +500,7 @@
     "full_name": "Huyện Bắc Hà",
     "full_name_en": "Bac Ha District",
     "code_name": "bac_ha",
-    "province_code": "10",
+    "province_id": "10",
     "id": "085"
   },
   {
@@ -509,7 +509,7 @@
     "full_name": "Huyện Bảo Thắng",
     "full_name_en": "Bao Thang District",
     "code_name": "bao_thang",
-    "province_code": "10",
+    "province_id": "10",
     "id": "086"
   },
   {
@@ -518,7 +518,7 @@
     "full_name": "Huyện Bảo Yên",
     "full_name_en": "Bao Yen District",
     "code_name": "bao_yen",
-    "province_code": "10",
+    "province_id": "10",
     "id": "087"
   },
   {
@@ -527,7 +527,7 @@
     "full_name": "Thị xã Sa Pa",
     "full_name_en": "Sa Pa Town",
     "code_name": "sa_pa",
-    "province_code": "10",
+    "province_id": "10",
     "id": "088"
   },
   {
@@ -536,7 +536,7 @@
     "full_name": "Huyện Văn Bàn",
     "full_name_en": "Van Ban District",
     "code_name": "van_ban",
-    "province_code": "10",
+    "province_id": "10",
     "id": "089"
   },
   {
@@ -545,7 +545,7 @@
     "full_name": "Thành phố Điện Biên Phủ",
     "full_name_en": "Dien Bien Phu City",
     "code_name": "dien_bien_phu",
-    "province_code": "11",
+    "province_id": "11",
     "id": "094"
   },
   {
@@ -554,7 +554,7 @@
     "full_name": "Thị xã Mường Lay",
     "full_name_en": "Muong Lay Town",
     "code_name": "muong_lay",
-    "province_code": "11",
+    "province_id": "11",
     "id": "095"
   },
   {
@@ -563,7 +563,7 @@
     "full_name": "Huyện Mường Nhé",
     "full_name_en": "Muong Nhe District",
     "code_name": "muong_nhe",
-    "province_code": "11",
+    "province_id": "11",
     "id": "096"
   },
   {
@@ -572,7 +572,7 @@
     "full_name": "Huyện Mường Chà",
     "full_name_en": "Muong Cha District",
     "code_name": "muong_cha",
-    "province_code": "11",
+    "province_id": "11",
     "id": "097"
   },
   {
@@ -581,7 +581,7 @@
     "full_name": "Huyện Tủa Chùa",
     "full_name_en": "Tua Chua District",
     "code_name": "tua_chua",
-    "province_code": "11",
+    "province_id": "11",
     "id": "098"
   },
   {
@@ -590,7 +590,7 @@
     "full_name": "Huyện Tuần Giáo",
     "full_name_en": "Tuan Giao District",
     "code_name": "tuan_giao",
-    "province_code": "11",
+    "province_id": "11",
     "id": "099"
   },
   {
@@ -599,7 +599,7 @@
     "full_name": "Huyện Điện Biên",
     "full_name_en": "Dien Bien District",
     "code_name": "dien_bien",
-    "province_code": "11",
+    "province_id": "11",
     "id": "100"
   },
   {
@@ -608,7 +608,7 @@
     "full_name": "Huyện Điện Biên Đông",
     "full_name_en": "Dien Bien Dong District",
     "code_name": "dien_bien_dong",
-    "province_code": "11",
+    "province_id": "11",
     "id": "101"
   },
   {
@@ -617,7 +617,7 @@
     "full_name": "Huyện Mường Ảng",
     "full_name_en": "Muong Ang District",
     "code_name": "muong_ang",
-    "province_code": "11",
+    "province_id": "11",
     "id": "102"
   },
   {
@@ -626,7 +626,7 @@
     "full_name": "Huyện Nậm Pồ",
     "full_name_en": "Nam Po District",
     "code_name": "nam_po",
-    "province_code": "11",
+    "province_id": "11",
     "id": "103"
   },
   {
@@ -635,7 +635,7 @@
     "full_name": "Thành phố Lai Châu",
     "full_name_en": "Lai Chau City",
     "code_name": "lai_chau",
-    "province_code": "12",
+    "province_id": "12",
     "id": "105"
   },
   {
@@ -644,7 +644,7 @@
     "full_name": "Huyện Tam Đường",
     "full_name_en": "Tam Duong District",
     "code_name": "tam_duong",
-    "province_code": "12",
+    "province_id": "12",
     "id": "106"
   },
   {
@@ -653,7 +653,7 @@
     "full_name": "Huyện Mường Tè",
     "full_name_en": "Muong Te District",
     "code_name": "muong_te",
-    "province_code": "12",
+    "province_id": "12",
     "id": "107"
   },
   {
@@ -662,7 +662,7 @@
     "full_name": "Huyện Sìn Hồ",
     "full_name_en": "Sin Ho District",
     "code_name": "sin_ho",
-    "province_code": "12",
+    "province_id": "12",
     "id": "108"
   },
   {
@@ -671,7 +671,7 @@
     "full_name": "Huyện Phong Thổ",
     "full_name_en": "Phong Tho District",
     "code_name": "phong_tho",
-    "province_code": "12",
+    "province_id": "12",
     "id": "109"
   },
   {
@@ -680,7 +680,7 @@
     "full_name": "Huyện Than Uyên",
     "full_name_en": "Than Uyen District",
     "code_name": "than_uyen",
-    "province_code": "12",
+    "province_id": "12",
     "id": "110"
   },
   {
@@ -689,7 +689,7 @@
     "full_name": "Huyện Tân Uyên",
     "full_name_en": "Tan Uyen District",
     "code_name": "tan_uyen",
-    "province_code": "12",
+    "province_id": "12",
     "id": "111"
   },
   {
@@ -698,7 +698,7 @@
     "full_name": "Huyện Nậm Nhùn",
     "full_name_en": "Nam Nhun District",
     "code_name": "nam_nhun",
-    "province_code": "12",
+    "province_id": "12",
     "id": "112"
   },
   {
@@ -707,7 +707,7 @@
     "full_name": "Thành phố Sơn La",
     "full_name_en": "Son La City",
     "code_name": "son_la",
-    "province_code": "14",
+    "province_id": "14",
     "id": "116"
   },
   {
@@ -716,7 +716,7 @@
     "full_name": "Huyện Quỳnh Nhai",
     "full_name_en": "Quynh Nhai District",
     "code_name": "quynh_nhai",
-    "province_code": "14",
+    "province_id": "14",
     "id": "118"
   },
   {
@@ -725,7 +725,7 @@
     "full_name": "Huyện Thuận Châu",
     "full_name_en": "Thuan Chau District",
     "code_name": "thuan_chau",
-    "province_code": "14",
+    "province_id": "14",
     "id": "119"
   },
   {
@@ -734,7 +734,7 @@
     "full_name": "Huyện Mường La",
     "full_name_en": "Muong La District",
     "code_name": "muong_la",
-    "province_code": "14",
+    "province_id": "14",
     "id": "120"
   },
   {
@@ -743,7 +743,7 @@
     "full_name": "Huyện Bắc Yên",
     "full_name_en": "Bac Yen District",
     "code_name": "bac_yen",
-    "province_code": "14",
+    "province_id": "14",
     "id": "121"
   },
   {
@@ -752,7 +752,7 @@
     "full_name": "Huyện Phù Yên",
     "full_name_en": "Phu Yen District",
     "code_name": "phu_yen",
-    "province_code": "14",
+    "province_id": "14",
     "id": "122"
   },
   {
@@ -761,7 +761,7 @@
     "full_name": "Huyện Mộc Châu",
     "full_name_en": "Moc Chau District",
     "code_name": "moc_chau",
-    "province_code": "14",
+    "province_id": "14",
     "id": "123"
   },
   {
@@ -770,7 +770,7 @@
     "full_name": "Huyện Yên Châu",
     "full_name_en": "Yen Chau District",
     "code_name": "yen_chau",
-    "province_code": "14",
+    "province_id": "14",
     "id": "124"
   },
   {
@@ -779,7 +779,7 @@
     "full_name": "Huyện Mai Sơn",
     "full_name_en": "Mai Son District",
     "code_name": "mai_son",
-    "province_code": "14",
+    "province_id": "14",
     "id": "125"
   },
   {
@@ -788,7 +788,7 @@
     "full_name": "Huyện Sông Mã",
     "full_name_en": "Song Ma District",
     "code_name": "song_ma",
-    "province_code": "14",
+    "province_id": "14",
     "id": "126"
   },
   {
@@ -797,7 +797,7 @@
     "full_name": "Huyện Sốp Cộp",
     "full_name_en": "Sop Cop District",
     "code_name": "sop_cop",
-    "province_code": "14",
+    "province_id": "14",
     "id": "127"
   },
   {
@@ -806,7 +806,7 @@
     "full_name": "Huyện Vân Hồ",
     "full_name_en": "Van Ho District",
     "code_name": "van_ho",
-    "province_code": "14",
+    "province_id": "14",
     "id": "128"
   },
   {
@@ -815,7 +815,7 @@
     "full_name": "Thành phố Yên Bái",
     "full_name_en": "Yen Bai City",
     "code_name": "yen_bai",
-    "province_code": "15",
+    "province_id": "15",
     "id": "132"
   },
   {
@@ -824,7 +824,7 @@
     "full_name": "Thị xã Nghĩa Lộ",
     "full_name_en": "Nghia Lo Town",
     "code_name": "nghia_lo",
-    "province_code": "15",
+    "province_id": "15",
     "id": "133"
   },
   {
@@ -833,7 +833,7 @@
     "full_name": "Huyện Lục Yên",
     "full_name_en": "Luc Yen District",
     "code_name": "luc_yen",
-    "province_code": "15",
+    "province_id": "15",
     "id": "135"
   },
   {
@@ -842,7 +842,7 @@
     "full_name": "Huyện Văn Yên",
     "full_name_en": "Van Yen District",
     "code_name": "van_yen",
-    "province_code": "15",
+    "province_id": "15",
     "id": "136"
   },
   {
@@ -851,7 +851,7 @@
     "full_name": "Huyện Mù Căng Chải",
     "full_name_en": "Mu Cang Chai District",
     "code_name": "mu_cang_chai",
-    "province_code": "15",
+    "province_id": "15",
     "id": "137"
   },
   {
@@ -860,7 +860,7 @@
     "full_name": "Huyện Trấn Yên",
     "full_name_en": "Tran Yen District",
     "code_name": "tran_yen",
-    "province_code": "15",
+    "province_id": "15",
     "id": "138"
   },
   {
@@ -869,7 +869,7 @@
     "full_name": "Huyện Trạm Tấu",
     "full_name_en": "Tram Tau District",
     "code_name": "tram_tau",
-    "province_code": "15",
+    "province_id": "15",
     "id": "139"
   },
   {
@@ -878,7 +878,7 @@
     "full_name": "Huyện Văn Chấn",
     "full_name_en": "Van Chan District",
     "code_name": "van_chan",
-    "province_code": "15",
+    "province_id": "15",
     "id": "140"
   },
   {
@@ -887,7 +887,7 @@
     "full_name": "Huyện Yên Bình",
     "full_name_en": "Yen Binh District",
     "code_name": "yen_binh",
-    "province_code": "15",
+    "province_id": "15",
     "id": "141"
   },
   {
@@ -896,7 +896,7 @@
     "full_name": "Thành phố Hòa Bình",
     "full_name_en": "Hoa Binh City",
     "code_name": "hoa_binh",
-    "province_code": "17",
+    "province_id": "17",
     "id": "148"
   },
   {
@@ -905,7 +905,7 @@
     "full_name": "Huyện Đà Bắc",
     "full_name_en": "Da Bac District",
     "code_name": "da_bac",
-    "province_code": "17",
+    "province_id": "17",
     "id": "150"
   },
   {
@@ -914,7 +914,7 @@
     "full_name": "Huyện Lương Sơn",
     "full_name_en": "Luong Son District",
     "code_name": "luong_son",
-    "province_code": "17",
+    "province_id": "17",
     "id": "152"
   },
   {
@@ -923,7 +923,7 @@
     "full_name": "Huyện Kim Bôi",
     "full_name_en": "Kim Boi District",
     "code_name": "kim_boi",
-    "province_code": "17",
+    "province_id": "17",
     "id": "153"
   },
   {
@@ -932,7 +932,7 @@
     "full_name": "Huyện Cao Phong",
     "full_name_en": "Cao Phong District",
     "code_name": "cao_phong",
-    "province_code": "17",
+    "province_id": "17",
     "id": "154"
   },
   {
@@ -941,7 +941,7 @@
     "full_name": "Huyện Tân Lạc",
     "full_name_en": "Tan Lac District",
     "code_name": "tan_lac",
-    "province_code": "17",
+    "province_id": "17",
     "id": "155"
   },
   {
@@ -950,7 +950,7 @@
     "full_name": "Huyện Mai Châu",
     "full_name_en": "Mai Chau District",
     "code_name": "mai_chau",
-    "province_code": "17",
+    "province_id": "17",
     "id": "156"
   },
   {
@@ -959,7 +959,7 @@
     "full_name": "Huyện Lạc Sơn",
     "full_name_en": "Lac Son District",
     "code_name": "lac_son",
-    "province_code": "17",
+    "province_id": "17",
     "id": "157"
   },
   {
@@ -968,7 +968,7 @@
     "full_name": "Huyện Yên Thủy",
     "full_name_en": "Yen Thuy District",
     "code_name": "yen_thuy",
-    "province_code": "17",
+    "province_id": "17",
     "id": "158"
   },
   {
@@ -977,7 +977,7 @@
     "full_name": "Huyện Lạc Thủy",
     "full_name_en": "Lac Thuy District",
     "code_name": "lac_thuy",
-    "province_code": "17",
+    "province_id": "17",
     "id": "159"
   },
   {
@@ -986,7 +986,7 @@
     "full_name": "Thành phố Thái Nguyên",
     "full_name_en": "Thai Nguyen City",
     "code_name": "thai_nguyen",
-    "province_code": "19",
+    "province_id": "19",
     "id": "164"
   },
   {
@@ -995,7 +995,7 @@
     "full_name": "Thành phố Sông Công",
     "full_name_en": "Song Cong City",
     "code_name": "song_cong",
-    "province_code": "19",
+    "province_id": "19",
     "id": "165"
   },
   {
@@ -1004,7 +1004,7 @@
     "full_name": "Huyện Định Hóa",
     "full_name_en": "Dinh Hoa District",
     "code_name": "dinh_hoa",
-    "province_code": "19",
+    "province_id": "19",
     "id": "167"
   },
   {
@@ -1013,7 +1013,7 @@
     "full_name": "Huyện Phú Lương",
     "full_name_en": "Phu Luong District",
     "code_name": "phu_luong",
-    "province_code": "19",
+    "province_id": "19",
     "id": "168"
   },
   {
@@ -1022,7 +1022,7 @@
     "full_name": "Huyện Đồng Hỷ",
     "full_name_en": "Dong Hy District",
     "code_name": "dong_hy",
-    "province_code": "19",
+    "province_id": "19",
     "id": "169"
   },
   {
@@ -1031,7 +1031,7 @@
     "full_name": "Huyện Võ Nhai",
     "full_name_en": "Vo Nhai District",
     "code_name": "vo_nhai",
-    "province_code": "19",
+    "province_id": "19",
     "id": "170"
   },
   {
@@ -1040,7 +1040,7 @@
     "full_name": "Huyện Đại Từ",
     "full_name_en": "Dai Tu District",
     "code_name": "dai_tu",
-    "province_code": "19",
+    "province_id": "19",
     "id": "171"
   },
   {
@@ -1049,7 +1049,7 @@
     "full_name": "Thành phố Phổ Yên",
     "full_name_en": "Pho Yen City",
     "code_name": "pho_yen",
-    "province_code": "19",
+    "province_id": "19",
     "id": "172"
   },
   {
@@ -1058,7 +1058,7 @@
     "full_name": "Huyện Phú Bình",
     "full_name_en": "Phu Binh District",
     "code_name": "phu_binh",
-    "province_code": "19",
+    "province_id": "19",
     "id": "173"
   },
   {
@@ -1067,7 +1067,7 @@
     "full_name": "Thành phố Lạng Sơn",
     "full_name_en": "Lang Son City",
     "code_name": "lang_son",
-    "province_code": "20",
+    "province_id": "20",
     "id": "178"
   },
   {
@@ -1076,7 +1076,7 @@
     "full_name": "Huyện Tràng Định",
     "full_name_en": "Trang Dinh District",
     "code_name": "trang_dinh",
-    "province_code": "20",
+    "province_id": "20",
     "id": "180"
   },
   {
@@ -1085,7 +1085,7 @@
     "full_name": "Huyện Bình Gia",
     "full_name_en": "Binh Gia District",
     "code_name": "binh_gia",
-    "province_code": "20",
+    "province_id": "20",
     "id": "181"
   },
   {
@@ -1094,7 +1094,7 @@
     "full_name": "Huyện Văn Lãng",
     "full_name_en": "Van Lang District",
     "code_name": "van_lang",
-    "province_code": "20",
+    "province_id": "20",
     "id": "182"
   },
   {
@@ -1103,7 +1103,7 @@
     "full_name": "Huyện Cao Lộc",
     "full_name_en": "Cao Loc District",
     "code_name": "cao_loc",
-    "province_code": "20",
+    "province_id": "20",
     "id": "183"
   },
   {
@@ -1112,7 +1112,7 @@
     "full_name": "Huyện Văn Quan",
     "full_name_en": "Van Quan District",
     "code_name": "van_quan",
-    "province_code": "20",
+    "province_id": "20",
     "id": "184"
   },
   {
@@ -1121,7 +1121,7 @@
     "full_name": "Huyện Bắc Sơn",
     "full_name_en": "Bac Son District",
     "code_name": "bac_son",
-    "province_code": "20",
+    "province_id": "20",
     "id": "185"
   },
   {
@@ -1130,7 +1130,7 @@
     "full_name": "Huyện Hữu Lũng",
     "full_name_en": "Huu Lung District",
     "code_name": "huu_lung",
-    "province_code": "20",
+    "province_id": "20",
     "id": "186"
   },
   {
@@ -1139,7 +1139,7 @@
     "full_name": "Huyện Chi Lăng",
     "full_name_en": "Chi Lang District",
     "code_name": "chi_lang",
-    "province_code": "20",
+    "province_id": "20",
     "id": "187"
   },
   {
@@ -1148,7 +1148,7 @@
     "full_name": "Huyện Lộc Bình",
     "full_name_en": "Loc Binh District",
     "code_name": "loc_binh",
-    "province_code": "20",
+    "province_id": "20",
     "id": "188"
   },
   {
@@ -1157,7 +1157,7 @@
     "full_name": "Huyện Đình Lập",
     "full_name_en": "Dinh Lap District",
     "code_name": "dinh_lap",
-    "province_code": "20",
+    "province_id": "20",
     "id": "189"
   },
   {
@@ -1166,7 +1166,7 @@
     "full_name": "Thành phố Hạ Long",
     "full_name_en": "Ha Long City",
     "code_name": "ha_long",
-    "province_code": "22",
+    "province_id": "22",
     "id": "193"
   },
   {
@@ -1175,7 +1175,7 @@
     "full_name": "Thành phố Móng Cái",
     "full_name_en": "Mong Cai City",
     "code_name": "mong_cai",
-    "province_code": "22",
+    "province_id": "22",
     "id": "194"
   },
   {
@@ -1184,7 +1184,7 @@
     "full_name": "Thành phố Cẩm Phả",
     "full_name_en": "Cam Pha City",
     "code_name": "cam_pha",
-    "province_code": "22",
+    "province_id": "22",
     "id": "195"
   },
   {
@@ -1193,7 +1193,7 @@
     "full_name": "Thành phố Uông Bí",
     "full_name_en": "Uong Bi City",
     "code_name": "uong_bi",
-    "province_code": "22",
+    "province_id": "22",
     "id": "196"
   },
   {
@@ -1202,7 +1202,7 @@
     "full_name": "Huyện Bình Liêu",
     "full_name_en": "Binh Lieu District",
     "code_name": "binh_lieu",
-    "province_code": "22",
+    "province_id": "22",
     "id": "198"
   },
   {
@@ -1211,7 +1211,7 @@
     "full_name": "Huyện Tiên Yên",
     "full_name_en": "Tien Yen District",
     "code_name": "tien_yen",
-    "province_code": "22",
+    "province_id": "22",
     "id": "199"
   },
   {
@@ -1220,7 +1220,7 @@
     "full_name": "Huyện Đầm Hà",
     "full_name_en": "Dam Ha District",
     "code_name": "dam_ha",
-    "province_code": "22",
+    "province_id": "22",
     "id": "200"
   },
   {
@@ -1229,7 +1229,7 @@
     "full_name": "Huyện Hải Hà",
     "full_name_en": "Hai Ha District",
     "code_name": "hai_ha",
-    "province_code": "22",
+    "province_id": "22",
     "id": "201"
   },
   {
@@ -1238,7 +1238,7 @@
     "full_name": "Huyện Ba Chẽ",
     "full_name_en": "Ba Che District",
     "code_name": "ba_che",
-    "province_code": "22",
+    "province_id": "22",
     "id": "202"
   },
   {
@@ -1247,7 +1247,7 @@
     "full_name": "Huyện Vân Đồn",
     "full_name_en": "Van Don District",
     "code_name": "van_don",
-    "province_code": "22",
+    "province_id": "22",
     "id": "203"
   },
   {
@@ -1256,7 +1256,7 @@
     "full_name": "Thị xã Đông Triều",
     "full_name_en": "Dong Trieu Town",
     "code_name": "dong_trieu",
-    "province_code": "22",
+    "province_id": "22",
     "id": "205"
   },
   {
@@ -1265,7 +1265,7 @@
     "full_name": "Thị xã Quảng Yên",
     "full_name_en": "Quang Yen Town",
     "code_name": "quang_yen",
-    "province_code": "22",
+    "province_id": "22",
     "id": "206"
   },
   {
@@ -1274,7 +1274,7 @@
     "full_name": "Huyện Cô Tô",
     "full_name_en": "Co To District",
     "code_name": "co_to",
-    "province_code": "22",
+    "province_id": "22",
     "id": "207"
   },
   {
@@ -1283,7 +1283,7 @@
     "full_name": "Thành phố Bắc Giang",
     "full_name_en": "Bac Giang City",
     "code_name": "bac_giang",
-    "province_code": "24",
+    "province_id": "24",
     "id": "213"
   },
   {
@@ -1292,7 +1292,7 @@
     "full_name": "Huyện Yên Thế",
     "full_name_en": "Yen The District",
     "code_name": "yen_the",
-    "province_code": "24",
+    "province_id": "24",
     "id": "215"
   },
   {
@@ -1301,7 +1301,7 @@
     "full_name": "Huyện Tân Yên",
     "full_name_en": "Tan Yen District",
     "code_name": "tan_yen",
-    "province_code": "24",
+    "province_id": "24",
     "id": "216"
   },
   {
@@ -1310,7 +1310,7 @@
     "full_name": "Huyện Lạng Giang",
     "full_name_en": "Lang Giang District",
     "code_name": "lang_giang",
-    "province_code": "24",
+    "province_id": "24",
     "id": "217"
   },
   {
@@ -1319,7 +1319,7 @@
     "full_name": "Huyện Lục Nam",
     "full_name_en": "Luc Nam District",
     "code_name": "luc_nam",
-    "province_code": "24",
+    "province_id": "24",
     "id": "218"
   },
   {
@@ -1328,7 +1328,7 @@
     "full_name": "Huyện Lục Ngạn",
     "full_name_en": "Luc Ngan District",
     "code_name": "luc_ngan",
-    "province_code": "24",
+    "province_id": "24",
     "id": "219"
   },
   {
@@ -1337,7 +1337,7 @@
     "full_name": "Huyện Sơn Động",
     "full_name_en": "Son Dong District",
     "code_name": "son_dong",
-    "province_code": "24",
+    "province_id": "24",
     "id": "220"
   },
   {
@@ -1346,7 +1346,7 @@
     "full_name": "Huyện Yên Dũng",
     "full_name_en": "Yen Dung District",
     "code_name": "yen_dung",
-    "province_code": "24",
+    "province_id": "24",
     "id": "221"
   },
   {
@@ -1355,7 +1355,7 @@
     "full_name": "Thị xã Việt Yên",
     "full_name_en": "Viet Yen Town",
     "code_name": "viet_yen",
-    "province_code": "24",
+    "province_id": "24",
     "id": "222"
   },
   {
@@ -1364,7 +1364,7 @@
     "full_name": "Huyện Hiệp Hòa",
     "full_name_en": "Hiep Hoa District",
     "code_name": "hiep_hoa",
-    "province_code": "24",
+    "province_id": "24",
     "id": "223"
   },
   {
@@ -1373,7 +1373,7 @@
     "full_name": "Thành phố Việt Trì",
     "full_name_en": "Viet Tri City",
     "code_name": "viet_tri",
-    "province_code": "25",
+    "province_id": "25",
     "id": "227"
   },
   {
@@ -1382,7 +1382,7 @@
     "full_name": "Thị xã Phú Thọ",
     "full_name_en": "Phu Tho Town",
     "code_name": "phu_tho",
-    "province_code": "25",
+    "province_id": "25",
     "id": "228"
   },
   {
@@ -1391,7 +1391,7 @@
     "full_name": "Huyện Đoan Hùng",
     "full_name_en": "Doan Hung District",
     "code_name": "doan_hung",
-    "province_code": "25",
+    "province_id": "25",
     "id": "230"
   },
   {
@@ -1400,7 +1400,7 @@
     "full_name": "Huyện Hạ Hoà",
     "full_name_en": "Ha Hoa District",
     "code_name": "ha_hoa",
-    "province_code": "25",
+    "province_id": "25",
     "id": "231"
   },
   {
@@ -1409,7 +1409,7 @@
     "full_name": "Huyện Thanh Ba",
     "full_name_en": "Thanh Ba District",
     "code_name": "thanh_ba",
-    "province_code": "25",
+    "province_id": "25",
     "id": "232"
   },
   {
@@ -1418,7 +1418,7 @@
     "full_name": "Huyện Phù Ninh",
     "full_name_en": "Phu Ninh District",
     "code_name": "phu_ninh",
-    "province_code": "25",
+    "province_id": "25",
     "id": "233"
   },
   {
@@ -1427,7 +1427,7 @@
     "full_name": "Huyện Yên Lập",
     "full_name_en": "Yen Lap District",
     "code_name": "yen_lap",
-    "province_code": "25",
+    "province_id": "25",
     "id": "234"
   },
   {
@@ -1436,7 +1436,7 @@
     "full_name": "Huyện Cẩm Khê",
     "full_name_en": "Cam Khe District",
     "code_name": "cam_khe",
-    "province_code": "25",
+    "province_id": "25",
     "id": "235"
   },
   {
@@ -1445,7 +1445,7 @@
     "full_name": "Huyện Tam Nông",
     "full_name_en": "Tam Nong District",
     "code_name": "tam_nong",
-    "province_code": "25",
+    "province_id": "25",
     "id": "236"
   },
   {
@@ -1454,7 +1454,7 @@
     "full_name": "Huyện Lâm Thao",
     "full_name_en": "Lam Thao District",
     "code_name": "lam_thao",
-    "province_code": "25",
+    "province_id": "25",
     "id": "237"
   },
   {
@@ -1463,7 +1463,7 @@
     "full_name": "Huyện Thanh Sơn",
     "full_name_en": "Thanh Son District",
     "code_name": "thanh_son",
-    "province_code": "25",
+    "province_id": "25",
     "id": "238"
   },
   {
@@ -1472,7 +1472,7 @@
     "full_name": "Huyện Thanh Thuỷ",
     "full_name_en": "Thanh Thuy District",
     "code_name": "thanh_thuy",
-    "province_code": "25",
+    "province_id": "25",
     "id": "239"
   },
   {
@@ -1481,7 +1481,7 @@
     "full_name": "Huyện Tân Sơn",
     "full_name_en": "Tan Son District",
     "code_name": "tan_son",
-    "province_code": "25",
+    "province_id": "25",
     "id": "240"
   },
   {
@@ -1490,7 +1490,7 @@
     "full_name": "Thành phố Vĩnh Yên",
     "full_name_en": "Vinh Yen City",
     "code_name": "vinh_yen",
-    "province_code": "26",
+    "province_id": "26",
     "id": "243"
   },
   {
@@ -1499,7 +1499,7 @@
     "full_name": "Thành phố Phúc Yên",
     "full_name_en": "Phuc Yen City",
     "code_name": "phuc_yen",
-    "province_code": "26",
+    "province_id": "26",
     "id": "244"
   },
   {
@@ -1508,7 +1508,7 @@
     "full_name": "Huyện Lập Thạch",
     "full_name_en": "Lap Thach District",
     "code_name": "lap_thach",
-    "province_code": "26",
+    "province_id": "26",
     "id": "246"
   },
   {
@@ -1517,7 +1517,7 @@
     "full_name": "Huyện Tam Dương",
     "full_name_en": "Tam Duong District",
     "code_name": "tam_duong",
-    "province_code": "26",
+    "province_id": "26",
     "id": "247"
   },
   {
@@ -1526,7 +1526,7 @@
     "full_name": "Huyện Tam Đảo",
     "full_name_en": "Tam Dao District",
     "code_name": "tam_dao",
-    "province_code": "26",
+    "province_id": "26",
     "id": "248"
   },
   {
@@ -1535,7 +1535,7 @@
     "full_name": "Huyện Bình Xuyên",
     "full_name_en": "Binh Xuyen District",
     "code_name": "binh_xuyen",
-    "province_code": "26",
+    "province_id": "26",
     "id": "249"
   },
   {
@@ -1544,7 +1544,7 @@
     "full_name": "Huyện Mê Linh",
     "full_name_en": "Me Linh District",
     "code_name": "me_linh",
-    "province_code": "01",
+    "province_id": "01",
     "id": "250"
   },
   {
@@ -1553,7 +1553,7 @@
     "full_name": "Huyện Yên Lạc",
     "full_name_en": "Yen Lac District",
     "code_name": "yen_lac",
-    "province_code": "26",
+    "province_id": "26",
     "id": "251"
   },
   {
@@ -1562,7 +1562,7 @@
     "full_name": "Huyện Vĩnh Tường",
     "full_name_en": "Vinh Tuong District",
     "code_name": "vinh_tuong",
-    "province_code": "26",
+    "province_id": "26",
     "id": "252"
   },
   {
@@ -1571,7 +1571,7 @@
     "full_name": "Huyện Sông Lô",
     "full_name_en": "Song Lo District",
     "code_name": "song_lo",
-    "province_code": "26",
+    "province_id": "26",
     "id": "253"
   },
   {
@@ -1580,7 +1580,7 @@
     "full_name": "Thành phố Bắc Ninh",
     "full_name_en": "Bac Ninh City",
     "code_name": "bac_ninh",
-    "province_code": "27",
+    "province_id": "27",
     "id": "256"
   },
   {
@@ -1589,7 +1589,7 @@
     "full_name": "Huyện Yên Phong",
     "full_name_en": "Yen Phong District",
     "code_name": "yen_phong",
-    "province_code": "27",
+    "province_id": "27",
     "id": "258"
   },
   {
@@ -1598,7 +1598,7 @@
     "full_name": "Thị xã Quế Võ",
     "full_name_en": "Que Vo Town",
     "code_name": "que_vo",
-    "province_code": "27",
+    "province_id": "27",
     "id": "259"
   },
   {
@@ -1607,7 +1607,7 @@
     "full_name": "Huyện Tiên Du",
     "full_name_en": "Tien Du District",
     "code_name": "tien_du",
-    "province_code": "27",
+    "province_id": "27",
     "id": "260"
   },
   {
@@ -1616,7 +1616,7 @@
     "full_name": "Thành phố Từ Sơn",
     "full_name_en": "Tu Son City",
     "code_name": "tu_son",
-    "province_code": "27",
+    "province_id": "27",
     "id": "261"
   },
   {
@@ -1625,7 +1625,7 @@
     "full_name": "Thị xã Thuận Thành",
     "full_name_en": "Thuan Thanh Town",
     "code_name": "thuan_thanh",
-    "province_code": "27",
+    "province_id": "27",
     "id": "262"
   },
   {
@@ -1634,7 +1634,7 @@
     "full_name": "Huyện Gia Bình",
     "full_name_en": "Gia Binh District",
     "code_name": "gia_binh",
-    "province_code": "27",
+    "province_id": "27",
     "id": "263"
   },
   {
@@ -1643,7 +1643,7 @@
     "full_name": "Huyện Lương Tài",
     "full_name_en": "Luong Tai District",
     "code_name": "luong_tai",
-    "province_code": "27",
+    "province_id": "27",
     "id": "264"
   },
   {
@@ -1652,7 +1652,7 @@
     "full_name": "Quận Hà Đông",
     "full_name_en": "Ha Dong District",
     "code_name": "ha_dong",
-    "province_code": "01",
+    "province_id": "01",
     "id": "268"
   },
   {
@@ -1661,7 +1661,7 @@
     "full_name": "Thị xã Sơn Tây",
     "full_name_en": "Son Tay Town",
     "code_name": "son_tay",
-    "province_code": "01",
+    "province_id": "01",
     "id": "269"
   },
   {
@@ -1670,7 +1670,7 @@
     "full_name": "Huyện Ba Vì",
     "full_name_en": "Ba Vi District",
     "code_name": "ba_vi",
-    "province_code": "01",
+    "province_id": "01",
     "id": "271"
   },
   {
@@ -1679,7 +1679,7 @@
     "full_name": "Huyện Phúc Thọ",
     "full_name_en": "Phuc Tho District",
     "code_name": "phuc_tho",
-    "province_code": "01",
+    "province_id": "01",
     "id": "272"
   },
   {
@@ -1688,7 +1688,7 @@
     "full_name": "Huyện Đan Phượng",
     "full_name_en": "Dan Phuong District",
     "code_name": "dan_phuong",
-    "province_code": "01",
+    "province_id": "01",
     "id": "273"
   },
   {
@@ -1697,7 +1697,7 @@
     "full_name": "Huyện Hoài Đức",
     "full_name_en": "Hoai Duc District",
     "code_name": "hoai_duc",
-    "province_code": "01",
+    "province_id": "01",
     "id": "274"
   },
   {
@@ -1706,7 +1706,7 @@
     "full_name": "Huyện Quốc Oai",
     "full_name_en": "Quoc Oai District",
     "code_name": "quoc_oai",
-    "province_code": "01",
+    "province_id": "01",
     "id": "275"
   },
   {
@@ -1715,7 +1715,7 @@
     "full_name": "Huyện Thạch Thất",
     "full_name_en": "Thach That District",
     "code_name": "thach_that",
-    "province_code": "01",
+    "province_id": "01",
     "id": "276"
   },
   {
@@ -1724,7 +1724,7 @@
     "full_name": "Huyện Chương Mỹ",
     "full_name_en": "Chuong My District",
     "code_name": "chuong_my",
-    "province_code": "01",
+    "province_id": "01",
     "id": "277"
   },
   {
@@ -1733,7 +1733,7 @@
     "full_name": "Huyện Thanh Oai",
     "full_name_en": "Thanh Oai District",
     "code_name": "thanh_oai",
-    "province_code": "01",
+    "province_id": "01",
     "id": "278"
   },
   {
@@ -1742,7 +1742,7 @@
     "full_name": "Huyện Thường Tín",
     "full_name_en": "Thuong Tin District",
     "code_name": "thuong_tin",
-    "province_code": "01",
+    "province_id": "01",
     "id": "279"
   },
   {
@@ -1751,7 +1751,7 @@
     "full_name": "Huyện Phú Xuyên",
     "full_name_en": "Phu Xuyen District",
     "code_name": "phu_xuyen",
-    "province_code": "01",
+    "province_id": "01",
     "id": "280"
   },
   {
@@ -1760,7 +1760,7 @@
     "full_name": "Huyện Ứng Hòa",
     "full_name_en": "Ung Hoa District",
     "code_name": "ung_hoa",
-    "province_code": "01",
+    "province_id": "01",
     "id": "281"
   },
   {
@@ -1769,7 +1769,7 @@
     "full_name": "Huyện Mỹ Đức",
     "full_name_en": "My Duc District",
     "code_name": "my_duc",
-    "province_code": "01",
+    "province_id": "01",
     "id": "282"
   },
   {
@@ -1778,7 +1778,7 @@
     "full_name": "Thành phố Hải Dương",
     "full_name_en": "Hai Duong City",
     "code_name": "hai_duong",
-    "province_code": "30",
+    "province_id": "30",
     "id": "288"
   },
   {
@@ -1787,7 +1787,7 @@
     "full_name": "Thành phố Chí Linh",
     "full_name_en": "Chi Linh City",
     "code_name": "chi_linh",
-    "province_code": "30",
+    "province_id": "30",
     "id": "290"
   },
   {
@@ -1796,7 +1796,7 @@
     "full_name": "Huyện Nam Sách",
     "full_name_en": "Nam Sach District",
     "code_name": "nam_sach",
-    "province_code": "30",
+    "province_id": "30",
     "id": "291"
   },
   {
@@ -1805,7 +1805,7 @@
     "full_name": "Thị xã Kinh Môn",
     "full_name_en": "Kinh Mon Town",
     "code_name": "kinh_mon",
-    "province_code": "30",
+    "province_id": "30",
     "id": "292"
   },
   {
@@ -1814,7 +1814,7 @@
     "full_name": "Huyện Kim Thành",
     "full_name_en": "Kim Thanh District",
     "code_name": "kim_thanh",
-    "province_code": "30",
+    "province_id": "30",
     "id": "293"
   },
   {
@@ -1823,7 +1823,7 @@
     "full_name": "Huyện Thanh Hà",
     "full_name_en": "Thanh Ha District",
     "code_name": "thanh_ha",
-    "province_code": "30",
+    "province_id": "30",
     "id": "294"
   },
   {
@@ -1832,7 +1832,7 @@
     "full_name": "Huyện Cẩm Giàng",
     "full_name_en": "Cam Giang District",
     "code_name": "cam_giang",
-    "province_code": "30",
+    "province_id": "30",
     "id": "295"
   },
   {
@@ -1841,7 +1841,7 @@
     "full_name": "Huyện Bình Giang",
     "full_name_en": "Binh Giang District",
     "code_name": "binh_giang",
-    "province_code": "30",
+    "province_id": "30",
     "id": "296"
   },
   {
@@ -1850,7 +1850,7 @@
     "full_name": "Huyện Gia Lộc",
     "full_name_en": "Gia Loc District",
     "code_name": "gia_loc",
-    "province_code": "30",
+    "province_id": "30",
     "id": "297"
   },
   {
@@ -1859,7 +1859,7 @@
     "full_name": "Huyện Tứ Kỳ",
     "full_name_en": "Tu Ky District",
     "code_name": "tu_ky",
-    "province_code": "30",
+    "province_id": "30",
     "id": "298"
   },
   {
@@ -1868,7 +1868,7 @@
     "full_name": "Huyện Ninh Giang",
     "full_name_en": "Ninh Giang District",
     "code_name": "ninh_giang",
-    "province_code": "30",
+    "province_id": "30",
     "id": "299"
   },
   {
@@ -1877,7 +1877,7 @@
     "full_name": "Huyện Thanh Miện",
     "full_name_en": "Thanh Mien District",
     "code_name": "thanh_mien",
-    "province_code": "30",
+    "province_id": "30",
     "id": "300"
   },
   {
@@ -1886,7 +1886,7 @@
     "full_name": "Quận Hồng Bàng",
     "full_name_en": "Hong Bang District",
     "code_name": "hong_bang",
-    "province_code": "31",
+    "province_id": "31",
     "id": "303"
   },
   {
@@ -1895,7 +1895,7 @@
     "full_name": "Quận Ngô Quyền",
     "full_name_en": "Ngo Quyen District",
     "code_name": "ngo_quyen",
-    "province_code": "31",
+    "province_id": "31",
     "id": "304"
   },
   {
@@ -1904,7 +1904,7 @@
     "full_name": "Quận Lê Chân",
     "full_name_en": "Le Chan District",
     "code_name": "le_chan",
-    "province_code": "31",
+    "province_id": "31",
     "id": "305"
   },
   {
@@ -1913,7 +1913,7 @@
     "full_name": "Quận Hải An",
     "full_name_en": "Hai An District",
     "code_name": "hai_an",
-    "province_code": "31",
+    "province_id": "31",
     "id": "306"
   },
   {
@@ -1922,7 +1922,7 @@
     "full_name": "Quận Kiến An",
     "full_name_en": "Kien An District",
     "code_name": "kien_an",
-    "province_code": "31",
+    "province_id": "31",
     "id": "307"
   },
   {
@@ -1931,7 +1931,7 @@
     "full_name": "Quận Đồ Sơn",
     "full_name_en": "Do Son District",
     "code_name": "do_son",
-    "province_code": "31",
+    "province_id": "31",
     "id": "308"
   },
   {
@@ -1940,7 +1940,7 @@
     "full_name": "Quận Dương Kinh",
     "full_name_en": "Duong Kinh District",
     "code_name": "duong_kinh",
-    "province_code": "31",
+    "province_id": "31",
     "id": "309"
   },
   {
@@ -1949,7 +1949,7 @@
     "full_name": "Huyện Thuỷ Nguyên",
     "full_name_en": "Thuy Nguyen District",
     "code_name": "thuy_nguyen",
-    "province_code": "31",
+    "province_id": "31",
     "id": "311"
   },
   {
@@ -1958,7 +1958,7 @@
     "full_name": "Huyện An Dương",
     "full_name_en": "An Duong District",
     "code_name": "an_duong",
-    "province_code": "31",
+    "province_id": "31",
     "id": "312"
   },
   {
@@ -1967,7 +1967,7 @@
     "full_name": "Huyện An Lão",
     "full_name_en": "An Lao District",
     "code_name": "an_lao",
-    "province_code": "31",
+    "province_id": "31",
     "id": "313"
   },
   {
@@ -1976,7 +1976,7 @@
     "full_name": "Huyện Kiến Thuỵ",
     "full_name_en": "Kien Thuy District",
     "code_name": "kien_thuy",
-    "province_code": "31",
+    "province_id": "31",
     "id": "314"
   },
   {
@@ -1985,7 +1985,7 @@
     "full_name": "Huyện Tiên Lãng",
     "full_name_en": "Tien Lang District",
     "code_name": "tien_lang",
-    "province_code": "31",
+    "province_id": "31",
     "id": "315"
   },
   {
@@ -1994,7 +1994,7 @@
     "full_name": "Huyện Vĩnh Bảo",
     "full_name_en": "Vinh Bao District",
     "code_name": "vinh_bao",
-    "province_code": "31",
+    "province_id": "31",
     "id": "316"
   },
   {
@@ -2003,7 +2003,7 @@
     "full_name": "Huyện Cát Hải",
     "full_name_en": "Cat Hai District",
     "code_name": "cat_hai",
-    "province_code": "31",
+    "province_id": "31",
     "id": "317"
   },
   {
@@ -2012,7 +2012,7 @@
     "full_name": "Thành phố Hưng Yên",
     "full_name_en": "Hung Yen City",
     "code_name": "hung_yen",
-    "province_code": "33",
+    "province_id": "33",
     "id": "323"
   },
   {
@@ -2021,7 +2021,7 @@
     "full_name": "Huyện Văn Lâm",
     "full_name_en": "Van Lam District",
     "code_name": "van_lam",
-    "province_code": "33",
+    "province_id": "33",
     "id": "325"
   },
   {
@@ -2030,7 +2030,7 @@
     "full_name": "Huyện Văn Giang",
     "full_name_en": "Van Giang District",
     "code_name": "van_giang",
-    "province_code": "33",
+    "province_id": "33",
     "id": "326"
   },
   {
@@ -2039,7 +2039,7 @@
     "full_name": "Huyện Yên Mỹ",
     "full_name_en": "Yen My District",
     "code_name": "yen_my",
-    "province_code": "33",
+    "province_id": "33",
     "id": "327"
   },
   {
@@ -2048,7 +2048,7 @@
     "full_name": "Thị xã Mỹ Hào",
     "full_name_en": "My Hao Town",
     "code_name": "my_hao",
-    "province_code": "33",
+    "province_id": "33",
     "id": "328"
   },
   {
@@ -2057,7 +2057,7 @@
     "full_name": "Huyện Ân Thi",
     "full_name_en": "An Thi District",
     "code_name": "an_thi",
-    "province_code": "33",
+    "province_id": "33",
     "id": "329"
   },
   {
@@ -2066,7 +2066,7 @@
     "full_name": "Huyện Khoái Châu",
     "full_name_en": "Khoai Chau District",
     "code_name": "khoai_chau",
-    "province_code": "33",
+    "province_id": "33",
     "id": "330"
   },
   {
@@ -2075,7 +2075,7 @@
     "full_name": "Huyện Kim Động",
     "full_name_en": "Kim Dong District",
     "code_name": "kim_dong",
-    "province_code": "33",
+    "province_id": "33",
     "id": "331"
   },
   {
@@ -2084,7 +2084,7 @@
     "full_name": "Huyện Tiên Lữ",
     "full_name_en": "Tien Lu District",
     "code_name": "tien_lu",
-    "province_code": "33",
+    "province_id": "33",
     "id": "332"
   },
   {
@@ -2093,7 +2093,7 @@
     "full_name": "Huyện Phù Cừ",
     "full_name_en": "Phu Cu District",
     "code_name": "phu_cu",
-    "province_code": "33",
+    "province_id": "33",
     "id": "333"
   },
   {
@@ -2102,7 +2102,7 @@
     "full_name": "Thành phố Thái Bình",
     "full_name_en": "Thai Binh City",
     "code_name": "thai_binh",
-    "province_code": "34",
+    "province_id": "34",
     "id": "336"
   },
   {
@@ -2111,7 +2111,7 @@
     "full_name": "Huyện Quỳnh Phụ",
     "full_name_en": "Quynh Phu District",
     "code_name": "quynh_phu",
-    "province_code": "34",
+    "province_id": "34",
     "id": "338"
   },
   {
@@ -2120,7 +2120,7 @@
     "full_name": "Huyện Hưng Hà",
     "full_name_en": "Hung Ha District",
     "code_name": "hung_ha",
-    "province_code": "34",
+    "province_id": "34",
     "id": "339"
   },
   {
@@ -2129,7 +2129,7 @@
     "full_name": "Huyện Đông Hưng",
     "full_name_en": "Dong Hung District",
     "code_name": "dong_hung",
-    "province_code": "34",
+    "province_id": "34",
     "id": "340"
   },
   {
@@ -2138,7 +2138,7 @@
     "full_name": "Huyện Thái Thụy",
     "full_name_en": "Thai Thuy District",
     "code_name": "thai_thuy",
-    "province_code": "34",
+    "province_id": "34",
     "id": "341"
   },
   {
@@ -2147,7 +2147,7 @@
     "full_name": "Huyện Tiền Hải",
     "full_name_en": "Tien Hai District",
     "code_name": "tien_hai",
-    "province_code": "34",
+    "province_id": "34",
     "id": "342"
   },
   {
@@ -2156,7 +2156,7 @@
     "full_name": "Huyện Kiến Xương",
     "full_name_en": "Kien Xuong District",
     "code_name": "kien_xuong",
-    "province_code": "34",
+    "province_id": "34",
     "id": "343"
   },
   {
@@ -2165,7 +2165,7 @@
     "full_name": "Huyện Vũ Thư",
     "full_name_en": "Vu Thu District",
     "code_name": "vu_thu",
-    "province_code": "34",
+    "province_id": "34",
     "id": "344"
   },
   {
@@ -2174,7 +2174,7 @@
     "full_name": "Thành phố Phủ Lý",
     "full_name_en": "Phu Ly City",
     "code_name": "phu_ly",
-    "province_code": "35",
+    "province_id": "35",
     "id": "347"
   },
   {
@@ -2183,7 +2183,7 @@
     "full_name": "Thị xã Duy Tiên",
     "full_name_en": "Duy Tien Town",
     "code_name": "duy_tien",
-    "province_code": "35",
+    "province_id": "35",
     "id": "349"
   },
   {
@@ -2192,7 +2192,7 @@
     "full_name": "Huyện Kim Bảng",
     "full_name_en": "Kim Bang District",
     "code_name": "kim_bang",
-    "province_code": "35",
+    "province_id": "35",
     "id": "350"
   },
   {
@@ -2201,7 +2201,7 @@
     "full_name": "Huyện Thanh Liêm",
     "full_name_en": "Thanh Liem District",
     "code_name": "thanh_liem",
-    "province_code": "35",
+    "province_id": "35",
     "id": "351"
   },
   {
@@ -2210,7 +2210,7 @@
     "full_name": "Huyện Bình Lục",
     "full_name_en": "Binh Luc District",
     "code_name": "binh_luc",
-    "province_code": "35",
+    "province_id": "35",
     "id": "352"
   },
   {
@@ -2219,7 +2219,7 @@
     "full_name": "Huyện Lý Nhân",
     "full_name_en": "Ly Nhan District",
     "code_name": "ly_nhan",
-    "province_code": "35",
+    "province_id": "35",
     "id": "353"
   },
   {
@@ -2228,7 +2228,7 @@
     "full_name": "Thành phố Nam Định",
     "full_name_en": "Nam Dinh City",
     "code_name": "nam_dinh",
-    "province_code": "36",
+    "province_id": "36",
     "id": "356"
   },
   {
@@ -2237,7 +2237,7 @@
     "full_name": "Huyện Vụ Bản",
     "full_name_en": "Vu Ban District",
     "code_name": "vu_ban",
-    "province_code": "36",
+    "province_id": "36",
     "id": "359"
   },
   {
@@ -2246,7 +2246,7 @@
     "full_name": "Huyện Ý Yên",
     "full_name_en": "Y Yen District",
     "code_name": "y_yen",
-    "province_code": "36",
+    "province_id": "36",
     "id": "360"
   },
   {
@@ -2255,7 +2255,7 @@
     "full_name": "Huyện Nghĩa Hưng",
     "full_name_en": "Nghia Hung District",
     "code_name": "nghia_hung",
-    "province_code": "36",
+    "province_id": "36",
     "id": "361"
   },
   {
@@ -2264,7 +2264,7 @@
     "full_name": "Huyện Nam Trực",
     "full_name_en": "Nam Truc District",
     "code_name": "nam_truc",
-    "province_code": "36",
+    "province_id": "36",
     "id": "362"
   },
   {
@@ -2273,7 +2273,7 @@
     "full_name": "Huyện Trực Ninh",
     "full_name_en": "Truc Ninh District",
     "code_name": "truc_ninh",
-    "province_code": "36",
+    "province_id": "36",
     "id": "363"
   },
   {
@@ -2282,7 +2282,7 @@
     "full_name": "Huyện Xuân Trường",
     "full_name_en": "Xuan Truong District",
     "code_name": "xuan_truong",
-    "province_code": "36",
+    "province_id": "36",
     "id": "364"
   },
   {
@@ -2291,7 +2291,7 @@
     "full_name": "Huyện Giao Thủy",
     "full_name_en": "Giao Thuy District",
     "code_name": "giao_thuy",
-    "province_code": "36",
+    "province_id": "36",
     "id": "365"
   },
   {
@@ -2300,7 +2300,7 @@
     "full_name": "Huyện Hải Hậu",
     "full_name_en": "Hai Hau District",
     "code_name": "hai_hau",
-    "province_code": "36",
+    "province_id": "36",
     "id": "366"
   },
   {
@@ -2309,7 +2309,7 @@
     "full_name": "Thành phố Ninh Bình",
     "full_name_en": "Ninh Binh City",
     "code_name": "ninh_binh",
-    "province_code": "37",
+    "province_id": "37",
     "id": "369"
   },
   {
@@ -2318,7 +2318,7 @@
     "full_name": "Thành phố Tam Điệp",
     "full_name_en": "Tam Diep City",
     "code_name": "tam_diep",
-    "province_code": "37",
+    "province_id": "37",
     "id": "370"
   },
   {
@@ -2327,7 +2327,7 @@
     "full_name": "Huyện Nho Quan",
     "full_name_en": "Nho Quan District",
     "code_name": "nho_quan",
-    "province_code": "37",
+    "province_id": "37",
     "id": "372"
   },
   {
@@ -2336,7 +2336,7 @@
     "full_name": "Huyện Gia Viễn",
     "full_name_en": "Gia Vien District",
     "code_name": "gia_vien",
-    "province_code": "37",
+    "province_id": "37",
     "id": "373"
   },
   {
@@ -2345,7 +2345,7 @@
     "full_name": "Huyện Hoa Lư",
     "full_name_en": "Hoa Lu District",
     "code_name": "hoa_lu",
-    "province_code": "37",
+    "province_id": "37",
     "id": "374"
   },
   {
@@ -2354,7 +2354,7 @@
     "full_name": "Huyện Yên Khánh",
     "full_name_en": "Yen Khanh District",
     "code_name": "yen_khanh",
-    "province_code": "37",
+    "province_id": "37",
     "id": "375"
   },
   {
@@ -2363,7 +2363,7 @@
     "full_name": "Huyện Kim Sơn",
     "full_name_en": "Kim Son District",
     "code_name": "kim_son",
-    "province_code": "37",
+    "province_id": "37",
     "id": "376"
   },
   {
@@ -2372,7 +2372,7 @@
     "full_name": "Huyện Yên Mô",
     "full_name_en": "Yen Mo District",
     "code_name": "yen_mo",
-    "province_code": "37",
+    "province_id": "37",
     "id": "377"
   },
   {
@@ -2381,7 +2381,7 @@
     "full_name": "Thành phố Thanh Hóa",
     "full_name_en": "Thanh Hoa City",
     "code_name": "thanh_hoa",
-    "province_code": "38",
+    "province_id": "38",
     "id": "380"
   },
   {
@@ -2390,7 +2390,7 @@
     "full_name": "Thị xã Bỉm Sơn",
     "full_name_en": "Bim Son Town",
     "code_name": "bim_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "381"
   },
   {
@@ -2399,7 +2399,7 @@
     "full_name": "Thành phố Sầm Sơn",
     "full_name_en": "Sam Son City",
     "code_name": "sam_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "382"
   },
   {
@@ -2408,7 +2408,7 @@
     "full_name": "Huyện Mường Lát",
     "full_name_en": "Muong Lat District",
     "code_name": "muong_lat",
-    "province_code": "38",
+    "province_id": "38",
     "id": "384"
   },
   {
@@ -2417,7 +2417,7 @@
     "full_name": "Huyện Quan Hóa",
     "full_name_en": "Quan Hoa District",
     "code_name": "quan_hoa",
-    "province_code": "38",
+    "province_id": "38",
     "id": "385"
   },
   {
@@ -2426,7 +2426,7 @@
     "full_name": "Huyện Bá Thước",
     "full_name_en": "Ba Thuoc District",
     "code_name": "ba_thuoc",
-    "province_code": "38",
+    "province_id": "38",
     "id": "386"
   },
   {
@@ -2435,7 +2435,7 @@
     "full_name": "Huyện Quan Sơn",
     "full_name_en": "Quan Son District",
     "code_name": "quan_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "387"
   },
   {
@@ -2444,7 +2444,7 @@
     "full_name": "Huyện Lang Chánh",
     "full_name_en": "Lang Chanh District",
     "code_name": "lang_chanh",
-    "province_code": "38",
+    "province_id": "38",
     "id": "388"
   },
   {
@@ -2453,7 +2453,7 @@
     "full_name": "Huyện Ngọc Lặc",
     "full_name_en": "Ngoc Lac District",
     "code_name": "ngoc_lac",
-    "province_code": "38",
+    "province_id": "38",
     "id": "389"
   },
   {
@@ -2462,7 +2462,7 @@
     "full_name": "Huyện Cẩm Thủy",
     "full_name_en": "Cam Thuy District",
     "code_name": "cam_thuy",
-    "province_code": "38",
+    "province_id": "38",
     "id": "390"
   },
   {
@@ -2471,7 +2471,7 @@
     "full_name": "Huyện Thạch Thành",
     "full_name_en": "Thach Thanh District",
     "code_name": "thach_thanh",
-    "province_code": "38",
+    "province_id": "38",
     "id": "391"
   },
   {
@@ -2480,7 +2480,7 @@
     "full_name": "Huyện Hà Trung",
     "full_name_en": "Ha Trung District",
     "code_name": "ha_trung",
-    "province_code": "38",
+    "province_id": "38",
     "id": "392"
   },
   {
@@ -2489,7 +2489,7 @@
     "full_name": "Huyện Vĩnh Lộc",
     "full_name_en": "Vinh Loc District",
     "code_name": "vinh_loc",
-    "province_code": "38",
+    "province_id": "38",
     "id": "393"
   },
   {
@@ -2498,7 +2498,7 @@
     "full_name": "Huyện Yên Định",
     "full_name_en": "Yen Dinh District",
     "code_name": "yen_dinh",
-    "province_code": "38",
+    "province_id": "38",
     "id": "394"
   },
   {
@@ -2507,7 +2507,7 @@
     "full_name": "Huyện Thọ Xuân",
     "full_name_en": "Tho Xuan District",
     "code_name": "tho_xuan",
-    "province_code": "38",
+    "province_id": "38",
     "id": "395"
   },
   {
@@ -2516,7 +2516,7 @@
     "full_name": "Huyện Thường Xuân",
     "full_name_en": "Thuong Xuan District",
     "code_name": "thuong_xuan",
-    "province_code": "38",
+    "province_id": "38",
     "id": "396"
   },
   {
@@ -2525,7 +2525,7 @@
     "full_name": "Huyện Triệu Sơn",
     "full_name_en": "Trieu Son District",
     "code_name": "trieu_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "397"
   },
   {
@@ -2534,7 +2534,7 @@
     "full_name": "Huyện Thiệu Hóa",
     "full_name_en": "Thieu Hoa District",
     "code_name": "thieu_hoa",
-    "province_code": "38",
+    "province_id": "38",
     "id": "398"
   },
   {
@@ -2543,7 +2543,7 @@
     "full_name": "Huyện Hoằng Hóa",
     "full_name_en": "Hoang Hoa District",
     "code_name": "hoang_hoa",
-    "province_code": "38",
+    "province_id": "38",
     "id": "399"
   },
   {
@@ -2552,7 +2552,7 @@
     "full_name": "Huyện Hậu Lộc",
     "full_name_en": "Hau Loc District",
     "code_name": "hau_loc",
-    "province_code": "38",
+    "province_id": "38",
     "id": "400"
   },
   {
@@ -2561,7 +2561,7 @@
     "full_name": "Huyện Nga Sơn",
     "full_name_en": "Nga Son District",
     "code_name": "nga_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "401"
   },
   {
@@ -2570,7 +2570,7 @@
     "full_name": "Huyện Như Xuân",
     "full_name_en": "Nhu Xuan District",
     "code_name": "nhu_xuan",
-    "province_code": "38",
+    "province_id": "38",
     "id": "402"
   },
   {
@@ -2579,7 +2579,7 @@
     "full_name": "Huyện Như Thanh",
     "full_name_en": "Nhu Thanh District",
     "code_name": "nhu_thanh",
-    "province_code": "38",
+    "province_id": "38",
     "id": "403"
   },
   {
@@ -2588,7 +2588,7 @@
     "full_name": "Huyện Nông Cống",
     "full_name_en": "Nong Cong District",
     "code_name": "nong_cong",
-    "province_code": "38",
+    "province_id": "38",
     "id": "404"
   },
   {
@@ -2597,7 +2597,7 @@
     "full_name": "Huyện Đông Sơn",
     "full_name_en": "Dong Son District",
     "code_name": "dong_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "405"
   },
   {
@@ -2606,7 +2606,7 @@
     "full_name": "Huyện Quảng Xương",
     "full_name_en": "Quang Xuong District",
     "code_name": "quang_xuong",
-    "province_code": "38",
+    "province_id": "38",
     "id": "406"
   },
   {
@@ -2615,7 +2615,7 @@
     "full_name": "Thị xã Nghi Sơn",
     "full_name_en": "Nghi Son Town",
     "code_name": "nghi_son",
-    "province_code": "38",
+    "province_id": "38",
     "id": "407"
   },
   {
@@ -2624,7 +2624,7 @@
     "full_name": "Thành phố Vinh",
     "full_name_en": "Vinh City",
     "code_name": "vinh",
-    "province_code": "40",
+    "province_id": "40",
     "id": "412"
   },
   {
@@ -2633,7 +2633,7 @@
     "full_name": "Thị xã Cửa Lò",
     "full_name_en": "Cua Lo Town",
     "code_name": "cua_lo",
-    "province_code": "40",
+    "province_id": "40",
     "id": "413"
   },
   {
@@ -2642,7 +2642,7 @@
     "full_name": "Thị xã Thái Hoà",
     "full_name_en": "Thai Hoa Town",
     "code_name": "thai_hoa",
-    "province_code": "40",
+    "province_id": "40",
     "id": "414"
   },
   {
@@ -2651,7 +2651,7 @@
     "full_name": "Huyện Quế Phong",
     "full_name_en": "Que Phong District",
     "code_name": "que_phong",
-    "province_code": "40",
+    "province_id": "40",
     "id": "415"
   },
   {
@@ -2660,7 +2660,7 @@
     "full_name": "Huyện Quỳ Châu",
     "full_name_en": "Quy Chau District",
     "code_name": "quy_chau",
-    "province_code": "40",
+    "province_id": "40",
     "id": "416"
   },
   {
@@ -2669,7 +2669,7 @@
     "full_name": "Huyện Kỳ Sơn",
     "full_name_en": "Ky Son District",
     "code_name": "ky_son",
-    "province_code": "40",
+    "province_id": "40",
     "id": "417"
   },
   {
@@ -2678,7 +2678,7 @@
     "full_name": "Huyện Tương Dương",
     "full_name_en": "Tuong Duong District",
     "code_name": "tuong_duong",
-    "province_code": "40",
+    "province_id": "40",
     "id": "418"
   },
   {
@@ -2687,7 +2687,7 @@
     "full_name": "Huyện Nghĩa Đàn",
     "full_name_en": "Nghia Dan District",
     "code_name": "nghia_dan",
-    "province_code": "40",
+    "province_id": "40",
     "id": "419"
   },
   {
@@ -2696,7 +2696,7 @@
     "full_name": "Huyện Quỳ Hợp",
     "full_name_en": "Quy Hop District",
     "code_name": "quy_hop",
-    "province_code": "40",
+    "province_id": "40",
     "id": "420"
   },
   {
@@ -2705,7 +2705,7 @@
     "full_name": "Huyện Quỳnh Lưu",
     "full_name_en": "Quynh Luu District",
     "code_name": "quynh_luu",
-    "province_code": "40",
+    "province_id": "40",
     "id": "421"
   },
   {
@@ -2714,7 +2714,7 @@
     "full_name": "Huyện Con Cuông",
     "full_name_en": "Con Cuong District",
     "code_name": "con_cuong",
-    "province_code": "40",
+    "province_id": "40",
     "id": "422"
   },
   {
@@ -2723,7 +2723,7 @@
     "full_name": "Huyện Tân Kỳ",
     "full_name_en": "Tan Ky District",
     "code_name": "tan_ky",
-    "province_code": "40",
+    "province_id": "40",
     "id": "423"
   },
   {
@@ -2732,7 +2732,7 @@
     "full_name": "Huyện Anh Sơn",
     "full_name_en": "Anh Son District",
     "code_name": "anh_son",
-    "province_code": "40",
+    "province_id": "40",
     "id": "424"
   },
   {
@@ -2741,7 +2741,7 @@
     "full_name": "Huyện Diễn Châu",
     "full_name_en": "Dien Chau District",
     "code_name": "dien_chau",
-    "province_code": "40",
+    "province_id": "40",
     "id": "425"
   },
   {
@@ -2750,7 +2750,7 @@
     "full_name": "Huyện Yên Thành",
     "full_name_en": "Yen Thanh District",
     "code_name": "yen_thanh",
-    "province_code": "40",
+    "province_id": "40",
     "id": "426"
   },
   {
@@ -2759,7 +2759,7 @@
     "full_name": "Huyện Đô Lương",
     "full_name_en": "Do Luong District",
     "code_name": "do_luong",
-    "province_code": "40",
+    "province_id": "40",
     "id": "427"
   },
   {
@@ -2768,7 +2768,7 @@
     "full_name": "Huyện Thanh Chương",
     "full_name_en": "Thanh Chuong District",
     "code_name": "thanh_chuong",
-    "province_code": "40",
+    "province_id": "40",
     "id": "428"
   },
   {
@@ -2777,7 +2777,7 @@
     "full_name": "Huyện Nghi Lộc",
     "full_name_en": "Nghi Loc District",
     "code_name": "nghi_loc",
-    "province_code": "40",
+    "province_id": "40",
     "id": "429"
   },
   {
@@ -2786,7 +2786,7 @@
     "full_name": "Huyện Nam Đàn",
     "full_name_en": "Nam Dan District",
     "code_name": "nam_dan",
-    "province_code": "40",
+    "province_id": "40",
     "id": "430"
   },
   {
@@ -2795,7 +2795,7 @@
     "full_name": "Huyện Hưng Nguyên",
     "full_name_en": "Hung Nguyen District",
     "code_name": "hung_nguyen",
-    "province_code": "40",
+    "province_id": "40",
     "id": "431"
   },
   {
@@ -2804,7 +2804,7 @@
     "full_name": "Thị xã Hoàng Mai",
     "full_name_en": "Hoang Mai Town",
     "code_name": "hoang_mai",
-    "province_code": "40",
+    "province_id": "40",
     "id": "432"
   },
   {
@@ -2813,7 +2813,7 @@
     "full_name": "Thành phố Hà Tĩnh",
     "full_name_en": "Ha Tinh City",
     "code_name": "ha_tinh",
-    "province_code": "42",
+    "province_id": "42",
     "id": "436"
   },
   {
@@ -2822,7 +2822,7 @@
     "full_name": "Thị xã Hồng Lĩnh",
     "full_name_en": "Hong Linh Town",
     "code_name": "hong_linh",
-    "province_code": "42",
+    "province_id": "42",
     "id": "437"
   },
   {
@@ -2831,7 +2831,7 @@
     "full_name": "Huyện Hương Sơn",
     "full_name_en": "Huong Son District",
     "code_name": "huong_son",
-    "province_code": "42",
+    "province_id": "42",
     "id": "439"
   },
   {
@@ -2840,7 +2840,7 @@
     "full_name": "Huyện Đức Thọ",
     "full_name_en": "Duc Tho District",
     "code_name": "duc_tho",
-    "province_code": "42",
+    "province_id": "42",
     "id": "440"
   },
   {
@@ -2849,7 +2849,7 @@
     "full_name": "Huyện Vũ Quang",
     "full_name_en": "Vu Quang District",
     "code_name": "vu_quang",
-    "province_code": "42",
+    "province_id": "42",
     "id": "441"
   },
   {
@@ -2858,7 +2858,7 @@
     "full_name": "Huyện Nghi Xuân",
     "full_name_en": "Nghi Xuan District",
     "code_name": "nghi_xuan",
-    "province_code": "42",
+    "province_id": "42",
     "id": "442"
   },
   {
@@ -2867,7 +2867,7 @@
     "full_name": "Huyện Can Lộc",
     "full_name_en": "Can Loc District",
     "code_name": "can_loc",
-    "province_code": "42",
+    "province_id": "42",
     "id": "443"
   },
   {
@@ -2876,7 +2876,7 @@
     "full_name": "Huyện Hương Khê",
     "full_name_en": "Huong Khe District",
     "code_name": "huong_khe",
-    "province_code": "42",
+    "province_id": "42",
     "id": "444"
   },
   {
@@ -2885,7 +2885,7 @@
     "full_name": "Huyện Thạch Hà",
     "full_name_en": "Thach Ha District",
     "code_name": "thach_ha",
-    "province_code": "42",
+    "province_id": "42",
     "id": "445"
   },
   {
@@ -2894,7 +2894,7 @@
     "full_name": "Huyện Cẩm Xuyên",
     "full_name_en": "Cam Xuyen District",
     "code_name": "cam_xuyen",
-    "province_code": "42",
+    "province_id": "42",
     "id": "446"
   },
   {
@@ -2903,7 +2903,7 @@
     "full_name": "Huyện Kỳ Anh",
     "full_name_en": "Ky Anh District",
     "code_name": "ky_anh",
-    "province_code": "42",
+    "province_id": "42",
     "id": "447"
   },
   {
@@ -2912,7 +2912,7 @@
     "full_name": "Huyện Lộc Hà",
     "full_name_en": "Loc Ha District",
     "code_name": "loc_ha",
-    "province_code": "42",
+    "province_id": "42",
     "id": "448"
   },
   {
@@ -2921,7 +2921,7 @@
     "full_name": "Thị xã Kỳ Anh",
     "full_name_en": "Ky Anh Town",
     "code_name": "ky_anh",
-    "province_code": "42",
+    "province_id": "42",
     "id": "449"
   },
   {
@@ -2930,7 +2930,7 @@
     "full_name": "Thành phố Đồng Hới",
     "full_name_en": "Dong Hoi City",
     "code_name": "dong_hoi",
-    "province_code": "44",
+    "province_id": "44",
     "id": "450"
   },
   {
@@ -2939,7 +2939,7 @@
     "full_name": "Huyện Minh Hóa",
     "full_name_en": "Minh Hoa District",
     "code_name": "minh_hoa",
-    "province_code": "44",
+    "province_id": "44",
     "id": "452"
   },
   {
@@ -2948,7 +2948,7 @@
     "full_name": "Huyện Tuyên Hóa",
     "full_name_en": "Tuyen Hoa District",
     "code_name": "tuyen_hoa",
-    "province_code": "44",
+    "province_id": "44",
     "id": "453"
   },
   {
@@ -2957,7 +2957,7 @@
     "full_name": "Huyện Quảng Trạch",
     "full_name_en": "Quang Trach District",
     "code_name": "quang_trach",
-    "province_code": "44",
+    "province_id": "44",
     "id": "454"
   },
   {
@@ -2966,7 +2966,7 @@
     "full_name": "Huyện Bố Trạch",
     "full_name_en": "Bo Trach District",
     "code_name": "bo_trach",
-    "province_code": "44",
+    "province_id": "44",
     "id": "455"
   },
   {
@@ -2975,7 +2975,7 @@
     "full_name": "Huyện Quảng Ninh",
     "full_name_en": "Quang Ninh District",
     "code_name": "quang_ninh",
-    "province_code": "44",
+    "province_id": "44",
     "id": "456"
   },
   {
@@ -2984,7 +2984,7 @@
     "full_name": "Huyện Lệ Thủy",
     "full_name_en": "Le Thuy District",
     "code_name": "le_thuy",
-    "province_code": "44",
+    "province_id": "44",
     "id": "457"
   },
   {
@@ -2993,7 +2993,7 @@
     "full_name": "Thị xã Ba Đồn",
     "full_name_en": "Ba Don Town",
     "code_name": "ba_don",
-    "province_code": "44",
+    "province_id": "44",
     "id": "458"
   },
   {
@@ -3002,7 +3002,7 @@
     "full_name": "Thành phố Đông Hà",
     "full_name_en": "Dong Ha City",
     "code_name": "dong_ha",
-    "province_code": "45",
+    "province_id": "45",
     "id": "461"
   },
   {
@@ -3011,7 +3011,7 @@
     "full_name": "Thị xã Quảng Trị",
     "full_name_en": "Quang Tri Town",
     "code_name": "quang_tri",
-    "province_code": "45",
+    "province_id": "45",
     "id": "462"
   },
   {
@@ -3020,7 +3020,7 @@
     "full_name": "Huyện Vĩnh Linh",
     "full_name_en": "Vinh Linh District",
     "code_name": "vinh_linh",
-    "province_code": "45",
+    "province_id": "45",
     "id": "464"
   },
   {
@@ -3029,7 +3029,7 @@
     "full_name": "Huyện Hướng Hóa",
     "full_name_en": "Huong Hoa District",
     "code_name": "huong_hoa",
-    "province_code": "45",
+    "province_id": "45",
     "id": "465"
   },
   {
@@ -3038,7 +3038,7 @@
     "full_name": "Huyện Gio Linh",
     "full_name_en": "Gio Linh District",
     "code_name": "gio_linh",
-    "province_code": "45",
+    "province_id": "45",
     "id": "466"
   },
   {
@@ -3047,7 +3047,7 @@
     "full_name": "Huyện Đa Krông",
     "full_name_en": "Da Krong District",
     "code_name": "da_krong",
-    "province_code": "45",
+    "province_id": "45",
     "id": "467"
   },
   {
@@ -3056,7 +3056,7 @@
     "full_name": "Huyện Cam Lộ",
     "full_name_en": "Cam Lo District",
     "code_name": "cam_lo",
-    "province_code": "45",
+    "province_id": "45",
     "id": "468"
   },
   {
@@ -3065,7 +3065,7 @@
     "full_name": "Huyện Triệu Phong",
     "full_name_en": "Trieu Phong District",
     "code_name": "trieu_phong",
-    "province_code": "45",
+    "province_id": "45",
     "id": "469"
   },
   {
@@ -3074,7 +3074,7 @@
     "full_name": "Huyện Hải Lăng",
     "full_name_en": "Hai Lang District",
     "code_name": "hai_lang",
-    "province_code": "45",
+    "province_id": "45",
     "id": "470"
   },
   {
@@ -3083,7 +3083,7 @@
     "full_name": "Thành phố Huế",
     "full_name_en": "Hue City",
     "code_name": "hue",
-    "province_code": "46",
+    "province_id": "46",
     "id": "474"
   },
   {
@@ -3092,7 +3092,7 @@
     "full_name": "Huyện Phong Điền",
     "full_name_en": "Phong Dien District",
     "code_name": "phong_dien",
-    "province_code": "46",
+    "province_id": "46",
     "id": "476"
   },
   {
@@ -3101,7 +3101,7 @@
     "full_name": "Huyện Quảng Điền",
     "full_name_en": "Quang Dien District",
     "code_name": "quang_dien",
-    "province_code": "46",
+    "province_id": "46",
     "id": "477"
   },
   {
@@ -3110,7 +3110,7 @@
     "full_name": "Huyện Phú Vang",
     "full_name_en": "Phu Vang District",
     "code_name": "phu_vang",
-    "province_code": "46",
+    "province_id": "46",
     "id": "478"
   },
   {
@@ -3119,7 +3119,7 @@
     "full_name": "Thị xã Hương Thủy",
     "full_name_en": "Huong Thuy Town",
     "code_name": "huong_thuy",
-    "province_code": "46",
+    "province_id": "46",
     "id": "479"
   },
   {
@@ -3128,7 +3128,7 @@
     "full_name": "Thị xã Hương Trà",
     "full_name_en": "Huong Tra Town",
     "code_name": "huong_tra",
-    "province_code": "46",
+    "province_id": "46",
     "id": "480"
   },
   {
@@ -3137,7 +3137,7 @@
     "full_name": "Huyện A Lưới",
     "full_name_en": "A Luoi District",
     "code_name": "a_luoi",
-    "province_code": "46",
+    "province_id": "46",
     "id": "481"
   },
   {
@@ -3146,7 +3146,7 @@
     "full_name": "Huyện Phú Lộc",
     "full_name_en": "Phu Loc District",
     "code_name": "phu_loc",
-    "province_code": "46",
+    "province_id": "46",
     "id": "482"
   },
   {
@@ -3155,7 +3155,7 @@
     "full_name": "Huyện Nam Đông",
     "full_name_en": "Nam Dong District",
     "code_name": "nam_dong",
-    "province_code": "46",
+    "province_id": "46",
     "id": "483"
   },
   {
@@ -3164,7 +3164,7 @@
     "full_name": "Quận Liên Chiểu",
     "full_name_en": "Lien Chieu District",
     "code_name": "lien_chieu",
-    "province_code": "48",
+    "province_id": "48",
     "id": "490"
   },
   {
@@ -3173,7 +3173,7 @@
     "full_name": "Quận Thanh Khê",
     "full_name_en": "Thanh Khe District",
     "code_name": "thanh_khe",
-    "province_code": "48",
+    "province_id": "48",
     "id": "491"
   },
   {
@@ -3182,7 +3182,7 @@
     "full_name": "Quận Hải Châu",
     "full_name_en": "Hai Chau District",
     "code_name": "hai_chau",
-    "province_code": "48",
+    "province_id": "48",
     "id": "492"
   },
   {
@@ -3191,7 +3191,7 @@
     "full_name": "Quận Sơn Trà",
     "full_name_en": "Son Tra District",
     "code_name": "son_tra",
-    "province_code": "48",
+    "province_id": "48",
     "id": "493"
   },
   {
@@ -3200,7 +3200,7 @@
     "full_name": "Quận Ngũ Hành Sơn",
     "full_name_en": "Ngu Hanh Son District",
     "code_name": "ngu_hanh_son",
-    "province_code": "48",
+    "province_id": "48",
     "id": "494"
   },
   {
@@ -3209,7 +3209,7 @@
     "full_name": "Quận Cẩm Lệ",
     "full_name_en": "Cam Le District",
     "code_name": "cam_le",
-    "province_code": "48",
+    "province_id": "48",
     "id": "495"
   },
   {
@@ -3218,7 +3218,7 @@
     "full_name": "Huyện Hòa Vang",
     "full_name_en": "Hoa Vang District",
     "code_name": "hoa_vang",
-    "province_code": "48",
+    "province_id": "48",
     "id": "497"
   },
   {
@@ -3227,7 +3227,7 @@
     "full_name": "Thành phố Tam Kỳ",
     "full_name_en": "Tam Ky City",
     "code_name": "tam_ky",
-    "province_code": "49",
+    "province_id": "49",
     "id": "502"
   },
   {
@@ -3236,7 +3236,7 @@
     "full_name": "Thành phố Hội An",
     "full_name_en": "Hoi An City",
     "code_name": "hoi_an",
-    "province_code": "49",
+    "province_id": "49",
     "id": "503"
   },
   {
@@ -3245,7 +3245,7 @@
     "full_name": "Huyện Tây Giang",
     "full_name_en": "Tay Giang District",
     "code_name": "tay_giang",
-    "province_code": "49",
+    "province_id": "49",
     "id": "504"
   },
   {
@@ -3254,7 +3254,7 @@
     "full_name": "Huyện Đông Giang",
     "full_name_en": "Dong Giang District",
     "code_name": "dong_giang",
-    "province_code": "49",
+    "province_id": "49",
     "id": "505"
   },
   {
@@ -3263,7 +3263,7 @@
     "full_name": "Huyện Đại Lộc",
     "full_name_en": "Dai Loc District",
     "code_name": "dai_loc",
-    "province_code": "49",
+    "province_id": "49",
     "id": "506"
   },
   {
@@ -3272,7 +3272,7 @@
     "full_name": "Thị xã Điện Bàn",
     "full_name_en": "Dien Ban Town",
     "code_name": "dien_ban",
-    "province_code": "49",
+    "province_id": "49",
     "id": "507"
   },
   {
@@ -3281,7 +3281,7 @@
     "full_name": "Huyện Duy Xuyên",
     "full_name_en": "Duy Xuyen District",
     "code_name": "duy_xuyen",
-    "province_code": "49",
+    "province_id": "49",
     "id": "508"
   },
   {
@@ -3290,7 +3290,7 @@
     "full_name": "Huyện Quế Sơn",
     "full_name_en": "Que Son District",
     "code_name": "que_son",
-    "province_code": "49",
+    "province_id": "49",
     "id": "509"
   },
   {
@@ -3299,7 +3299,7 @@
     "full_name": "Huyện Nam Giang",
     "full_name_en": "Nam Giang District",
     "code_name": "nam_giang",
-    "province_code": "49",
+    "province_id": "49",
     "id": "510"
   },
   {
@@ -3308,7 +3308,7 @@
     "full_name": "Huyện Phước Sơn",
     "full_name_en": "Phuoc Son District",
     "code_name": "phuoc_son",
-    "province_code": "49",
+    "province_id": "49",
     "id": "511"
   },
   {
@@ -3317,7 +3317,7 @@
     "full_name": "Huyện Hiệp Đức",
     "full_name_en": "Hiep Duc District",
     "code_name": "hiep_duc",
-    "province_code": "49",
+    "province_id": "49",
     "id": "512"
   },
   {
@@ -3326,7 +3326,7 @@
     "full_name": "Huyện Thăng Bình",
     "full_name_en": "Thang Binh District",
     "code_name": "thang_binh",
-    "province_code": "49",
+    "province_id": "49",
     "id": "513"
   },
   {
@@ -3335,7 +3335,7 @@
     "full_name": "Huyện Tiên Phước",
     "full_name_en": "Tien Phuoc District",
     "code_name": "tien_phuoc",
-    "province_code": "49",
+    "province_id": "49",
     "id": "514"
   },
   {
@@ -3344,7 +3344,7 @@
     "full_name": "Huyện Bắc Trà My",
     "full_name_en": "Bac Tra My District",
     "code_name": "bac_tra_my",
-    "province_code": "49",
+    "province_id": "49",
     "id": "515"
   },
   {
@@ -3353,7 +3353,7 @@
     "full_name": "Huyện Nam Trà My",
     "full_name_en": "Nam Tra My District",
     "code_name": "nam_tra_my",
-    "province_code": "49",
+    "province_id": "49",
     "id": "516"
   },
   {
@@ -3362,7 +3362,7 @@
     "full_name": "Huyện Núi Thành",
     "full_name_en": "Nui Thanh District",
     "code_name": "nui_thanh",
-    "province_code": "49",
+    "province_id": "49",
     "id": "517"
   },
   {
@@ -3371,7 +3371,7 @@
     "full_name": "Huyện Phú Ninh",
     "full_name_en": "Phu Ninh District",
     "code_name": "phu_ninh",
-    "province_code": "49",
+    "province_id": "49",
     "id": "518"
   },
   {
@@ -3380,7 +3380,7 @@
     "full_name": "Huyện Nông Sơn",
     "full_name_en": "Nong Son District",
     "code_name": "nong_son",
-    "province_code": "49",
+    "province_id": "49",
     "id": "519"
   },
   {
@@ -3389,7 +3389,7 @@
     "full_name": "Thành phố Quảng Ngãi",
     "full_name_en": "Quang Ngai City",
     "code_name": "quang_ngai",
-    "province_code": "51",
+    "province_id": "51",
     "id": "522"
   },
   {
@@ -3398,7 +3398,7 @@
     "full_name": "Huyện Bình Sơn",
     "full_name_en": "Binh Son District",
     "code_name": "binh_son",
-    "province_code": "51",
+    "province_id": "51",
     "id": "524"
   },
   {
@@ -3407,7 +3407,7 @@
     "full_name": "Huyện Trà Bồng",
     "full_name_en": "Tra Bong District",
     "code_name": "tra_bong",
-    "province_code": "51",
+    "province_id": "51",
     "id": "525"
   },
   {
@@ -3416,7 +3416,7 @@
     "full_name": "Huyện Sơn Tịnh",
     "full_name_en": "Son Tinh District",
     "code_name": "son_tinh",
-    "province_code": "51",
+    "province_id": "51",
     "id": "527"
   },
   {
@@ -3425,7 +3425,7 @@
     "full_name": "Huyện Tư Nghĩa",
     "full_name_en": "Tu Nghia District",
     "code_name": "tu_nghia",
-    "province_code": "51",
+    "province_id": "51",
     "id": "528"
   },
   {
@@ -3434,7 +3434,7 @@
     "full_name": "Huyện Sơn Hà",
     "full_name_en": "Son Ha District",
     "code_name": "son_ha",
-    "province_code": "51",
+    "province_id": "51",
     "id": "529"
   },
   {
@@ -3443,7 +3443,7 @@
     "full_name": "Huyện Sơn Tây",
     "full_name_en": "Son Tay District",
     "code_name": "son_tay",
-    "province_code": "51",
+    "province_id": "51",
     "id": "530"
   },
   {
@@ -3452,7 +3452,7 @@
     "full_name": "Huyện Minh Long",
     "full_name_en": "Minh Long District",
     "code_name": "minh_long",
-    "province_code": "51",
+    "province_id": "51",
     "id": "531"
   },
   {
@@ -3461,7 +3461,7 @@
     "full_name": "Huyện Nghĩa Hành",
     "full_name_en": "Nghia Hanh District",
     "code_name": "nghia_hanh",
-    "province_code": "51",
+    "province_id": "51",
     "id": "532"
   },
   {
@@ -3470,7 +3470,7 @@
     "full_name": "Huyện Mộ Đức",
     "full_name_en": "Mo Duc District",
     "code_name": "mo_duc",
-    "province_code": "51",
+    "province_id": "51",
     "id": "533"
   },
   {
@@ -3479,7 +3479,7 @@
     "full_name": "Thị xã Đức Phổ",
     "full_name_en": "Duc Pho Town",
     "code_name": "duc_pho",
-    "province_code": "51",
+    "province_id": "51",
     "id": "534"
   },
   {
@@ -3488,7 +3488,7 @@
     "full_name": "Huyện Ba Tơ",
     "full_name_en": "Ba To District",
     "code_name": "ba_to",
-    "province_code": "51",
+    "province_id": "51",
     "id": "535"
   },
   {
@@ -3497,7 +3497,7 @@
     "full_name": "Thành phố Quy Nhơn",
     "full_name_en": "Quy Nhon City",
     "code_name": "quy_nhon",
-    "province_code": "52",
+    "province_id": "52",
     "id": "540"
   },
   {
@@ -3506,7 +3506,7 @@
     "full_name": "Huyện An Lão",
     "full_name_en": "An Lao District",
     "code_name": "an_lao",
-    "province_code": "52",
+    "province_id": "52",
     "id": "542"
   },
   {
@@ -3515,7 +3515,7 @@
     "full_name": "Thị xã Hoài Nhơn",
     "full_name_en": "Hoai Nhon Town",
     "code_name": "hoai_nhon",
-    "province_code": "52",
+    "province_id": "52",
     "id": "543"
   },
   {
@@ -3524,7 +3524,7 @@
     "full_name": "Huyện Hoài Ân",
     "full_name_en": "Hoai An District",
     "code_name": "hoai_an",
-    "province_code": "52",
+    "province_id": "52",
     "id": "544"
   },
   {
@@ -3533,7 +3533,7 @@
     "full_name": "Huyện Phù Mỹ",
     "full_name_en": "Phu My District",
     "code_name": "phu_my",
-    "province_code": "52",
+    "province_id": "52",
     "id": "545"
   },
   {
@@ -3542,7 +3542,7 @@
     "full_name": "Huyện Vĩnh Thạnh",
     "full_name_en": "Vinh Thanh District",
     "code_name": "vinh_thanh",
-    "province_code": "52",
+    "province_id": "52",
     "id": "546"
   },
   {
@@ -3551,7 +3551,7 @@
     "full_name": "Huyện Tây Sơn",
     "full_name_en": "Tay Son District",
     "code_name": "tay_son",
-    "province_code": "52",
+    "province_id": "52",
     "id": "547"
   },
   {
@@ -3560,7 +3560,7 @@
     "full_name": "Huyện Phù Cát",
     "full_name_en": "Phu Cat District",
     "code_name": "phu_cat",
-    "province_code": "52",
+    "province_id": "52",
     "id": "548"
   },
   {
@@ -3569,7 +3569,7 @@
     "full_name": "Thị xã An Nhơn",
     "full_name_en": "An Nhon Town",
     "code_name": "an_nhon",
-    "province_code": "52",
+    "province_id": "52",
     "id": "549"
   },
   {
@@ -3578,7 +3578,7 @@
     "full_name": "Huyện Tuy Phước",
     "full_name_en": "Tuy Phuoc District",
     "code_name": "tuy_phuoc",
-    "province_code": "52",
+    "province_id": "52",
     "id": "550"
   },
   {
@@ -3587,7 +3587,7 @@
     "full_name": "Huyện Vân Canh",
     "full_name_en": "Van Canh District",
     "code_name": "van_canh",
-    "province_code": "52",
+    "province_id": "52",
     "id": "551"
   },
   {
@@ -3596,7 +3596,7 @@
     "full_name": "Thành phố Tuy Hoà",
     "full_name_en": "Tuy Hoa City",
     "code_name": "tuy_hoa",
-    "province_code": "54",
+    "province_id": "54",
     "id": "555"
   },
   {
@@ -3605,7 +3605,7 @@
     "full_name": "Thị xã Sông Cầu",
     "full_name_en": "Song Cau Town",
     "code_name": "song_cau",
-    "province_code": "54",
+    "province_id": "54",
     "id": "557"
   },
   {
@@ -3614,7 +3614,7 @@
     "full_name": "Huyện Đồng Xuân",
     "full_name_en": "Dong Xuan District",
     "code_name": "dong_xuan",
-    "province_code": "54",
+    "province_id": "54",
     "id": "558"
   },
   {
@@ -3623,7 +3623,7 @@
     "full_name": "Huyện Tuy An",
     "full_name_en": "Tuy An District",
     "code_name": "tuy_an",
-    "province_code": "54",
+    "province_id": "54",
     "id": "559"
   },
   {
@@ -3632,7 +3632,7 @@
     "full_name": "Huyện Sơn Hòa",
     "full_name_en": "Son Hoa District",
     "code_name": "son_hoa",
-    "province_code": "54",
+    "province_id": "54",
     "id": "560"
   },
   {
@@ -3641,7 +3641,7 @@
     "full_name": "Huyện Sông Hinh",
     "full_name_en": "Song Hinh District",
     "code_name": "song_hinh",
-    "province_code": "54",
+    "province_id": "54",
     "id": "561"
   },
   {
@@ -3650,7 +3650,7 @@
     "full_name": "Huyện Tây Hoà",
     "full_name_en": "Tay Hoa District",
     "code_name": "tay_hoa",
-    "province_code": "54",
+    "province_id": "54",
     "id": "562"
   },
   {
@@ -3659,7 +3659,7 @@
     "full_name": "Huyện Phú Hoà",
     "full_name_en": "Phu Hoa District",
     "code_name": "phu_hoa",
-    "province_code": "54",
+    "province_id": "54",
     "id": "563"
   },
   {
@@ -3668,7 +3668,7 @@
     "full_name": "Thị xã Đông Hòa",
     "full_name_en": "Dong Hoa Town",
     "code_name": "dong_hoa",
-    "province_code": "54",
+    "province_id": "54",
     "id": "564"
   },
   {
@@ -3677,7 +3677,7 @@
     "full_name": "Thành phố Nha Trang",
     "full_name_en": "Nha Trang City",
     "code_name": "nha_trang",
-    "province_code": "56",
+    "province_id": "56",
     "id": "568"
   },
   {
@@ -3686,7 +3686,7 @@
     "full_name": "Thành phố Cam Ranh",
     "full_name_en": "Cam Ranh City",
     "code_name": "cam_ranh",
-    "province_code": "56",
+    "province_id": "56",
     "id": "569"
   },
   {
@@ -3695,7 +3695,7 @@
     "full_name": "Huyện Cam Lâm",
     "full_name_en": "Cam Lam District",
     "code_name": "cam_lam",
-    "province_code": "56",
+    "province_id": "56",
     "id": "570"
   },
   {
@@ -3704,7 +3704,7 @@
     "full_name": "Huyện Vạn Ninh",
     "full_name_en": "Van Ninh District",
     "code_name": "van_ninh",
-    "province_code": "56",
+    "province_id": "56",
     "id": "571"
   },
   {
@@ -3713,7 +3713,7 @@
     "full_name": "Thị xã Ninh Hòa",
     "full_name_en": "Ninh Hoa Town",
     "code_name": "ninh_hoa",
-    "province_code": "56",
+    "province_id": "56",
     "id": "572"
   },
   {
@@ -3722,7 +3722,7 @@
     "full_name": "Huyện Khánh Vĩnh",
     "full_name_en": "Khanh Vinh District",
     "code_name": "khanh_vinh",
-    "province_code": "56",
+    "province_id": "56",
     "id": "573"
   },
   {
@@ -3731,7 +3731,7 @@
     "full_name": "Huyện Diên Khánh",
     "full_name_en": "Dien Khanh District",
     "code_name": "dien_khanh",
-    "province_code": "56",
+    "province_id": "56",
     "id": "574"
   },
   {
@@ -3740,7 +3740,7 @@
     "full_name": "Huyện Khánh Sơn",
     "full_name_en": "Khanh Son District",
     "code_name": "khanh_son",
-    "province_code": "56",
+    "province_id": "56",
     "id": "575"
   },
   {
@@ -3749,7 +3749,7 @@
     "full_name": "Huyện Trường Sa",
     "full_name_en": "Truong Sa District",
     "code_name": "truong_sa",
-    "province_code": "56",
+    "province_id": "56",
     "id": "576"
   },
   {
@@ -3758,7 +3758,7 @@
     "full_name": "Thành phố Phan Rang-Tháp Chàm",
     "full_name_en": "Phan Rang-Thap Cham City",
     "code_name": "phan_rang-thap_cham",
-    "province_code": "58",
+    "province_id": "58",
     "id": "582"
   },
   {
@@ -3767,7 +3767,7 @@
     "full_name": "Huyện Bác Ái",
     "full_name_en": "Bac Ai District",
     "code_name": "bac_ai",
-    "province_code": "58",
+    "province_id": "58",
     "id": "584"
   },
   {
@@ -3776,7 +3776,7 @@
     "full_name": "Huyện Ninh Sơn",
     "full_name_en": "Ninh Son District",
     "code_name": "ninh_son",
-    "province_code": "58",
+    "province_id": "58",
     "id": "585"
   },
   {
@@ -3785,7 +3785,7 @@
     "full_name": "Huyện Ninh Hải",
     "full_name_en": "Ninh Hai District",
     "code_name": "ninh_hai",
-    "province_code": "58",
+    "province_id": "58",
     "id": "586"
   },
   {
@@ -3794,7 +3794,7 @@
     "full_name": "Huyện Ninh Phước",
     "full_name_en": "Ninh Phuoc District",
     "code_name": "ninh_phuoc",
-    "province_code": "58",
+    "province_id": "58",
     "id": "587"
   },
   {
@@ -3803,7 +3803,7 @@
     "full_name": "Huyện Thuận Bắc",
     "full_name_en": "Thuan Bac District",
     "code_name": "thuan_bac",
-    "province_code": "58",
+    "province_id": "58",
     "id": "588"
   },
   {
@@ -3812,7 +3812,7 @@
     "full_name": "Huyện Thuận Nam",
     "full_name_en": "Thuan Nam District",
     "code_name": "thuan_nam",
-    "province_code": "58",
+    "province_id": "58",
     "id": "589"
   },
   {
@@ -3821,7 +3821,7 @@
     "full_name": "Thành phố Phan Thiết",
     "full_name_en": "Phan Thiet City",
     "code_name": "phan_thiet",
-    "province_code": "60",
+    "province_id": "60",
     "id": "593"
   },
   {
@@ -3830,7 +3830,7 @@
     "full_name": "Thị xã La Gi",
     "full_name_en": "La Gi Town",
     "code_name": "la_gi",
-    "province_code": "60",
+    "province_id": "60",
     "id": "594"
   },
   {
@@ -3839,7 +3839,7 @@
     "full_name": "Huyện Tuy Phong",
     "full_name_en": "Tuy Phong District",
     "code_name": "tuy_phong",
-    "province_code": "60",
+    "province_id": "60",
     "id": "595"
   },
   {
@@ -3848,7 +3848,7 @@
     "full_name": "Huyện Bắc Bình",
     "full_name_en": "Bac Binh District",
     "code_name": "bac_binh",
-    "province_code": "60",
+    "province_id": "60",
     "id": "596"
   },
   {
@@ -3857,7 +3857,7 @@
     "full_name": "Huyện Hàm Thuận Bắc",
     "full_name_en": "Ham Thuan Bac District",
     "code_name": "ham_thuan_bac",
-    "province_code": "60",
+    "province_id": "60",
     "id": "597"
   },
   {
@@ -3866,7 +3866,7 @@
     "full_name": "Huyện Hàm Thuận Nam",
     "full_name_en": "Ham Thuan Nam District",
     "code_name": "ham_thuan_nam",
-    "province_code": "60",
+    "province_id": "60",
     "id": "598"
   },
   {
@@ -3875,7 +3875,7 @@
     "full_name": "Huyện Tánh Linh",
     "full_name_en": "Tanh Linh District",
     "code_name": "tanh_linh",
-    "province_code": "60",
+    "province_id": "60",
     "id": "599"
   },
   {
@@ -3884,7 +3884,7 @@
     "full_name": "Huyện Đức Linh",
     "full_name_en": "Duc Linh District",
     "code_name": "duc_linh",
-    "province_code": "60",
+    "province_id": "60",
     "id": "600"
   },
   {
@@ -3893,7 +3893,7 @@
     "full_name": "Huyện Hàm Tân",
     "full_name_en": "Ham Tan District",
     "code_name": "ham_tan",
-    "province_code": "60",
+    "province_id": "60",
     "id": "601"
   },
   {
@@ -3902,7 +3902,7 @@
     "full_name": "Huyện Phú Quí",
     "full_name_en": "Phu Qui District",
     "code_name": "phu_qui",
-    "province_code": "60",
+    "province_id": "60",
     "id": "602"
   },
   {
@@ -3911,7 +3911,7 @@
     "full_name": "Thành phố Kon Tum",
     "full_name_en": "Kon Tum City",
     "code_name": "kon_tum",
-    "province_code": "62",
+    "province_id": "62",
     "id": "608"
   },
   {
@@ -3920,7 +3920,7 @@
     "full_name": "Huyện Đắk Glei",
     "full_name_en": "Dak Glei District",
     "code_name": "dak_glei",
-    "province_code": "62",
+    "province_id": "62",
     "id": "610"
   },
   {
@@ -3929,7 +3929,7 @@
     "full_name": "Huyện Ngọc Hồi",
     "full_name_en": "Ngoc Hoi District",
     "code_name": "ngoc_hoi",
-    "province_code": "62",
+    "province_id": "62",
     "id": "611"
   },
   {
@@ -3938,7 +3938,7 @@
     "full_name": "Huyện Đắk Tô",
     "full_name_en": "Dak To District",
     "code_name": "dak_to",
-    "province_code": "62",
+    "province_id": "62",
     "id": "612"
   },
   {
@@ -3947,7 +3947,7 @@
     "full_name": "Huyện Kon Plông",
     "full_name_en": "Kon Plong District",
     "code_name": "kon_plong",
-    "province_code": "62",
+    "province_id": "62",
     "id": "613"
   },
   {
@@ -3956,7 +3956,7 @@
     "full_name": "Huyện Kon Rẫy",
     "full_name_en": "Kon Ray District",
     "code_name": "kon_ray",
-    "province_code": "62",
+    "province_id": "62",
     "id": "614"
   },
   {
@@ -3965,7 +3965,7 @@
     "full_name": "Huyện Đắk Hà",
     "full_name_en": "Dak Ha District",
     "code_name": "dak_ha",
-    "province_code": "62",
+    "province_id": "62",
     "id": "615"
   },
   {
@@ -3974,7 +3974,7 @@
     "full_name": "Huyện Sa Thầy",
     "full_name_en": "Sa Thay District",
     "code_name": "sa_thay",
-    "province_code": "62",
+    "province_id": "62",
     "id": "616"
   },
   {
@@ -3983,7 +3983,7 @@
     "full_name": "Huyện Tu Mơ Rông",
     "full_name_en": "Tu Mo Rong District",
     "code_name": "tu_mo_rong",
-    "province_code": "62",
+    "province_id": "62",
     "id": "617"
   },
   {
@@ -3992,7 +3992,7 @@
     "full_name": "Huyện Ia H' Drai",
     "full_name_en": "Ia H' Drai District",
     "code_name": "ia_h_drai",
-    "province_code": "62",
+    "province_id": "62",
     "id": "618"
   },
   {
@@ -4001,7 +4001,7 @@
     "full_name": "Thành phố Pleiku",
     "full_name_en": "Pleiku City",
     "code_name": "pleiku",
-    "province_code": "64",
+    "province_id": "64",
     "id": "622"
   },
   {
@@ -4010,7 +4010,7 @@
     "full_name": "Thị xã An Khê",
     "full_name_en": "An Khe Town",
     "code_name": "an_khe",
-    "province_code": "64",
+    "province_id": "64",
     "id": "623"
   },
   {
@@ -4019,7 +4019,7 @@
     "full_name": "Thị xã Ayun Pa",
     "full_name_en": "Ayun Pa Town",
     "code_name": "ayun_pa",
-    "province_code": "64",
+    "province_id": "64",
     "id": "624"
   },
   {
@@ -4028,7 +4028,7 @@
     "full_name": "Huyện KBang",
     "full_name_en": "KBang District",
     "code_name": "kbang",
-    "province_code": "64",
+    "province_id": "64",
     "id": "625"
   },
   {
@@ -4037,7 +4037,7 @@
     "full_name": "Huyện Đăk Đoa",
     "full_name_en": "Dak Doa District",
     "code_name": "dak_doa",
-    "province_code": "64",
+    "province_id": "64",
     "id": "626"
   },
   {
@@ -4046,7 +4046,7 @@
     "full_name": "Huyện Chư Păh",
     "full_name_en": "Chu Pah District",
     "code_name": "chu_pah",
-    "province_code": "64",
+    "province_id": "64",
     "id": "627"
   },
   {
@@ -4055,7 +4055,7 @@
     "full_name": "Huyện Ia Grai",
     "full_name_en": "Ia Grai District",
     "code_name": "ia_grai",
-    "province_code": "64",
+    "province_id": "64",
     "id": "628"
   },
   {
@@ -4064,7 +4064,7 @@
     "full_name": "Huyện Mang Yang",
     "full_name_en": "Mang Yang District",
     "code_name": "mang_yang",
-    "province_code": "64",
+    "province_id": "64",
     "id": "629"
   },
   {
@@ -4073,7 +4073,7 @@
     "full_name": "Huyện Kông Chro",
     "full_name_en": "Kong Chro District",
     "code_name": "kong_chro",
-    "province_code": "64",
+    "province_id": "64",
     "id": "630"
   },
   {
@@ -4082,7 +4082,7 @@
     "full_name": "Huyện Đức Cơ",
     "full_name_en": "Duc Co District",
     "code_name": "duc_co",
-    "province_code": "64",
+    "province_id": "64",
     "id": "631"
   },
   {
@@ -4091,7 +4091,7 @@
     "full_name": "Huyện Chư Prông",
     "full_name_en": "Chu Prong District",
     "code_name": "chu_prong",
-    "province_code": "64",
+    "province_id": "64",
     "id": "632"
   },
   {
@@ -4100,7 +4100,7 @@
     "full_name": "Huyện Chư Sê",
     "full_name_en": "Chu Se District",
     "code_name": "chu_se",
-    "province_code": "64",
+    "province_id": "64",
     "id": "633"
   },
   {
@@ -4109,7 +4109,7 @@
     "full_name": "Huyện Đăk Pơ",
     "full_name_en": "Dak Po District",
     "code_name": "dak_po",
-    "province_code": "64",
+    "province_id": "64",
     "id": "634"
   },
   {
@@ -4118,7 +4118,7 @@
     "full_name": "Huyện Ia Pa",
     "full_name_en": "Ia Pa District",
     "code_name": "ia_pa",
-    "province_code": "64",
+    "province_id": "64",
     "id": "635"
   },
   {
@@ -4127,7 +4127,7 @@
     "full_name": "Huyện Krông Pa",
     "full_name_en": "Krong Pa District",
     "code_name": "krong_pa",
-    "province_code": "64",
+    "province_id": "64",
     "id": "637"
   },
   {
@@ -4136,7 +4136,7 @@
     "full_name": "Huyện Phú Thiện",
     "full_name_en": "Phu Thien District",
     "code_name": "phu_thien",
-    "province_code": "64",
+    "province_id": "64",
     "id": "638"
   },
   {
@@ -4145,7 +4145,7 @@
     "full_name": "Huyện Chư Pưh",
     "full_name_en": "Chu Puh District",
     "code_name": "chu_puh",
-    "province_code": "64",
+    "province_id": "64",
     "id": "639"
   },
   {
@@ -4154,7 +4154,7 @@
     "full_name": "Thành phố Buôn Ma Thuột",
     "full_name_en": "Buon Ma Thuot City",
     "code_name": "buon_ma_thuot",
-    "province_code": "66",
+    "province_id": "66",
     "id": "643"
   },
   {
@@ -4163,7 +4163,7 @@
     "full_name": "Thị xã Buôn Hồ",
     "full_name_en": "Buon Ho Town",
     "code_name": "buon_ho",
-    "province_code": "66",
+    "province_id": "66",
     "id": "644"
   },
   {
@@ -4172,7 +4172,7 @@
     "full_name": "Huyện Ea H'leo",
     "full_name_en": "Ea H'leo District",
     "code_name": "ea_hleo",
-    "province_code": "66",
+    "province_id": "66",
     "id": "645"
   },
   {
@@ -4181,7 +4181,7 @@
     "full_name": "Huyện Ea Súp",
     "full_name_en": "Ea Sup District",
     "code_name": "ea_sup",
-    "province_code": "66",
+    "province_id": "66",
     "id": "646"
   },
   {
@@ -4190,7 +4190,7 @@
     "full_name": "Huyện Buôn Đôn",
     "full_name_en": "Buon Don District",
     "code_name": "buon_don",
-    "province_code": "66",
+    "province_id": "66",
     "id": "647"
   },
   {
@@ -4199,7 +4199,7 @@
     "full_name": "Huyện Cư M'gar",
     "full_name_en": "Cu M'gar District",
     "code_name": "cu_mgar",
-    "province_code": "66",
+    "province_id": "66",
     "id": "648"
   },
   {
@@ -4208,7 +4208,7 @@
     "full_name": "Huyện Krông Búk",
     "full_name_en": "Krong Buk District",
     "code_name": "krong_buk",
-    "province_code": "66",
+    "province_id": "66",
     "id": "649"
   },
   {
@@ -4217,7 +4217,7 @@
     "full_name": "Huyện Krông Năng",
     "full_name_en": "Krong Nang District",
     "code_name": "krong_nang",
-    "province_code": "66",
+    "province_id": "66",
     "id": "650"
   },
   {
@@ -4226,7 +4226,7 @@
     "full_name": "Huyện Ea Kar",
     "full_name_en": "Ea Kar District",
     "code_name": "ea_kar",
-    "province_code": "66",
+    "province_id": "66",
     "id": "651"
   },
   {
@@ -4235,7 +4235,7 @@
     "full_name": "Huyện M'Đrắk",
     "full_name_en": "M'Drak District",
     "code_name": "mdrak",
-    "province_code": "66",
+    "province_id": "66",
     "id": "652"
   },
   {
@@ -4244,7 +4244,7 @@
     "full_name": "Huyện Krông Bông",
     "full_name_en": "Krong Bong District",
     "code_name": "krong_bong",
-    "province_code": "66",
+    "province_id": "66",
     "id": "653"
   },
   {
@@ -4253,7 +4253,7 @@
     "full_name": "Huyện Krông Pắc",
     "full_name_en": "Krong Pac District",
     "code_name": "krong_pac",
-    "province_code": "66",
+    "province_id": "66",
     "id": "654"
   },
   {
@@ -4262,7 +4262,7 @@
     "full_name": "Huyện Krông A Na",
     "full_name_en": "Krong A Na District",
     "code_name": "krong_a_na",
-    "province_code": "66",
+    "province_id": "66",
     "id": "655"
   },
   {
@@ -4271,7 +4271,7 @@
     "full_name": "Huyện Lắk",
     "full_name_en": "Lak District",
     "code_name": "lak",
-    "province_code": "66",
+    "province_id": "66",
     "id": "656"
   },
   {
@@ -4280,7 +4280,7 @@
     "full_name": "Huyện Cư Kuin",
     "full_name_en": "Cu Kuin District",
     "code_name": "cu_kuin",
-    "province_code": "66",
+    "province_id": "66",
     "id": "657"
   },
   {
@@ -4289,7 +4289,7 @@
     "full_name": "Thành phố Gia Nghĩa",
     "full_name_en": "Gia Nghia City",
     "code_name": "gia_nghia",
-    "province_code": "67",
+    "province_id": "67",
     "id": "660"
   },
   {
@@ -4298,7 +4298,7 @@
     "full_name": "Huyện Đăk Glong",
     "full_name_en": "Dak Glong District",
     "code_name": "dak_glong",
-    "province_code": "67",
+    "province_id": "67",
     "id": "661"
   },
   {
@@ -4307,7 +4307,7 @@
     "full_name": "Huyện Cư Jút",
     "full_name_en": "Cu Jut District",
     "code_name": "cu_jut",
-    "province_code": "67",
+    "province_id": "67",
     "id": "662"
   },
   {
@@ -4316,7 +4316,7 @@
     "full_name": "Huyện Đắk Mil",
     "full_name_en": "Dak Mil District",
     "code_name": "dak_mil",
-    "province_code": "67",
+    "province_id": "67",
     "id": "663"
   },
   {
@@ -4325,7 +4325,7 @@
     "full_name": "Huyện Krông Nô",
     "full_name_en": "Krong No District",
     "code_name": "krong_no",
-    "province_code": "67",
+    "province_id": "67",
     "id": "664"
   },
   {
@@ -4334,7 +4334,7 @@
     "full_name": "Huyện Đắk Song",
     "full_name_en": "Dak Song District",
     "code_name": "dak_song",
-    "province_code": "67",
+    "province_id": "67",
     "id": "665"
   },
   {
@@ -4343,7 +4343,7 @@
     "full_name": "Huyện Đắk R'Lấp",
     "full_name_en": "Dak R'Lap District",
     "code_name": "dak_rlap",
-    "province_code": "67",
+    "province_id": "67",
     "id": "666"
   },
   {
@@ -4352,7 +4352,7 @@
     "full_name": "Huyện Tuy Đức",
     "full_name_en": "Tuy Duc District",
     "code_name": "tuy_duc",
-    "province_code": "67",
+    "province_id": "67",
     "id": "667"
   },
   {
@@ -4361,7 +4361,7 @@
     "full_name": "Thành phố Đà Lạt",
     "full_name_en": "Da Lat City",
     "code_name": "da_lat",
-    "province_code": "68",
+    "province_id": "68",
     "id": "672"
   },
   {
@@ -4370,7 +4370,7 @@
     "full_name": "Thành phố Bảo Lộc",
     "full_name_en": "Bao Loc City",
     "code_name": "bao_loc",
-    "province_code": "68",
+    "province_id": "68",
     "id": "673"
   },
   {
@@ -4379,7 +4379,7 @@
     "full_name": "Huyện Đam Rông",
     "full_name_en": "Dam Rong District",
     "code_name": "dam_rong",
-    "province_code": "68",
+    "province_id": "68",
     "id": "674"
   },
   {
@@ -4388,7 +4388,7 @@
     "full_name": "Huyện Lạc Dương",
     "full_name_en": "Lac Duong District",
     "code_name": "lac_duong",
-    "province_code": "68",
+    "province_id": "68",
     "id": "675"
   },
   {
@@ -4397,7 +4397,7 @@
     "full_name": "Huyện Lâm Hà",
     "full_name_en": "Lam Ha District",
     "code_name": "lam_ha",
-    "province_code": "68",
+    "province_id": "68",
     "id": "676"
   },
   {
@@ -4406,7 +4406,7 @@
     "full_name": "Huyện Đơn Dương",
     "full_name_en": "Don Duong District",
     "code_name": "don_duong",
-    "province_code": "68",
+    "province_id": "68",
     "id": "677"
   },
   {
@@ -4415,7 +4415,7 @@
     "full_name": "Huyện Đức Trọng",
     "full_name_en": "Duc Trong District",
     "code_name": "duc_trong",
-    "province_code": "68",
+    "province_id": "68",
     "id": "678"
   },
   {
@@ -4424,7 +4424,7 @@
     "full_name": "Huyện Di Linh",
     "full_name_en": "Di Linh District",
     "code_name": "di_linh",
-    "province_code": "68",
+    "province_id": "68",
     "id": "679"
   },
   {
@@ -4433,7 +4433,7 @@
     "full_name": "Huyện Bảo Lâm",
     "full_name_en": "Bao Lam District",
     "code_name": "bao_lam",
-    "province_code": "68",
+    "province_id": "68",
     "id": "680"
   },
   {
@@ -4442,7 +4442,7 @@
     "full_name": "Huyện Đạ Huoai",
     "full_name_en": "Da Huoai District",
     "code_name": "da_huoai",
-    "province_code": "68",
+    "province_id": "68",
     "id": "681"
   },
   {
@@ -4451,7 +4451,7 @@
     "full_name": "Huyện Đạ Tẻh",
     "full_name_en": "Da Teh District",
     "code_name": "da_teh",
-    "province_code": "68",
+    "province_id": "68",
     "id": "682"
   },
   {
@@ -4460,7 +4460,7 @@
     "full_name": "Huyện Cát Tiên",
     "full_name_en": "Cat Tien District",
     "code_name": "cat_tien",
-    "province_code": "68",
+    "province_id": "68",
     "id": "683"
   },
   {
@@ -4469,7 +4469,7 @@
     "full_name": "Thị xã Phước Long",
     "full_name_en": "Phuoc Long Town",
     "code_name": "phuoc_long",
-    "province_code": "70",
+    "province_id": "70",
     "id": "688"
   },
   {
@@ -4478,7 +4478,7 @@
     "full_name": "Thành phố Đồng Xoài",
     "full_name_en": "Dong Xoai City",
     "code_name": "dong_xoai",
-    "province_code": "70",
+    "province_id": "70",
     "id": "689"
   },
   {
@@ -4487,7 +4487,7 @@
     "full_name": "Thị xã Bình Long",
     "full_name_en": "Binh Long Town",
     "code_name": "binh_long",
-    "province_code": "70",
+    "province_id": "70",
     "id": "690"
   },
   {
@@ -4496,7 +4496,7 @@
     "full_name": "Huyện Bù Gia Mập",
     "full_name_en": "Bu Gia Map District",
     "code_name": "bu_gia_map",
-    "province_code": "70",
+    "province_id": "70",
     "id": "691"
   },
   {
@@ -4505,7 +4505,7 @@
     "full_name": "Huyện Lộc Ninh",
     "full_name_en": "Loc Ninh District",
     "code_name": "loc_ninh",
-    "province_code": "70",
+    "province_id": "70",
     "id": "692"
   },
   {
@@ -4514,7 +4514,7 @@
     "full_name": "Huyện Bù Đốp",
     "full_name_en": "Bu Dop District",
     "code_name": "bu_dop",
-    "province_code": "70",
+    "province_id": "70",
     "id": "693"
   },
   {
@@ -4523,7 +4523,7 @@
     "full_name": "Huyện Hớn Quản",
     "full_name_en": "Hon Quan District",
     "code_name": "hon_quan",
-    "province_code": "70",
+    "province_id": "70",
     "id": "694"
   },
   {
@@ -4532,7 +4532,7 @@
     "full_name": "Huyện Đồng Phú",
     "full_name_en": "Dong Phu District",
     "code_name": "dong_phu",
-    "province_code": "70",
+    "province_id": "70",
     "id": "695"
   },
   {
@@ -4541,7 +4541,7 @@
     "full_name": "Huyện Bù Đăng",
     "full_name_en": "Bu Dang District",
     "code_name": "bu_dang",
-    "province_code": "70",
+    "province_id": "70",
     "id": "696"
   },
   {
@@ -4550,7 +4550,7 @@
     "full_name": "Thị xã Chơn Thành",
     "full_name_en": "Chon Thanh Town",
     "code_name": "chon_thanh",
-    "province_code": "70",
+    "province_id": "70",
     "id": "697"
   },
   {
@@ -4559,7 +4559,7 @@
     "full_name": "Huyện Phú Riềng",
     "full_name_en": "Phu Rieng District",
     "code_name": "phu_rieng",
-    "province_code": "70",
+    "province_id": "70",
     "id": "698"
   },
   {
@@ -4568,7 +4568,7 @@
     "full_name": "Thành phố Tây Ninh",
     "full_name_en": "Tay Ninh City",
     "code_name": "tay_ninh",
-    "province_code": "72",
+    "province_id": "72",
     "id": "703"
   },
   {
@@ -4577,7 +4577,7 @@
     "full_name": "Huyện Tân Biên",
     "full_name_en": "Tan Bien District",
     "code_name": "tan_bien",
-    "province_code": "72",
+    "province_id": "72",
     "id": "705"
   },
   {
@@ -4586,7 +4586,7 @@
     "full_name": "Huyện Tân Châu",
     "full_name_en": "Tan Chau District",
     "code_name": "tan_chau",
-    "province_code": "72",
+    "province_id": "72",
     "id": "706"
   },
   {
@@ -4595,7 +4595,7 @@
     "full_name": "Huyện Dương Minh Châu",
     "full_name_en": "Duong Minh Chau District",
     "code_name": "duong_minh_chau",
-    "province_code": "72",
+    "province_id": "72",
     "id": "707"
   },
   {
@@ -4604,7 +4604,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "72",
+    "province_id": "72",
     "id": "708"
   },
   {
@@ -4613,7 +4613,7 @@
     "full_name": "Thị xã Hòa Thành",
     "full_name_en": "Hoa Thanh Town",
     "code_name": "hoa_thanh",
-    "province_code": "72",
+    "province_id": "72",
     "id": "709"
   },
   {
@@ -4622,7 +4622,7 @@
     "full_name": "Huyện Gò Dầu",
     "full_name_en": "Go Dau District",
     "code_name": "go_dau",
-    "province_code": "72",
+    "province_id": "72",
     "id": "710"
   },
   {
@@ -4631,7 +4631,7 @@
     "full_name": "Huyện Bến Cầu",
     "full_name_en": "Ben Cau District",
     "code_name": "ben_cau",
-    "province_code": "72",
+    "province_id": "72",
     "id": "711"
   },
   {
@@ -4640,7 +4640,7 @@
     "full_name": "Thị xã Trảng Bàng",
     "full_name_en": "Trang Bang Town",
     "code_name": "trang_bang",
-    "province_code": "72",
+    "province_id": "72",
     "id": "712"
   },
   {
@@ -4649,7 +4649,7 @@
     "full_name": "Thành phố Thủ Dầu Một",
     "full_name_en": "Thu Dau Mot City",
     "code_name": "thu_dau_mot",
-    "province_code": "74",
+    "province_id": "74",
     "id": "718"
   },
   {
@@ -4658,7 +4658,7 @@
     "full_name": "Huyện Bàu Bàng",
     "full_name_en": "Bau Bang District",
     "code_name": "bau_bang",
-    "province_code": "74",
+    "province_id": "74",
     "id": "719"
   },
   {
@@ -4667,7 +4667,7 @@
     "full_name": "Huyện Dầu Tiếng",
     "full_name_en": "Dau Tieng District",
     "code_name": "dau_tieng",
-    "province_code": "74",
+    "province_id": "74",
     "id": "720"
   },
   {
@@ -4676,7 +4676,7 @@
     "full_name": "Thành phố Bến Cát",
     "full_name_en": "Ben Cat City",
     "code_name": "ben_cat",
-    "province_code": "74",
+    "province_id": "74",
     "id": "721"
   },
   {
@@ -4685,7 +4685,7 @@
     "full_name": "Huyện Phú Giáo",
     "full_name_en": "Phu Giao District",
     "code_name": "phu_giao",
-    "province_code": "74",
+    "province_id": "74",
     "id": "722"
   },
   {
@@ -4694,7 +4694,7 @@
     "full_name": "Thành phố Tân Uyên",
     "full_name_en": "Tan Uyen City",
     "code_name": "tan_uyen",
-    "province_code": "74",
+    "province_id": "74",
     "id": "723"
   },
   {
@@ -4703,7 +4703,7 @@
     "full_name": "Thành phố Dĩ An",
     "full_name_en": "Di An City",
     "code_name": "di_an",
-    "province_code": "74",
+    "province_id": "74",
     "id": "724"
   },
   {
@@ -4712,7 +4712,7 @@
     "full_name": "Thành phố Thuận An",
     "full_name_en": "Thuan An City",
     "code_name": "thuan_an",
-    "province_code": "74",
+    "province_id": "74",
     "id": "725"
   },
   {
@@ -4721,7 +4721,7 @@
     "full_name": "Huyện Bắc Tân Uyên",
     "full_name_en": "Bac Tan Uyen District",
     "code_name": "bac_tan_uyen",
-    "province_code": "74",
+    "province_id": "74",
     "id": "726"
   },
   {
@@ -4730,7 +4730,7 @@
     "full_name": "Thành phố Biên Hòa",
     "full_name_en": "Bien Hoa City",
     "code_name": "bien_hoa",
-    "province_code": "75",
+    "province_id": "75",
     "id": "731"
   },
   {
@@ -4739,7 +4739,7 @@
     "full_name": "Thành phố Long Khánh",
     "full_name_en": "Long Khanh City",
     "code_name": "long_khanh",
-    "province_code": "75",
+    "province_id": "75",
     "id": "732"
   },
   {
@@ -4748,7 +4748,7 @@
     "full_name": "Huyện Tân Phú",
     "full_name_en": "Tan Phu District",
     "code_name": "tan_phu",
-    "province_code": "75",
+    "province_id": "75",
     "id": "734"
   },
   {
@@ -4757,7 +4757,7 @@
     "full_name": "Huyện Vĩnh Cửu",
     "full_name_en": "Vinh Cuu District",
     "code_name": "vinh_cuu",
-    "province_code": "75",
+    "province_id": "75",
     "id": "735"
   },
   {
@@ -4766,7 +4766,7 @@
     "full_name": "Huyện Định Quán",
     "full_name_en": "Dinh Quan District",
     "code_name": "dinh_quan",
-    "province_code": "75",
+    "province_id": "75",
     "id": "736"
   },
   {
@@ -4775,7 +4775,7 @@
     "full_name": "Huyện Trảng Bom",
     "full_name_en": "Trang Bom District",
     "code_name": "trang_bom",
-    "province_code": "75",
+    "province_id": "75",
     "id": "737"
   },
   {
@@ -4784,7 +4784,7 @@
     "full_name": "Huyện Thống Nhất",
     "full_name_en": "Thong Nhat District",
     "code_name": "thong_nhat",
-    "province_code": "75",
+    "province_id": "75",
     "id": "738"
   },
   {
@@ -4793,7 +4793,7 @@
     "full_name": "Huyện Cẩm Mỹ",
     "full_name_en": "Cam My District",
     "code_name": "cam_my",
-    "province_code": "75",
+    "province_id": "75",
     "id": "739"
   },
   {
@@ -4802,7 +4802,7 @@
     "full_name": "Huyện Long Thành",
     "full_name_en": "Long Thanh District",
     "code_name": "long_thanh",
-    "province_code": "75",
+    "province_id": "75",
     "id": "740"
   },
   {
@@ -4811,7 +4811,7 @@
     "full_name": "Huyện Xuân Lộc",
     "full_name_en": "Xuan Loc District",
     "code_name": "xuan_loc",
-    "province_code": "75",
+    "province_id": "75",
     "id": "741"
   },
   {
@@ -4820,7 +4820,7 @@
     "full_name": "Huyện Nhơn Trạch",
     "full_name_en": "Nhon Trach District",
     "code_name": "nhon_trach",
-    "province_code": "75",
+    "province_id": "75",
     "id": "742"
   },
   {
@@ -4829,7 +4829,7 @@
     "full_name": "Thành phố Vũng Tàu",
     "full_name_en": "Vung Tau City",
     "code_name": "vung_tau",
-    "province_code": "77",
+    "province_id": "77",
     "id": "747"
   },
   {
@@ -4838,7 +4838,7 @@
     "full_name": "Thành phố Bà Rịa",
     "full_name_en": "Ba Ria City",
     "code_name": "ba_ria",
-    "province_code": "77",
+    "province_id": "77",
     "id": "748"
   },
   {
@@ -4847,7 +4847,7 @@
     "full_name": "Huyện Châu Đức",
     "full_name_en": "Chau Duc District",
     "code_name": "chau_duc",
-    "province_code": "77",
+    "province_id": "77",
     "id": "750"
   },
   {
@@ -4856,7 +4856,7 @@
     "full_name": "Huyện Xuyên Mộc",
     "full_name_en": "Xuyen Moc District",
     "code_name": "xuyen_moc",
-    "province_code": "77",
+    "province_id": "77",
     "id": "751"
   },
   {
@@ -4865,7 +4865,7 @@
     "full_name": "Huyện Long Điền",
     "full_name_en": "Long Dien District",
     "code_name": "long_dien",
-    "province_code": "77",
+    "province_id": "77",
     "id": "752"
   },
   {
@@ -4874,7 +4874,7 @@
     "full_name": "Huyện Đất Đỏ",
     "full_name_en": "Dat Do District",
     "code_name": "dat_do",
-    "province_code": "77",
+    "province_id": "77",
     "id": "753"
   },
   {
@@ -4883,7 +4883,7 @@
     "full_name": "Thị xã Phú Mỹ",
     "full_name_en": "Phu My Town",
     "code_name": "phu_my",
-    "province_code": "77",
+    "province_id": "77",
     "id": "754"
   },
   {
@@ -4892,7 +4892,7 @@
     "full_name": "Quận 1",
     "full_name_en": "District 1",
     "code_name": "1",
-    "province_code": "79",
+    "province_id": "79",
     "id": "760"
   },
   {
@@ -4901,7 +4901,7 @@
     "full_name": "Quận 12",
     "full_name_en": "District 12",
     "code_name": "12",
-    "province_code": "79",
+    "province_id": "79",
     "id": "761"
   },
   {
@@ -4910,7 +4910,7 @@
     "full_name": "Quận Gò Vấp",
     "full_name_en": "Go Vap District",
     "code_name": "go_vap",
-    "province_code": "79",
+    "province_id": "79",
     "id": "764"
   },
   {
@@ -4919,7 +4919,7 @@
     "full_name": "Quận Bình Thạnh",
     "full_name_en": "Binh Thanh District",
     "code_name": "binh_thanh",
-    "province_code": "79",
+    "province_id": "79",
     "id": "765"
   },
   {
@@ -4928,7 +4928,7 @@
     "full_name": "Quận Tân Bình",
     "full_name_en": "Tan Binh District",
     "code_name": "tan_binh",
-    "province_code": "79",
+    "province_id": "79",
     "id": "766"
   },
   {
@@ -4937,7 +4937,7 @@
     "full_name": "Quận Tân Phú",
     "full_name_en": "Tan Phu District",
     "code_name": "tan_phu",
-    "province_code": "79",
+    "province_id": "79",
     "id": "767"
   },
   {
@@ -4946,7 +4946,7 @@
     "full_name": "Quận Phú Nhuận",
     "full_name_en": "Phu Nhuan District",
     "code_name": "phu_nhuan",
-    "province_code": "79",
+    "province_id": "79",
     "id": "768"
   },
   {
@@ -4955,7 +4955,7 @@
     "full_name": "Thành phố Thủ Đức",
     "full_name_en": "Thu Duc City",
     "code_name": "thu_duc",
-    "province_code": "79",
+    "province_id": "79",
     "id": "769"
   },
   {
@@ -4964,7 +4964,7 @@
     "full_name": "Quận 3",
     "full_name_en": "District 3",
     "code_name": "3",
-    "province_code": "79",
+    "province_id": "79",
     "id": "770"
   },
   {
@@ -4973,7 +4973,7 @@
     "full_name": "Quận 10",
     "full_name_en": "District 10",
     "code_name": "10",
-    "province_code": "79",
+    "province_id": "79",
     "id": "771"
   },
   {
@@ -4982,7 +4982,7 @@
     "full_name": "Quận 11",
     "full_name_en": "District 11",
     "code_name": "11",
-    "province_code": "79",
+    "province_id": "79",
     "id": "772"
   },
   {
@@ -4991,7 +4991,7 @@
     "full_name": "Quận 4",
     "full_name_en": "District 4",
     "code_name": "4",
-    "province_code": "79",
+    "province_id": "79",
     "id": "773"
   },
   {
@@ -5000,7 +5000,7 @@
     "full_name": "Quận 5",
     "full_name_en": "District 5",
     "code_name": "5",
-    "province_code": "79",
+    "province_id": "79",
     "id": "774"
   },
   {
@@ -5009,7 +5009,7 @@
     "full_name": "Quận 6",
     "full_name_en": "District 6",
     "code_name": "6",
-    "province_code": "79",
+    "province_id": "79",
     "id": "775"
   },
   {
@@ -5018,7 +5018,7 @@
     "full_name": "Quận 8",
     "full_name_en": "District 8",
     "code_name": "8",
-    "province_code": "79",
+    "province_id": "79",
     "id": "776"
   },
   {
@@ -5027,7 +5027,7 @@
     "full_name": "Quận Bình Tân",
     "full_name_en": "Binh Tan District",
     "code_name": "binh_tan",
-    "province_code": "79",
+    "province_id": "79",
     "id": "777"
   },
   {
@@ -5036,7 +5036,7 @@
     "full_name": "Quận 7",
     "full_name_en": "District 7",
     "code_name": "7",
-    "province_code": "79",
+    "province_id": "79",
     "id": "778"
   },
   {
@@ -5045,7 +5045,7 @@
     "full_name": "Huyện Củ Chi",
     "full_name_en": "Cu Chi District",
     "code_name": "cu_chi",
-    "province_code": "79",
+    "province_id": "79",
     "id": "783"
   },
   {
@@ -5054,7 +5054,7 @@
     "full_name": "Huyện Hóc Môn",
     "full_name_en": "Hoc Mon District",
     "code_name": "hoc_mon",
-    "province_code": "79",
+    "province_id": "79",
     "id": "784"
   },
   {
@@ -5063,7 +5063,7 @@
     "full_name": "Huyện Bình Chánh",
     "full_name_en": "Binh Chanh District",
     "code_name": "binh_chanh",
-    "province_code": "79",
+    "province_id": "79",
     "id": "785"
   },
   {
@@ -5072,7 +5072,7 @@
     "full_name": "Huyện Nhà Bè",
     "full_name_en": "Nha Be District",
     "code_name": "nha_be",
-    "province_code": "79",
+    "province_id": "79",
     "id": "786"
   },
   {
@@ -5081,7 +5081,7 @@
     "full_name": "Huyện Cần Giờ",
     "full_name_en": "Can Gio District",
     "code_name": "can_gio",
-    "province_code": "79",
+    "province_id": "79",
     "id": "787"
   },
   {
@@ -5090,7 +5090,7 @@
     "full_name": "Thành phố Tân An",
     "full_name_en": "Tan An City",
     "code_name": "tan_an",
-    "province_code": "80",
+    "province_id": "80",
     "id": "794"
   },
   {
@@ -5099,7 +5099,7 @@
     "full_name": "Thị xã Kiến Tường",
     "full_name_en": "Kien Tuong Town",
     "code_name": "kien_tuong",
-    "province_code": "80",
+    "province_id": "80",
     "id": "795"
   },
   {
@@ -5108,7 +5108,7 @@
     "full_name": "Huyện Tân Hưng",
     "full_name_en": "Tan Hung District",
     "code_name": "tan_hung",
-    "province_code": "80",
+    "province_id": "80",
     "id": "796"
   },
   {
@@ -5117,7 +5117,7 @@
     "full_name": "Huyện Vĩnh Hưng",
     "full_name_en": "Vinh Hung District",
     "code_name": "vinh_hung",
-    "province_code": "80",
+    "province_id": "80",
     "id": "797"
   },
   {
@@ -5126,7 +5126,7 @@
     "full_name": "Huyện Mộc Hóa",
     "full_name_en": "Moc Hoa District",
     "code_name": "moc_hoa",
-    "province_code": "80",
+    "province_id": "80",
     "id": "798"
   },
   {
@@ -5135,7 +5135,7 @@
     "full_name": "Huyện Tân Thạnh",
     "full_name_en": "Tan Thanh District",
     "code_name": "tan_thanh",
-    "province_code": "80",
+    "province_id": "80",
     "id": "799"
   },
   {
@@ -5144,7 +5144,7 @@
     "full_name": "Huyện Thạnh Hóa",
     "full_name_en": "Thanh Hoa District",
     "code_name": "thanh_hoa",
-    "province_code": "80",
+    "province_id": "80",
     "id": "800"
   },
   {
@@ -5153,7 +5153,7 @@
     "full_name": "Huyện Đức Huệ",
     "full_name_en": "Duc Hue District",
     "code_name": "duc_hue",
-    "province_code": "80",
+    "province_id": "80",
     "id": "801"
   },
   {
@@ -5162,7 +5162,7 @@
     "full_name": "Huyện Đức Hòa",
     "full_name_en": "Duc Hoa District",
     "code_name": "duc_hoa",
-    "province_code": "80",
+    "province_id": "80",
     "id": "802"
   },
   {
@@ -5171,7 +5171,7 @@
     "full_name": "Huyện Bến Lức",
     "full_name_en": "Ben Luc District",
     "code_name": "ben_luc",
-    "province_code": "80",
+    "province_id": "80",
     "id": "803"
   },
   {
@@ -5180,7 +5180,7 @@
     "full_name": "Huyện Thủ Thừa",
     "full_name_en": "Thu Thua District",
     "code_name": "thu_thua",
-    "province_code": "80",
+    "province_id": "80",
     "id": "804"
   },
   {
@@ -5189,7 +5189,7 @@
     "full_name": "Huyện Tân Trụ",
     "full_name_en": "Tan Tru District",
     "code_name": "tan_tru",
-    "province_code": "80",
+    "province_id": "80",
     "id": "805"
   },
   {
@@ -5198,7 +5198,7 @@
     "full_name": "Huyện Cần Đước",
     "full_name_en": "Can Duoc District",
     "code_name": "can_duoc",
-    "province_code": "80",
+    "province_id": "80",
     "id": "806"
   },
   {
@@ -5207,7 +5207,7 @@
     "full_name": "Huyện Cần Giuộc",
     "full_name_en": "Can Giuoc District",
     "code_name": "can_giuoc",
-    "province_code": "80",
+    "province_id": "80",
     "id": "807"
   },
   {
@@ -5216,7 +5216,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "80",
+    "province_id": "80",
     "id": "808"
   },
   {
@@ -5225,7 +5225,7 @@
     "full_name": "Thành phố Mỹ Tho",
     "full_name_en": "My Tho City",
     "code_name": "my_tho",
-    "province_code": "82",
+    "province_id": "82",
     "id": "815"
   },
   {
@@ -5234,7 +5234,7 @@
     "full_name": "Thành phố Gò Công",
     "full_name_en": "Go Cong City",
     "code_name": "go_cong",
-    "province_code": "82",
+    "province_id": "82",
     "id": "816"
   },
   {
@@ -5243,7 +5243,7 @@
     "full_name": "Thị xã Cai Lậy",
     "full_name_en": "Cai Lay Town",
     "code_name": "cai_lay",
-    "province_code": "82",
+    "province_id": "82",
     "id": "817"
   },
   {
@@ -5252,7 +5252,7 @@
     "full_name": "Huyện Tân Phước",
     "full_name_en": "Tan Phuoc District",
     "code_name": "tan_phuoc",
-    "province_code": "82",
+    "province_id": "82",
     "id": "818"
   },
   {
@@ -5261,7 +5261,7 @@
     "full_name": "Huyện Cái Bè",
     "full_name_en": "Cai Be District",
     "code_name": "cai_be",
-    "province_code": "82",
+    "province_id": "82",
     "id": "819"
   },
   {
@@ -5270,7 +5270,7 @@
     "full_name": "Huyện Cai Lậy",
     "full_name_en": "Cai Lay District",
     "code_name": "cai_lay",
-    "province_code": "82",
+    "province_id": "82",
     "id": "820"
   },
   {
@@ -5279,7 +5279,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "82",
+    "province_id": "82",
     "id": "821"
   },
   {
@@ -5288,7 +5288,7 @@
     "full_name": "Huyện Chợ Gạo",
     "full_name_en": "Cho Gao District",
     "code_name": "cho_gao",
-    "province_code": "82",
+    "province_id": "82",
     "id": "822"
   },
   {
@@ -5297,7 +5297,7 @@
     "full_name": "Huyện Gò Công Tây",
     "full_name_en": "Go Cong Tay District",
     "code_name": "go_cong_tay",
-    "province_code": "82",
+    "province_id": "82",
     "id": "823"
   },
   {
@@ -5306,7 +5306,7 @@
     "full_name": "Huyện Gò Công Đông",
     "full_name_en": "Go Cong Dong District",
     "code_name": "go_cong_dong",
-    "province_code": "82",
+    "province_id": "82",
     "id": "824"
   },
   {
@@ -5315,7 +5315,7 @@
     "full_name": "Huyện Tân Phú Đông",
     "full_name_en": "Tan Phu Dong District",
     "code_name": "tan_phu_dong",
-    "province_code": "82",
+    "province_id": "82",
     "id": "825"
   },
   {
@@ -5324,7 +5324,7 @@
     "full_name": "Thành phố Bến Tre",
     "full_name_en": "Ben Tre City",
     "code_name": "ben_tre",
-    "province_code": "83",
+    "province_id": "83",
     "id": "829"
   },
   {
@@ -5333,7 +5333,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "83",
+    "province_id": "83",
     "id": "831"
   },
   {
@@ -5342,7 +5342,7 @@
     "full_name": "Huyện Chợ Lách",
     "full_name_en": "Cho Lach District",
     "code_name": "cho_lach",
-    "province_code": "83",
+    "province_id": "83",
     "id": "832"
   },
   {
@@ -5351,7 +5351,7 @@
     "full_name": "Huyện Mỏ Cày Nam",
     "full_name_en": "Mo Cay Nam District",
     "code_name": "mo_cay_nam",
-    "province_code": "83",
+    "province_id": "83",
     "id": "833"
   },
   {
@@ -5360,7 +5360,7 @@
     "full_name": "Huyện Giồng Trôm",
     "full_name_en": "Giong Trom District",
     "code_name": "giong_trom",
-    "province_code": "83",
+    "province_id": "83",
     "id": "834"
   },
   {
@@ -5369,7 +5369,7 @@
     "full_name": "Huyện Bình Đại",
     "full_name_en": "Binh Dai District",
     "code_name": "binh_dai",
-    "province_code": "83",
+    "province_id": "83",
     "id": "835"
   },
   {
@@ -5378,7 +5378,7 @@
     "full_name": "Huyện Ba Tri",
     "full_name_en": "Ba Tri District",
     "code_name": "ba_tri",
-    "province_code": "83",
+    "province_id": "83",
     "id": "836"
   },
   {
@@ -5387,7 +5387,7 @@
     "full_name": "Huyện Thạnh Phú",
     "full_name_en": "Thanh Phu District",
     "code_name": "thanh_phu",
-    "province_code": "83",
+    "province_id": "83",
     "id": "837"
   },
   {
@@ -5396,7 +5396,7 @@
     "full_name": "Huyện Mỏ Cày Bắc",
     "full_name_en": "Mo Cay Bac District",
     "code_name": "mo_cay_bac",
-    "province_code": "83",
+    "province_id": "83",
     "id": "838"
   },
   {
@@ -5405,7 +5405,7 @@
     "full_name": "Thành phố Trà Vinh",
     "full_name_en": "Tra Vinh City",
     "code_name": "tra_vinh",
-    "province_code": "84",
+    "province_id": "84",
     "id": "842"
   },
   {
@@ -5414,7 +5414,7 @@
     "full_name": "Huyện Càng Long",
     "full_name_en": "Cang Long District",
     "code_name": "cang_long",
-    "province_code": "84",
+    "province_id": "84",
     "id": "844"
   },
   {
@@ -5423,7 +5423,7 @@
     "full_name": "Huyện Cầu Kè",
     "full_name_en": "Cau Ke District",
     "code_name": "cau_ke",
-    "province_code": "84",
+    "province_id": "84",
     "id": "845"
   },
   {
@@ -5432,7 +5432,7 @@
     "full_name": "Huyện Tiểu Cần",
     "full_name_en": "Tieu Can District",
     "code_name": "tieu_can",
-    "province_code": "84",
+    "province_id": "84",
     "id": "846"
   },
   {
@@ -5441,7 +5441,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "84",
+    "province_id": "84",
     "id": "847"
   },
   {
@@ -5450,7 +5450,7 @@
     "full_name": "Huyện Cầu Ngang",
     "full_name_en": "Cau Ngang District",
     "code_name": "cau_ngang",
-    "province_code": "84",
+    "province_id": "84",
     "id": "848"
   },
   {
@@ -5459,7 +5459,7 @@
     "full_name": "Huyện Trà Cú",
     "full_name_en": "Tra Cu District",
     "code_name": "tra_cu",
-    "province_code": "84",
+    "province_id": "84",
     "id": "849"
   },
   {
@@ -5468,7 +5468,7 @@
     "full_name": "Huyện Duyên Hải",
     "full_name_en": "Duyen Hai District",
     "code_name": "duyen_hai",
-    "province_code": "84",
+    "province_id": "84",
     "id": "850"
   },
   {
@@ -5477,7 +5477,7 @@
     "full_name": "Thị xã Duyên Hải",
     "full_name_en": "Duyen Hai Town",
     "code_name": "duyen_hai",
-    "province_code": "84",
+    "province_id": "84",
     "id": "851"
   },
   {
@@ -5486,7 +5486,7 @@
     "full_name": "Thành phố Vĩnh Long",
     "full_name_en": "Vinh Long City",
     "code_name": "vinh_long",
-    "province_code": "86",
+    "province_id": "86",
     "id": "855"
   },
   {
@@ -5495,7 +5495,7 @@
     "full_name": "Huyện Long Hồ",
     "full_name_en": "Long Ho District",
     "code_name": "long_ho",
-    "province_code": "86",
+    "province_id": "86",
     "id": "857"
   },
   {
@@ -5504,7 +5504,7 @@
     "full_name": "Huyện Mang Thít",
     "full_name_en": "Mang Thit District",
     "code_name": "mang_thit",
-    "province_code": "86",
+    "province_id": "86",
     "id": "858"
   },
   {
@@ -5513,7 +5513,7 @@
     "full_name": "Huyện Vũng Liêm",
     "full_name_en": "Vung Liem District",
     "code_name": "vung_liem",
-    "province_code": "86",
+    "province_id": "86",
     "id": "859"
   },
   {
@@ -5522,7 +5522,7 @@
     "full_name": "Huyện Tam Bình",
     "full_name_en": "Tam Binh District",
     "code_name": "tam_binh",
-    "province_code": "86",
+    "province_id": "86",
     "id": "860"
   },
   {
@@ -5531,7 +5531,7 @@
     "full_name": "Thị xã Bình Minh",
     "full_name_en": "Binh Minh Town",
     "code_name": "binh_minh",
-    "province_code": "86",
+    "province_id": "86",
     "id": "861"
   },
   {
@@ -5540,7 +5540,7 @@
     "full_name": "Huyện Trà Ôn",
     "full_name_en": "Tra On District",
     "code_name": "tra_on",
-    "province_code": "86",
+    "province_id": "86",
     "id": "862"
   },
   {
@@ -5549,7 +5549,7 @@
     "full_name": "Huyện Bình Tân",
     "full_name_en": "Binh Tan District",
     "code_name": "binh_tan",
-    "province_code": "86",
+    "province_id": "86",
     "id": "863"
   },
   {
@@ -5558,7 +5558,7 @@
     "full_name": "Thành phố Cao Lãnh",
     "full_name_en": "Cao Lanh City",
     "code_name": "cao_lanh",
-    "province_code": "87",
+    "province_id": "87",
     "id": "866"
   },
   {
@@ -5567,7 +5567,7 @@
     "full_name": "Thành phố Sa Đéc",
     "full_name_en": "Sa Dec City",
     "code_name": "sa_dec",
-    "province_code": "87",
+    "province_id": "87",
     "id": "867"
   },
   {
@@ -5576,7 +5576,7 @@
     "full_name": "Thành phố Hồng Ngự",
     "full_name_en": "Hong Ngu City",
     "code_name": "hong_ngu",
-    "province_code": "87",
+    "province_id": "87",
     "id": "868"
   },
   {
@@ -5585,7 +5585,7 @@
     "full_name": "Huyện Tân Hồng",
     "full_name_en": "Tan Hong District",
     "code_name": "tan_hong",
-    "province_code": "87",
+    "province_id": "87",
     "id": "869"
   },
   {
@@ -5594,7 +5594,7 @@
     "full_name": "Huyện Hồng Ngự",
     "full_name_en": "Hong Ngu District",
     "code_name": "hong_ngu",
-    "province_code": "87",
+    "province_id": "87",
     "id": "870"
   },
   {
@@ -5603,7 +5603,7 @@
     "full_name": "Huyện Tam Nông",
     "full_name_en": "Tam Nong District",
     "code_name": "tam_nong",
-    "province_code": "87",
+    "province_id": "87",
     "id": "871"
   },
   {
@@ -5612,7 +5612,7 @@
     "full_name": "Huyện Tháp Mười",
     "full_name_en": "Thap Muoi District",
     "code_name": "thap_muoi",
-    "province_code": "87",
+    "province_id": "87",
     "id": "872"
   },
   {
@@ -5621,7 +5621,7 @@
     "full_name": "Huyện Cao Lãnh",
     "full_name_en": "Cao Lanh District",
     "code_name": "cao_lanh",
-    "province_code": "87",
+    "province_id": "87",
     "id": "873"
   },
   {
@@ -5630,7 +5630,7 @@
     "full_name": "Huyện Thanh Bình",
     "full_name_en": "Thanh Binh District",
     "code_name": "thanh_binh",
-    "province_code": "87",
+    "province_id": "87",
     "id": "874"
   },
   {
@@ -5639,7 +5639,7 @@
     "full_name": "Huyện Lấp Vò",
     "full_name_en": "Lap Vo District",
     "code_name": "lap_vo",
-    "province_code": "87",
+    "province_id": "87",
     "id": "875"
   },
   {
@@ -5648,7 +5648,7 @@
     "full_name": "Huyện Lai Vung",
     "full_name_en": "Lai Vung District",
     "code_name": "lai_vung",
-    "province_code": "87",
+    "province_id": "87",
     "id": "876"
   },
   {
@@ -5657,7 +5657,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "87",
+    "province_id": "87",
     "id": "877"
   },
   {
@@ -5666,7 +5666,7 @@
     "full_name": "Thành phố Long Xuyên",
     "full_name_en": "Long Xuyen City",
     "code_name": "long_xuyen",
-    "province_code": "89",
+    "province_id": "89",
     "id": "883"
   },
   {
@@ -5675,7 +5675,7 @@
     "full_name": "Thành phố Châu Đốc",
     "full_name_en": "Chau Doc City",
     "code_name": "chau_doc",
-    "province_code": "89",
+    "province_id": "89",
     "id": "884"
   },
   {
@@ -5684,7 +5684,7 @@
     "full_name": "Huyện An Phú",
     "full_name_en": "An Phu District",
     "code_name": "an_phu",
-    "province_code": "89",
+    "province_id": "89",
     "id": "886"
   },
   {
@@ -5693,7 +5693,7 @@
     "full_name": "Thị xã Tân Châu",
     "full_name_en": "Tan Chau Town",
     "code_name": "tan_chau",
-    "province_code": "89",
+    "province_id": "89",
     "id": "887"
   },
   {
@@ -5702,7 +5702,7 @@
     "full_name": "Huyện Phú Tân",
     "full_name_en": "Phu Tan District",
     "code_name": "phu_tan",
-    "province_code": "89",
+    "province_id": "89",
     "id": "888"
   },
   {
@@ -5711,7 +5711,7 @@
     "full_name": "Huyện Châu Phú",
     "full_name_en": "Chau Phu District",
     "code_name": "chau_phu",
-    "province_code": "89",
+    "province_id": "89",
     "id": "889"
   },
   {
@@ -5720,7 +5720,7 @@
     "full_name": "Thị xã Tịnh Biên",
     "full_name_en": "Tinh Bien Town",
     "code_name": "tinh_bien",
-    "province_code": "89",
+    "province_id": "89",
     "id": "890"
   },
   {
@@ -5729,7 +5729,7 @@
     "full_name": "Huyện Tri Tôn",
     "full_name_en": "Tri Ton District",
     "code_name": "tri_ton",
-    "province_code": "89",
+    "province_id": "89",
     "id": "891"
   },
   {
@@ -5738,7 +5738,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "89",
+    "province_id": "89",
     "id": "892"
   },
   {
@@ -5747,7 +5747,7 @@
     "full_name": "Huyện Chợ Mới",
     "full_name_en": "Cho Moi District",
     "code_name": "cho_moi",
-    "province_code": "89",
+    "province_id": "89",
     "id": "893"
   },
   {
@@ -5756,7 +5756,7 @@
     "full_name": "Huyện Thoại Sơn",
     "full_name_en": "Thoai Son District",
     "code_name": "thoai_son",
-    "province_code": "89",
+    "province_id": "89",
     "id": "894"
   },
   {
@@ -5765,7 +5765,7 @@
     "full_name": "Thành phố Rạch Giá",
     "full_name_en": "Rach Gia City",
     "code_name": "rach_gia",
-    "province_code": "91",
+    "province_id": "91",
     "id": "899"
   },
   {
@@ -5774,7 +5774,7 @@
     "full_name": "Thành phố Hà Tiên",
     "full_name_en": "Ha Tien City",
     "code_name": "ha_tien",
-    "province_code": "91",
+    "province_id": "91",
     "id": "900"
   },
   {
@@ -5783,7 +5783,7 @@
     "full_name": "Huyện Kiên Lương",
     "full_name_en": "Kien Luong District",
     "code_name": "kien_luong",
-    "province_code": "91",
+    "province_id": "91",
     "id": "902"
   },
   {
@@ -5792,7 +5792,7 @@
     "full_name": "Huyện Hòn Đất",
     "full_name_en": "Hon Dat District",
     "code_name": "hon_dat",
-    "province_code": "91",
+    "province_id": "91",
     "id": "903"
   },
   {
@@ -5801,7 +5801,7 @@
     "full_name": "Huyện Tân Hiệp",
     "full_name_en": "Tan Hiep District",
     "code_name": "tan_hiep",
-    "province_code": "91",
+    "province_id": "91",
     "id": "904"
   },
   {
@@ -5810,7 +5810,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "91",
+    "province_id": "91",
     "id": "905"
   },
   {
@@ -5819,7 +5819,7 @@
     "full_name": "Huyện Giồng Riềng",
     "full_name_en": "Giong Rieng District",
     "code_name": "giong_rieng",
-    "province_code": "91",
+    "province_id": "91",
     "id": "906"
   },
   {
@@ -5828,7 +5828,7 @@
     "full_name": "Huyện Gò Quao",
     "full_name_en": "Go Quao District",
     "code_name": "go_quao",
-    "province_code": "91",
+    "province_id": "91",
     "id": "907"
   },
   {
@@ -5837,7 +5837,7 @@
     "full_name": "Huyện An Biên",
     "full_name_en": "An Bien District",
     "code_name": "an_bien",
-    "province_code": "91",
+    "province_id": "91",
     "id": "908"
   },
   {
@@ -5846,7 +5846,7 @@
     "full_name": "Huyện An Minh",
     "full_name_en": "An Minh District",
     "code_name": "an_minh",
-    "province_code": "91",
+    "province_id": "91",
     "id": "909"
   },
   {
@@ -5855,7 +5855,7 @@
     "full_name": "Huyện Vĩnh Thuận",
     "full_name_en": "Vinh Thuan District",
     "code_name": "vinh_thuan",
-    "province_code": "91",
+    "province_id": "91",
     "id": "910"
   },
   {
@@ -5864,7 +5864,7 @@
     "full_name": "Thành phố Phú Quốc",
     "full_name_en": "Phu Quoc City",
     "code_name": "phu_quoc",
-    "province_code": "91",
+    "province_id": "91",
     "id": "911"
   },
   {
@@ -5873,7 +5873,7 @@
     "full_name": "Huyện Kiên Hải",
     "full_name_en": "Kien Hai District",
     "code_name": "kien_hai",
-    "province_code": "91",
+    "province_id": "91",
     "id": "912"
   },
   {
@@ -5882,7 +5882,7 @@
     "full_name": "Huyện U Minh Thượng",
     "full_name_en": "U Minh Thuong District",
     "code_name": "u_minh_thuong",
-    "province_code": "91",
+    "province_id": "91",
     "id": "913"
   },
   {
@@ -5891,7 +5891,7 @@
     "full_name": "Huyện Giang Thành",
     "full_name_en": "Giang Thanh District",
     "code_name": "giang_thanh",
-    "province_code": "91",
+    "province_id": "91",
     "id": "914"
   },
   {
@@ -5900,7 +5900,7 @@
     "full_name": "Quận Ninh Kiều",
     "full_name_en": "Ninh Kieu District",
     "code_name": "ninh_kieu",
-    "province_code": "92",
+    "province_id": "92",
     "id": "916"
   },
   {
@@ -5909,7 +5909,7 @@
     "full_name": "Quận Ô Môn",
     "full_name_en": "O Mon District",
     "code_name": "o_mon",
-    "province_code": "92",
+    "province_id": "92",
     "id": "917"
   },
   {
@@ -5918,7 +5918,7 @@
     "full_name": "Quận Bình Thuỷ",
     "full_name_en": "Binh Thuy District",
     "code_name": "binh_thuy",
-    "province_code": "92",
+    "province_id": "92",
     "id": "918"
   },
   {
@@ -5927,7 +5927,7 @@
     "full_name": "Quận Cái Răng",
     "full_name_en": "Cai Rang District",
     "code_name": "cai_rang",
-    "province_code": "92",
+    "province_id": "92",
     "id": "919"
   },
   {
@@ -5936,7 +5936,7 @@
     "full_name": "Quận Thốt Nốt",
     "full_name_en": "Thot Not District",
     "code_name": "thot_not",
-    "province_code": "92",
+    "province_id": "92",
     "id": "923"
   },
   {
@@ -5945,7 +5945,7 @@
     "full_name": "Huyện Vĩnh Thạnh",
     "full_name_en": "Vinh Thanh District",
     "code_name": "vinh_thanh",
-    "province_code": "92",
+    "province_id": "92",
     "id": "924"
   },
   {
@@ -5954,7 +5954,7 @@
     "full_name": "Huyện Cờ Đỏ",
     "full_name_en": "Co Do District",
     "code_name": "co_do",
-    "province_code": "92",
+    "province_id": "92",
     "id": "925"
   },
   {
@@ -5963,7 +5963,7 @@
     "full_name": "Huyện Phong Điền",
     "full_name_en": "Phong Dien District",
     "code_name": "phong_dien",
-    "province_code": "92",
+    "province_id": "92",
     "id": "926"
   },
   {
@@ -5972,7 +5972,7 @@
     "full_name": "Huyện Thới Lai",
     "full_name_en": "Thoi Lai District",
     "code_name": "thoi_lai",
-    "province_code": "92",
+    "province_id": "92",
     "id": "927"
   },
   {
@@ -5981,7 +5981,7 @@
     "full_name": "Thành phố Vị Thanh",
     "full_name_en": "Vi Thanh City",
     "code_name": "vi_thanh",
-    "province_code": "93",
+    "province_id": "93",
     "id": "930"
   },
   {
@@ -5990,7 +5990,7 @@
     "full_name": "Thành phố Ngã Bảy",
     "full_name_en": "Nga Bay City",
     "code_name": "nga_bay",
-    "province_code": "93",
+    "province_id": "93",
     "id": "931"
   },
   {
@@ -5999,7 +5999,7 @@
     "full_name": "Huyện Châu Thành A",
     "full_name_en": "Chau Thanh A District",
     "code_name": "chau_thanh_a",
-    "province_code": "93",
+    "province_id": "93",
     "id": "932"
   },
   {
@@ -6008,7 +6008,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "93",
+    "province_id": "93",
     "id": "933"
   },
   {
@@ -6017,7 +6017,7 @@
     "full_name": "Huyện Phụng Hiệp",
     "full_name_en": "Phung Hiep District",
     "code_name": "phung_hiep",
-    "province_code": "93",
+    "province_id": "93",
     "id": "934"
   },
   {
@@ -6026,7 +6026,7 @@
     "full_name": "Huyện Vị Thuỷ",
     "full_name_en": "Vi Thuy District",
     "code_name": "vi_thuy",
-    "province_code": "93",
+    "province_id": "93",
     "id": "935"
   },
   {
@@ -6035,7 +6035,7 @@
     "full_name": "Huyện Long Mỹ",
     "full_name_en": "Long My District",
     "code_name": "long_my",
-    "province_code": "93",
+    "province_id": "93",
     "id": "936"
   },
   {
@@ -6044,7 +6044,7 @@
     "full_name": "Thị xã Long Mỹ",
     "full_name_en": "Long My Town",
     "code_name": "long_my",
-    "province_code": "93",
+    "province_id": "93",
     "id": "937"
   },
   {
@@ -6053,7 +6053,7 @@
     "full_name": "Thành phố Sóc Trăng",
     "full_name_en": "Soc Trang City",
     "code_name": "soc_trang",
-    "province_code": "94",
+    "province_id": "94",
     "id": "941"
   },
   {
@@ -6062,7 +6062,7 @@
     "full_name": "Huyện Châu Thành",
     "full_name_en": "Chau Thanh District",
     "code_name": "chau_thanh",
-    "province_code": "94",
+    "province_id": "94",
     "id": "942"
   },
   {
@@ -6071,7 +6071,7 @@
     "full_name": "Huyện Kế Sách",
     "full_name_en": "Ke Sach District",
     "code_name": "ke_sach",
-    "province_code": "94",
+    "province_id": "94",
     "id": "943"
   },
   {
@@ -6080,7 +6080,7 @@
     "full_name": "Huyện Mỹ Tú",
     "full_name_en": "My Tu District",
     "code_name": "my_tu",
-    "province_code": "94",
+    "province_id": "94",
     "id": "944"
   },
   {
@@ -6089,7 +6089,7 @@
     "full_name": "Huyện Cù Lao Dung",
     "full_name_en": "Cu Lao Dung District",
     "code_name": "cu_lao_dung",
-    "province_code": "94",
+    "province_id": "94",
     "id": "945"
   },
   {
@@ -6098,7 +6098,7 @@
     "full_name": "Huyện Long Phú",
     "full_name_en": "Long Phu District",
     "code_name": "long_phu",
-    "province_code": "94",
+    "province_id": "94",
     "id": "946"
   },
   {
@@ -6107,7 +6107,7 @@
     "full_name": "Huyện Mỹ Xuyên",
     "full_name_en": "My Xuyen District",
     "code_name": "my_xuyen",
-    "province_code": "94",
+    "province_id": "94",
     "id": "947"
   },
   {
@@ -6116,7 +6116,7 @@
     "full_name": "Thị xã Ngã Năm",
     "full_name_en": "Nga Nam Town",
     "code_name": "nga_nam",
-    "province_code": "94",
+    "province_id": "94",
     "id": "948"
   },
   {
@@ -6125,7 +6125,7 @@
     "full_name": "Huyện Thạnh Trị",
     "full_name_en": "Thanh Tri District",
     "code_name": "thanh_tri",
-    "province_code": "94",
+    "province_id": "94",
     "id": "949"
   },
   {
@@ -6134,7 +6134,7 @@
     "full_name": "Thị xã Vĩnh Châu",
     "full_name_en": "Vinh Chau Town",
     "code_name": "vinh_chau",
-    "province_code": "94",
+    "province_id": "94",
     "id": "950"
   },
   {
@@ -6143,7 +6143,7 @@
     "full_name": "Huyện Trần Đề",
     "full_name_en": "Tran De District",
     "code_name": "tran_de",
-    "province_code": "94",
+    "province_id": "94",
     "id": "951"
   },
   {
@@ -6152,7 +6152,7 @@
     "full_name": "Thành phố Bạc Liêu",
     "full_name_en": "Bac Lieu City",
     "code_name": "bac_lieu",
-    "province_code": "95",
+    "province_id": "95",
     "id": "954"
   },
   {
@@ -6161,7 +6161,7 @@
     "full_name": "Huyện Hồng Dân",
     "full_name_en": "Hong Dan District",
     "code_name": "hong_dan",
-    "province_code": "95",
+    "province_id": "95",
     "id": "956"
   },
   {
@@ -6170,7 +6170,7 @@
     "full_name": "Huyện Phước Long",
     "full_name_en": "Phuoc Long District",
     "code_name": "phuoc_long",
-    "province_code": "95",
+    "province_id": "95",
     "id": "957"
   },
   {
@@ -6179,7 +6179,7 @@
     "full_name": "Huyện Vĩnh Lợi",
     "full_name_en": "Vinh Loi District",
     "code_name": "vinh_loi",
-    "province_code": "95",
+    "province_id": "95",
     "id": "958"
   },
   {
@@ -6188,7 +6188,7 @@
     "full_name": "Thị xã Giá Rai",
     "full_name_en": "Gia Rai Town",
     "code_name": "gia_rai",
-    "province_code": "95",
+    "province_id": "95",
     "id": "959"
   },
   {
@@ -6197,7 +6197,7 @@
     "full_name": "Huyện Đông Hải",
     "full_name_en": "Dong Hai District",
     "code_name": "dong_hai",
-    "province_code": "95",
+    "province_id": "95",
     "id": "960"
   },
   {
@@ -6206,7 +6206,7 @@
     "full_name": "Huyện Hoà Bình",
     "full_name_en": "Hoa Binh District",
     "code_name": "hoa_binh",
-    "province_code": "95",
+    "province_id": "95",
     "id": "961"
   },
   {
@@ -6215,7 +6215,7 @@
     "full_name": "Thành phố Cà Mau",
     "full_name_en": "Ca Mau City",
     "code_name": "ca_mau",
-    "province_code": "96",
+    "province_id": "96",
     "id": "964"
   },
   {
@@ -6224,7 +6224,7 @@
     "full_name": "Huyện U Minh",
     "full_name_en": "U Minh District",
     "code_name": "u_minh",
-    "province_code": "96",
+    "province_id": "96",
     "id": "966"
   },
   {
@@ -6233,7 +6233,7 @@
     "full_name": "Huyện Thới Bình",
     "full_name_en": "Thoi Binh District",
     "code_name": "thoi_binh",
-    "province_code": "96",
+    "province_id": "96",
     "id": "967"
   },
   {
@@ -6242,7 +6242,7 @@
     "full_name": "Huyện Trần Văn Thời",
     "full_name_en": "Tran Van Thoi District",
     "code_name": "tran_van_thoi",
-    "province_code": "96",
+    "province_id": "96",
     "id": "968"
   },
   {
@@ -6251,7 +6251,7 @@
     "full_name": "Huyện Cái Nước",
     "full_name_en": "Cai Nuoc District",
     "code_name": "cai_nuoc",
-    "province_code": "96",
+    "province_id": "96",
     "id": "969"
   },
   {
@@ -6260,7 +6260,7 @@
     "full_name": "Huyện Đầm Dơi",
     "full_name_en": "Dam Doi District",
     "code_name": "dam_doi",
-    "province_code": "96",
+    "province_id": "96",
     "id": "970"
   },
   {
@@ -6269,7 +6269,7 @@
     "full_name": "Huyện Năm Căn",
     "full_name_en": "Nam Can District",
     "code_name": "nam_can",
-    "province_code": "96",
+    "province_id": "96",
     "id": "971"
   },
   {
@@ -6278,7 +6278,7 @@
     "full_name": "Huyện Phú Tân",
     "full_name_en": "Phu Tan District",
     "code_name": "phu_tan",
-    "province_code": "96",
+    "province_id": "96",
     "id": "972"
   },
   {
@@ -6287,7 +6287,7 @@
     "full_name": "Huyện Ngọc Hiển",
     "full_name_en": "Ngoc Hien District",
     "code_name": "ngoc_hien",
-    "province_code": "96",
+    "province_id": "96",
     "id": "973"
   }
 ]

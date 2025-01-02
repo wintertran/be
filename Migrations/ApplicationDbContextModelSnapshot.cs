@@ -160,7 +160,7 @@ namespace be.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("TotalAmount")
+                    b.Property<double?>("TotalAmount")
                         .HasColumnType("numeric");
 
                     b.Property<string>("UserId")
@@ -331,7 +331,7 @@ namespace be.Migrations
                     b.Property<string>("PaymentStatus")
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("TotalAmount")
+                    b.Property<double?>("TotalAmount")
                         .HasColumnType("numeric");
 
                     b.HasKey("Id");
@@ -367,7 +367,7 @@ namespace be.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("TotalAmount")
+                    b.Property<double?>("TotalAmount")
                         .HasColumnType("numeric");
 
                     b.Property<string>("UserId")
@@ -394,7 +394,7 @@ namespace be.Migrations
                     b.Property<string>("BrandId")
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("CartQuantity")
+                    b.Property<double?>("CartQuantity")
                         .HasColumnType("numeric");
 
                     b.Property<string>("CategoryId")
@@ -414,13 +414,13 @@ namespace be.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("Price")
+                    b.Property<double?>("Price")
                         .HasColumnType("numeric");
 
                     b.Property<string>("Sku")
                         .HasColumnType("text");
 
-                    b.Property<decimal?>("StockQuantity")
+                    b.Property<double?>("StockQuantity")
                         .HasColumnType("numeric");
 
                     b.Property<DateTime?>("UpdatedAt")

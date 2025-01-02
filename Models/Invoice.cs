@@ -9,7 +9,7 @@ namespace be.Models
         public required string Id { get; set; }
         public required string OrderId { get; set; }
         public DateTime? InvoiceDate { get; set; }
-        public decimal? TotalAmount { get; set; }
+        public double? TotalAmount { get; set; }
         public DateTime? DueDate { get; set; }
         public string? PaymentStatus { get; set; } // Enum for payment status
         public string? PaymentMethod { get; set; }

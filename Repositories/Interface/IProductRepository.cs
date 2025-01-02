@@ -11,7 +11,7 @@ public interface IProductRepository : IGenericRepository<Product>
        int pageSize,
        List<string>? categories,
        List<string>? brands,
-       decimal? priceFrom,
-       decimal? priceTo,
+       double? priceFrom,
+       double? priceTo,
        string sort);
 }
